@@ -1,17 +1,15 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-// Initialize Resend with API Key
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Basic in-memory rate limiting (IP-based)
 // Note: For production on Vercel Edge/Serverless, consider using Vercel KV or Upstash
 const ipCache = new Map<string, number>();
 const RATE_LIMIT_MS = 60 * 1000; // 1 minute window
-const MAX_REQUESTS = 2; // Max 2 requests per minute per IP
 
 export async function POST(request: Request) {
   try {
+    // Initialize Resend inside the handler to prevent build-time errors if the API key is missing
+    const resend = new Resend(process.env.RESEND_API_KEY || 'no-key-yet');
     const ip = request.headers.get('x-forwarded-for') || '127.0.0.1';
     const now = Date.now();
     
