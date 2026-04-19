@@ -45,7 +45,7 @@
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  z-index: 1001;
+  z-index: 2101;
 }
 
 .logo:hover {
@@ -111,7 +111,7 @@
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 2101;
   padding: 4px;
 }
 
@@ -146,10 +146,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(29, 29, 31, 0.97);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  z-index: 999;
+  background: #111112;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 2100;
   flex-direction: column;
   align-items: center;
   justify-content: center;
