@@ -1,27 +1,38 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-// Basic in-memory rate limiting (IP-based)
-// Note: For production on Vercel Edge/Serverless, consider using Vercel KV or Upstash
-const ipCache = new Map<string, number>();
+const ipCache = new Map<string, { count: number; lastReset: number }>();
 const RATE_LIMIT_MS = 60 * 1000; // 1 minute window
+const MAX_REQUESTS = 3; // Max 3 requests per minute per IP
 
 export async function POST(request: Request) {
   try {
     // Initialize Resend inside the handler to prevent build-time errors if the API key is missing
     const resend = new Resend(process.env.RESEND_API_KEY || 'no-key-yet');
-    const ip = request.headers.get('x-forwarded-for') || '127.0.0.1';
+    
+    // Get client IP safely
+    const forwarded = request.headers.get('x-forwarded-for');
+    const ip = forwarded ? forwarded.split(',')[0] : '127.0.0.1';
+    
     const now = Date.now();
     
     // Rate Limiting Check
-    const lastRequest = ipCache.get(ip);
-    if (lastRequest && (now - lastRequest < RATE_LIMIT_MS)) {
+    const rateData = ipCache.get(ip) || { count: 0, lastReset: now };
+    
+    if (now - rateData.lastReset > RATE_LIMIT_MS) {
+      rateData.count = 0;
+      rateData.lastReset = now;
+    }
+    
+    if (rateData.count >= MAX_REQUESTS) {
       return NextResponse.json(
-        { error: 'Too many requests. Please try again in a minute.' },
+        { error: 'Too many inquiries. Please wait a minute before trying again.' },
         { status: 429 }
       );
     }
-    ipCache.set(ip, now);
+    
+    rateData.count++;
+    ipCache.set(ip, rateData);
 
     const body = await request.json();
     const { name, email, phone, company, country, product, message, website_url } = body;
