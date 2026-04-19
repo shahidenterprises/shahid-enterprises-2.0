@@ -8,7 +8,16 @@ const MAX_REQUESTS = 3; // Max 3 requests per minute per IP
 export async function POST(request: Request) {
   try {
     // Initialize Resend inside the handler to prevent build-time errors if the API key is missing
-    const resend = new Resend(process.env.RESEND_API_KEY || 'no-key-yet');
+    const apiKey = process.env.RESEND_API_KEY;
+    
+    if (!apiKey || apiKey === 'no-key-yet') {
+      return NextResponse.json(
+        { error: 'Contact form setup incomplete: RESEND_API_KEY is missing in settings.' },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
     
     // Get client IP safely
     const forwarded = request.headers.get('x-forwarded-for');
