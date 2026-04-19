@@ -37,7 +37,7 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`} id="main-nav">
+    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''} ${mobileOpen ? styles.menuOpen : ''}`} id="main-nav">
       <div className={styles.navInner}>
         <Link href="/" className={styles.logo}>
           <div className={styles.logoIcon}>SE</div>
