@@ -1,0 +1,56 @@
+.sectionHeading {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.sectionHeading.left {
+  text-align: left;
+}
+
+.sectionHeading.left .accentLine {
+  margin: 0;
+}
+
+.label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  margin-bottom: 0.6rem;
+}
+
+.title {
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.025em;
+}
+
+.dark .title {
+  color: #fff;
+}
+
+.subtitle {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.left .subtitle {
+  margin: 0;
+}
+
+.dark .subtitle {
+  color: var(--color-text-on-dark-secondary);
+}
+
+.accentLine {
+  width: 36px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
+  margin: 0 auto;
+}

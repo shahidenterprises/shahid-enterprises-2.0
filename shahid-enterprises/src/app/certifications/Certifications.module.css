@@ -1,0 +1,165 @@
+.certsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: var(--section-padding) 0;
+}
+
+.certCard {
+  display: flex;
+  gap: 1.75rem;
+  padding: 2.25rem;
+  background: #fff;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-base);
+  height: 100%;
+}
+
+.certCard:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.certIconBig {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  background: var(--color-bg-alt);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+.certContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.certContent h3 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.certContent p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-bottom: 0.65rem;
+  flex: 1;
+}
+
+.certTag {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  background: rgba(11, 93, 30, 0.06);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 980px;
+  letter-spacing: 0.01em;
+}
+
+/* QA Section */
+.qaSection {
+  padding: var(--section-padding) 0;
+  background: var(--color-bg-alt);
+}
+
+.qaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.qaCard {
+  padding: 2rem;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  text-align: center;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.qaCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: transparent;
+}
+
+.qaIcon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 0.85rem;
+  background: var(--color-bg-alt);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.qaCard h4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.qaCard p {
+  font-size: 0.86rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Trust Bar */
+.trustBar {
+  padding: 4rem 0;
+  background: var(--color-primary);
+  text-align: center;
+}
+
+.trustBar h2 {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.trustBar > .container > p {
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 480px;
+  margin: 0 auto 1.75rem;
+}
+
+.trustBtns {
+  display: flex;
+  gap: 0.85rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .certsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .certCard {
+    flex-direction: column;
+    gap: 1.15rem;
+    padding: 1.75rem;
+  }
+
+  .qaGrid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}

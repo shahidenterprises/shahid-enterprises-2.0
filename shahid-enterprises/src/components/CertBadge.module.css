@@ -1,0 +1,45 @@
+.badge {
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-base);
+}
+
+.badge:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: var(--color-primary);
+}
+
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1.15rem;
+  background: var(--color-bg-alt);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrap svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-primary);
+}
+
+.badge h4 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.badge p {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--color-text-light);
+}

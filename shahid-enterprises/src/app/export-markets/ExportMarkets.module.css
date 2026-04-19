@@ -1,0 +1,208 @@
+.marketsMain {
+  padding: var(--section-padding) 0;
+}
+
+.worldMapPlaceholder {
+  width: 100%;
+  aspect-ratio: 16/7;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-xl);
+  border: 1.5px dashed var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--color-text-light);
+  margin-bottom: 4rem;
+}
+
+.worldMapPlaceholder svg {
+  opacity: 0.3;
+}
+
+.worldMapPlaceholder span {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.regionsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.regionCard {
+  padding: 2.25rem;
+  background: #fff;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.regionCard:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+  transform: translateY(-3px);
+}
+
+.regionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.regionEmoji {
+  font-size: 2.25rem;
+}
+
+.regionHeader h3 {
+  font-size: 1.2rem;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.regionCard > p {
+  margin-bottom: 1.15rem;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.countryTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.countryTag {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  background: rgba(11, 93, 30, 0.05);
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 980px;
+  letter-spacing: 0em;
+}
+
+.regionFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.regionFeatures li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.86rem;
+  color: var(--color-text-secondary);
+}
+
+.regionFeatures li svg {
+  color: var(--color-primary);
+  min-width: 14px;
+}
+
+/* Capabilities */
+.capSection {
+  padding: var(--section-padding) 0;
+  background: var(--color-bg-alt);
+}
+
+.capGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.capCard {
+  text-align: center;
+  padding: 2.25rem 1.5rem;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-light);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.capCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: transparent;
+}
+
+.capIcon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  background: var(--color-bg-alt);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+.capCard h4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.capCard p {
+  font-size: 0.86rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* CTA */
+.marketsCta {
+  padding: 5rem 0;
+  background: var(--color-primary);
+  text-align: center;
+}
+
+.marketsCta h2 {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.marketsCta p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 480px;
+  margin: 0 auto 1.75rem;
+}
+
+.ctaBtns {
+  display: flex;
+  gap: 0.85rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .regionsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .capGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .capGrid {
+    grid-template-columns: 1fr;
+  }
+}
