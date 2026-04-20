@@ -39,8 +39,11 @@ const certs = [
     desc: 'Our Hazard Analysis and Critical Control Points (HACCP) certification demonstrates our systematic approach to food safety. Every step of our process is monitored and documented to prevent contamination.',
     tag: 'Food Safety',
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <svg width="24" height="24" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M70 60 L150 30 L230 60 V160 C230 210 150 250 150 250 C150 250 70 210 70 160 V60Z" fill="#0A2540"/>
+        <path d="M110 90 V170 M190 90 V170 M110 130 H190" stroke="#FFFFFF" strokeWidth="14" strokeLinecap="square" />
+        <circle cx="215" cy="75" r="18" fill="#00D4FF"/>
+        <path d="M207 75 L212 80 L223 69" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
       </svg>
     ),
   },
