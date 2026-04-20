@@ -15,7 +15,18 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section className={heroStyles.pageHero}>
-        <div className="container">
+        <div className={heroStyles.heroBg}>
+          <Image 
+            src="/images/factory.png" 
+            alt="Shahid Enterprises Heritage" 
+            fill 
+            priority 
+            className={heroStyles.heroImage}
+            sizes="100vw"
+          />
+        </div>
+        <div className={heroStyles.heroOverlay} />
+        <div className={`container ${heroStyles.heroContent}`}>
           <div className="accent-line accent-line--center" style={{ marginBottom: '1.25rem' }}></div>
           <h1>Our Legacy of Excellence</h1>
           <p>Five decades of manufacturing premium natural casings, trusted by meat processors across Europe and the Gulf.</p>

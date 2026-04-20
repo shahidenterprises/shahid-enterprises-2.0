@@ -37,8 +37,8 @@ export default function HomePage() {
       <section className={styles.hero} id="hero">
         <div className={styles.heroBg}>
           <Image 
-            src="/images/hero_bg.png" 
-            alt="Premium Natural Sheep Casings" 
+            src="/images/hero_home_8k.png" 
+            alt="Shahid Enterprises Premium Natural Casings" 
             fill 
             priority 
             className={styles.heroImage}

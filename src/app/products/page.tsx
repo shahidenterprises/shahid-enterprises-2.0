@@ -59,7 +59,18 @@ export default function ProductsPage() {
     <>
       {/* Hero */}
       <section className={heroStyles.pageHero}>
-        <div className="container">
+        <div className={heroStyles.heroBg}>
+          <Image 
+            src="/images/afghani_sheep.png" 
+            alt="Shahid Enterprises Product Catalog" 
+            fill 
+            priority 
+            className={heroStyles.heroImage}
+            sizes="100vw"
+          />
+        </div>
+        <div className={heroStyles.heroOverlay} />
+        <div className={`container ${heroStyles.heroContent}`}>
           <div className="accent-line accent-line--center" style={{ marginBottom: '1.25rem' }}></div>
           <h1>Products &amp; Services</h1>
           <p>Premium natural casings, bulk supply solutions, and custom packaging for global meat processors.</p>

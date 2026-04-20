@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import styles from './Contact.module.css';
 import heroStyles from '../PageHero.module.css';
 import ContactForm from '@/components/ContactForm';
@@ -14,7 +15,18 @@ export default function ContactPage() {
     <>
       {/* Hero */}
       <section className={heroStyles.pageHero}>
-        <div className="container">
+        <div className={heroStyles.heroBg}>
+          <Image 
+            src="/images/hero_bg.png" 
+            alt="Contact Shahid Enterprises" 
+            fill 
+            priority 
+            className={heroStyles.heroImage}
+            sizes="100vw"
+          />
+        </div>
+        <div className={heroStyles.heroOverlay} />
+        <div className={`container ${heroStyles.heroContent}`}>
           <div className="accent-line accent-line--center" style={{ marginBottom: '1.25rem' }}></div>
           <h1>Contact Us</h1>
           <p>Ready to place an order or need more information? Our export team is here to help.</p>

@@ -35,7 +35,18 @@ export default function ExportMarketsPage() {
     <>
       {/* Hero */}
       <section className={heroStyles.pageHero}>
-        <div className="container">
+        <div className={heroStyles.heroBg}>
+          <Image 
+            src="/images/logistics_global.png" 
+            alt="Shahid Enterprises Global Reach" 
+            fill 
+            priority 
+            className={heroStyles.heroImage}
+            sizes="100vw"
+          />
+        </div>
+        <div className={heroStyles.heroOverlay} />
+        <div className={`container ${heroStyles.heroContent}`}>
           <div className="accent-line accent-line--center" style={{ marginBottom: '1.25rem' }}></div>
           <h1>Export Markets & Reach</h1>
           <p>Supplying premium natural casings to buyers across Europe and the Gulf &amp; Middle East.</p>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Certifications.module.css';
 import heroStyles from '../PageHero.module.css';
@@ -58,7 +59,18 @@ export default function CertificationsPage() {
     <>
       {/* Hero */}
       <section className={heroStyles.pageHero}>
-        <div className="container">
+        <div className={heroStyles.heroBg}>
+          <Image 
+            src="/images/packaging.png" 
+            alt="Shahid Enterprises Certifications" 
+            fill 
+            priority 
+            className={heroStyles.heroImage}
+            sizes="100vw"
+          />
+        </div>
+        <div className={heroStyles.heroOverlay} />
+        <div className={`container ${heroStyles.heroContent}`}>
           <div className="accent-line accent-line--center" style={{ marginBottom: '1.25rem' }}></div>
           <h1>Certifications &amp; Quality</h1>
           <p>International certifications that guarantee the highest standards of quality, safety, and compliance.</p>
