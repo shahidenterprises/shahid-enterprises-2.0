@@ -1,26 +1,13 @@
-<svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  {/* Professional 'S E' Favicon Mark */}
-  <rect width="512" height="512" rx="120" fill="#0b5d1e" />
-  
-  {/* Modern Serif 'S' and 'E' Initials */}
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  {/* Professional Favicon - Stylized SE Initials */}
   <text 
     x="256" 
-    y="340" 
-    textAnchor="middle" 
-    fill="white" 
-    style={{ 
-      fontSize: '240px', 
-      fontWeight: '800', 
-      fontFamily: 'Playfair Display, serif',
-      letterSpacing: '-0.05em'
-    }}
-  >
-    SE
-  </text>
-  
-  {/* Underline / Accent Line in Gold */}
-  <rect x="140" y="370" width="232" height="12" rx="6" fill="#D4AF37" />
-  
-  {/* Subtle Border Glow */}
-  <rect x="10" y="10" width="492" height="492" rx="115" stroke="white" strokeWidth="4" opacity="0.2" />
+    y="360" 
+    text-anchor="middle" 
+    fill="#0b5d1e" 
+    font-size="400" 
+    font-weight="900" 
+    font-family="Arial, Helvetica, sans-serif"
+    letter-spacing="-20"
+  >SE</text>
 </svg>
