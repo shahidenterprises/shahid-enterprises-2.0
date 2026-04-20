@@ -23,6 +23,14 @@
   -webkit-backdrop-filter: none !important;
 }
 
+.navbar.menuOpen .logo span {
+  color: #fff !important;
+}
+
+.navbar.menuOpen .menuToggle span {
+  background: #fff !important;
+}
+
 .navbar.scrolled .logo span {
   color: var(--color-text);
 }
