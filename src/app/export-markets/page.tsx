@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './ExportMarkets.module.css';
 import heroStyles from '../PageHero.module.css';
 import SectionHeading from '@/components/SectionHeading';
@@ -44,15 +45,20 @@ export default function ExportMarketsPage() {
       {/* Main Content */}
       <section className={styles.marketsMain}>
         <div className="container">
-          {/* World Map Placeholder */}
+          {/* World Map Image */}
           <AnimatedSection>
-            <div className={styles.worldMapPlaceholder}>
-              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="2" y1="12" x2="22" y2="12"/>
-                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-              </svg>
-              <span>Interactive World Map — Highlighting Export Destinations</span>
+            <div className={styles.worldMapImage}>
+              <Image 
+                src="/images/logistics_global.png" 
+                alt="Shahid Enterprises Global Export Logistics" 
+                fill 
+                className={styles.mImg}
+                sizes="100vw"
+                priority
+              />
+              <div className={styles.mapOverlay}>
+                <span>Global Reach</span>
+              </div>
             </div>
           </AnimatedSection>
 
