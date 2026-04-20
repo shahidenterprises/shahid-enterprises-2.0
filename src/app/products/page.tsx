@@ -33,7 +33,7 @@ const products = [
       'Consistent length and caliber uniformity',
       'EU and Halal compliant processing',
     ],
-    image: '/images/afghani_sheep.png',
+    image: '/images/afghani_casings.jpg',
   },
   {
     title: 'Goat Casings',
@@ -71,7 +71,7 @@ export default function ProductsPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/afghani_sheep.png" 
+            src="/images/afghani_casings.jpg" 
             alt="Comprehensive catalog of premium natural sheep and goat casings for international export" 
             fill 
             priority 

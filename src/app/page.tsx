@@ -183,11 +183,11 @@ export default function HomePage() {
             <AnimatedSection delay={0}>
               <Link href="/products" className={styles.productCard}>
                 <div className={styles.productCardImage}>
-                  <Image src="/images/afghani_sheep.png" alt="High-quality natural sheep casings processed for European export" fill sizes="(max-width: 1024px) 100vw, 33vw" />
+                  <Image src="/images/afghani_casings.jpg" alt="Premium Afghani sheep casings being processed — natural casings for European and Gulf export" fill sizes="(max-width: 1024px) 100vw, 33vw" />
                 </div>
                 <div className={styles.productCardContent}>
-                  <h3>Natural Sheep Casings</h3>
-                  <p>Premium quality, sorted by caliber. Available in salted and dry-salted variants for sausage production.</p>
+                  <h3>Afghani Casings</h3>
+                  <p>Premium quality Afghani sheep casings, sorted by caliber. Available in salted and dry-salted variants for sausage production.</p>
                   <span className={styles.productCardLink}>Learn More →</span>
                 </div>
               </Link>
