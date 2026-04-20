@@ -12,7 +12,7 @@ export default function Footer() {
         {/* Company Info */}
         <div className={`${styles.footerCol} ${styles.footerAbout}`}>
           <div className={styles.footerLogo}>
-            <Logo width={40} height={40} />
+            <Logo width={64} height={64} />
           </div>
           <h4>Shahid Enterprises</h4>
           <p>

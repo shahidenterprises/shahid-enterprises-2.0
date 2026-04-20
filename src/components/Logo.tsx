@@ -6,7 +6,7 @@ interface LogoProps {
   height?: number;
 }
 
-const Logo: React.FC<LogoProps> = ({ className, width = 45, height = 45 }) => {
+const Logo: React.FC<LogoProps> = ({ className, width = 40, height = 40 }) => {
   return (
     <svg 
       width={width} 
@@ -16,46 +16,43 @@ const Logo: React.FC<LogoProps> = ({ className, width = 45, height = 45 }) => {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
+      {/* Outer Glow / Ring */}
+      <circle cx="256" cy="256" r="230" stroke="currentColor" strokeWidth="8" strokeDasharray="12 8" opacity="0.4" />
+      
+      {/* Main Seal Ring */}
+      <circle cx="256" cy="256" r="210" stroke="currentColor" strokeWidth="20" />
+      
+      {/* Inner Decorative Ring */}
+      <circle cx="256" cy="256" r="160" stroke="currentColor" strokeWidth="2" opacity="0.6" />
+
+      {/* S.E. Initials */}
+      <text 
+        x="256" 
+        y="280" 
+        textAnchor="middle" 
+        fill="currentColor" 
+        style={{ fontSize: '140px', fontWeight: '800', fontFamily: 'serif' }}
+      >
+        S.E.
+      </text>
+
+      {/* Arched Text (Simplified representation using Paths for better cross-browser arched look if needed, but textPath is best) */}
       <defs>
-        <linearGradient id="sausageGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#2DCDA4" />
-          <stop offset="100%" stopColor="#0B987C" />
-        </linearGradient>
-        <linearGradient id="sausageGradientTop" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#8FF7C1" />
-          <stop offset="100%" stopColor="#2DCDA4" />
-        </linearGradient>
-        <linearGradient id="barGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#E6FFFA" />
-          <stop offset="100%" stopColor="#B2F5EA" />
-        </linearGradient>
+        <path id="topCurve" d="M100,256 A156,156 0 0,1 412,256" />
+        <path id="bottomCurve" d="M100,256 A156,156 0 0,0 412,256" />
       </defs>
 
-      {/* Vertical bars/hooks background layer */}
-      <rect x="140" y="30" width="30" height="430" rx="15" fill="url(#barGradient)" opacity="0.6" />
-      <rect x="342" y="30" width="30" height="430" rx="15" fill="url(#barGradient)" opacity="0.6" />
-      
-      {/* Bottom Hooks */}
-      <circle cx="155" cy="460" r="45" stroke="url(#barGradient)" strokeWidth="30" fill="none" strokeDasharray="210 100" strokeDashoffset="-20" strokeLinecap="round" opacity="0.6" />
-      <circle cx="357" cy="460" r="45" stroke="url(#barGradient)" strokeWidth="30" fill="none" strokeDasharray="210 100" strokeDashoffset="-20" strokeLinecap="round" opacity="0.6" />
+      <text fill="currentColor" style={{ fontSize: '32px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+        <textPath href="#topCurve" startOffset="50%" textAnchor="middle">
+          SHAHID ENTERPRISES
+        </textPath>
+      </text>
 
-      {/* Top Sausage */}
-      <path 
-        d="M60 180c0-60 392-60 392 0s-392 60-392 0z" 
-        fill="url(#sausageGradientTop)" 
-      />
-      <rect x="180" y="90" width="25" height="60" rx="12" fill="white" opacity="0.2" />
-      <rect x="245" y="80" width="25" height="70" rx="12" fill="white" opacity="0.2" />
-      <rect x="310" y="90" width="25" height="60" rx="12" fill="white" opacity="0.2" />
-
-      {/* Bottom Sausage */}
-      <path 
-        d="M60 380c0-60 392-60 392 0s-392 60-392 0z" 
-        fill="url(#sausageGradient)" 
-      />
-      <rect x="180" y="290" width="25" height="60" rx="12" fill="white" opacity="0.2" />
-      <rect x="245" y="280" width="25" height="70" rx="12" fill="white" opacity="0.2" />
-      <rect x="310" y="290" width="25" height="60" rx="12" fill="white" opacity="0.2" />
+      <text fill="currentColor" style={{ fontSize: '28px', fontWeight: '500', letterSpacing: '0.2em' }}>
+        <textPath href="#bottomCurve" startOffset="50%" textAnchor="middle">
+          SINCE 1970
+        </textPath>
+      </text>
     </svg>
   );
 };

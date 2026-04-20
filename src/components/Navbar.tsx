@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className={styles.navInner}>
         <Link href="/" className={styles.logo}>
           <div className={styles.logoIcon}>
-            <Logo width={30} height={30} />
+            <Logo width={42} height={42} />
           </div>
           <span>Shahid Enterprises</span>
         </Link>
