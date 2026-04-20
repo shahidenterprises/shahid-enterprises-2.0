@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import Logo from './Logo';
 import styles from './Navbar.module.css';
 
 const navItems = [
@@ -43,13 +44,7 @@ export default function Navbar() {
       <div className={styles.navInner}>
         <Link href="/" className={styles.logo}>
           <div className={styles.logoIcon}>
-            <Image 
-              src="/images/logo.png" 
-              alt="Shahid Enterprises Logo" 
-              width={38} 
-              height={38} 
-              className={styles.logoImg}
-            />
+            <Logo width={30} height={30} />
           </div>
           <span>Shahid Enterprises</span>
         </Link>

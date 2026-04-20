@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Logo from './Logo';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -11,13 +12,7 @@ export default function Footer() {
         {/* Company Info */}
         <div className={`${styles.footerCol} ${styles.footerAbout}`}>
           <div className={styles.footerLogo}>
-            <Image 
-              src="/images/logo.png" 
-              alt="Shahid Enterprises Logo" 
-              width={48} 
-              height={48} 
-              className={styles.logoImg}
-            />
+            <Logo width={40} height={40} />
           </div>
           <h4>Shahid Enterprises</h4>
           <p>
