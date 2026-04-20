@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'About Shahid Enterprises | Natural Casing Experts',
     description: 'Our journey from a local family business to an international leader in natural casings.',
     url: 'https://shahidenterprises.com/about',
-    images: [{ url: '/images/factory.png' }],
+    images: [{ url: '/images/factory.webp' }],
   },
 };
 
@@ -27,7 +27,7 @@ export default function AboutPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/factory.png" 
+            src="/images/factory.webp" 
             alt="Shahid Enterprises heritage natural casing processing facility in Multan, Pakistan" 
             fill 
             priority 
@@ -50,7 +50,7 @@ export default function AboutPage() {
             <AnimatedSection>
               <div className={styles.storyImage}>
                 <Image 
-                  src="/images/factory.png" 
+                  src="/images/factory.webp" 
                   alt="Modern cleaning and grading facility for high-quality natural sheep casings" 
                   fill 
                   className={styles.stImg}

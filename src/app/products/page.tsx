@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: 'Our Natural Casing Products | Shahid Enterprises',
     description: 'High-quality natural sheep and goat casings for international meat processors.',
     url: 'https://shahidenterprises.com/products',
-    images: [{ url: '/images/afghani_sheep.png' }],
+    images: [{ url: '/images/afghani_sheep.webp' }],
   },
 };
 
@@ -33,7 +33,7 @@ const products = [
       'Consistent length and caliber uniformity',
       'EU and Halal compliant processing',
     ],
-    image: '/images/afghani_casings.jpg',
+    image: '/images/afghani_casings.webp',
   },
   {
     title: 'Goat Casings',
@@ -46,7 +46,7 @@ const products = [
       'Halal certified sourcing',
       'Custom caliber sorting available',
     ],
-    image: '/images/goat_casings.png',
+    image: '/images/goat_casings.webp',
     reverse: true,
   },
   {
@@ -60,7 +60,7 @@ const products = [
       'Temperature-controlled processing',
       'Consistent quality batch after batch',
     ],
-    image: '/images/hero_bg.png',
+    image: '/images/hero_bg.webp',
   },
 ];
 
@@ -71,7 +71,7 @@ export default function ProductsPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/afghani_casings.jpg" 
+            src="/images/afghani_casings.webp" 
             alt="Comprehensive catalog of premium natural sheep and goat casings for international export" 
             fill 
             priority 

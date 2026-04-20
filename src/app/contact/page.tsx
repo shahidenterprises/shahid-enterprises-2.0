@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: 'Get in Touch | Shahid Enterprises Export Team',
     description: 'Direct lines for international procurement and quality documentation requests.',
     url: 'https://shahidenterprises.com/contact',
-    images: [{ url: '/images/hero_bg.png' }],
+    images: [{ url: '/images/hero_bg.webp' }],
   },
 };
 
@@ -27,7 +27,7 @@ export default function ContactPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/hero_bg.png" 
+            src="/images/hero_bg.webp" 
             alt="Contact Shahid Enterprises" 
             fill 
             priority 

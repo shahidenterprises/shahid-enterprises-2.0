@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: 'Global Reach & Export Markets | Shahid Enterprises',
     description: 'Supplying top-grade natural casings to meat processors in over 20 countries.',
     url: 'https://shahidenterprises.com/export-markets',
-    images: [{ url: '/images/logistics_global.png' }],
+    images: [{ url: '/images/logistics_global.webp' }],
   },
 };
 
@@ -47,7 +47,7 @@ export default function ExportMarketsPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/logistics_global.png" 
+            src="/images/logistics_global.webp" 
             alt="Shahid Enterprises international export network covering Europe, Middle East and beyond" 
             fill 
             priority 
@@ -70,7 +70,7 @@ export default function ExportMarketsPage() {
           <AnimatedSection>
             <div className={styles.worldMapImage}>
               <Image 
-                src="/images/logistics_global.png" 
+                src="/images/logistics_global.webp" 
                 alt="Global logistics and supply chain map for Shahid Enterprises natural casings" 
                 fill 
                 className={styles.mImg}

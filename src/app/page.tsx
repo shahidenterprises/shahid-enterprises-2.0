@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: 'Supplying top-grade natural sheep and goat casings to Europe & the Gulf since 1970.',
     url: 'https://shahidenterprises.com',
     siteName: 'Shahid Enterprises',
-    images: [{ url: '/images/hero_home_8k.png', width: 1200, height: 630 }],
+    images: [{ url: '/images/hero_home_8k.webp', width: 1200, height: 630 }],
     locale: 'en_US',
     type: 'website',
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Shahid Enterprises | Premium Natural Casings Exporter',
     description: 'Pakistan\'s trusted name in natural casings manufacturing and export.',
-    images: ['/images/hero_home_8k.png'],
+    images: ['/images/hero_home_8k.webp'],
   },
 };
 import Image from 'next/image';
@@ -63,7 +63,7 @@ export default function HomePage() {
       <section className={styles.hero} id="hero">
         <div className={styles.heroBg}>
           <Image 
-            src="/images/hero_home_8k.png" 
+            src="/images/hero_home_8k.webp" 
             alt="Premium natural sheep casings and goat casings for export — Shahid Enterprises Pakistan" 
             fill 
             priority 
@@ -183,7 +183,7 @@ export default function HomePage() {
             <AnimatedSection delay={0}>
               <Link href="/products" className={styles.productCard}>
                 <div className={styles.productCardImage}>
-                  <Image src="/images/afghani_casings.jpg" alt="Premium Afghani sheep casings being processed — natural casings for European and Gulf export" fill sizes="(max-width: 1024px) 100vw, 33vw" />
+                  <Image src="/images/afghani_casings.webp" alt="Premium Afghani sheep casings being processed — natural casings for European and Gulf export" fill sizes="(max-width: 1024px) 100vw, 33vw" />
                 </div>
                 <div className={styles.productCardContent}>
                   <h3>Afghani Casings</h3>
@@ -195,7 +195,7 @@ export default function HomePage() {
             <AnimatedSection delay={100}>
               <Link href="/products" className={styles.productCard}>
                 <div className={styles.productCardImage}>
-                  <Image src="/images/goat_casings.png" alt="Halal certified natural goat casings for international meat processors" fill sizes="(max-width: 1024px) 100vw, 33vw" />
+                  <Image src="/images/goat_casings.webp" alt="Halal certified natural goat casings for international meat processors" fill sizes="(max-width: 1024px) 100vw, 33vw" />
                 </div>
                 <div className={styles.productCardContent}>
                   <h3>Goat Casings</h3>
@@ -207,7 +207,7 @@ export default function HomePage() {
             <AnimatedSection delay={200}>
               <Link href="/products" className={styles.productCard}>
                 <div className={styles.productCardImage}>
-                  <Image src="/images/packaging.png" alt="Export-grade salted sausage casings in professional packaging" fill sizes="(max-width: 1024px) 100vw, 33vw" />
+                  <Image src="/images/packaging.webp" alt="Export-grade salted sausage casings in professional packaging" fill sizes="(max-width: 1024px) 100vw, 33vw" />
                 </div>
                 <div className={styles.productCardContent}>
                   <h3>Sausage Casings</h3>

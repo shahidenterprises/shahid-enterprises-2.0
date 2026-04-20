@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/hero_bg.png" 
+            src="/images/hero_bg.webp" 
             alt="Privacy Policy" 
             fill 
             className={heroStyles.heroImage}

@@ -82,7 +82,7 @@ export default function FAQPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/logistics_global.png" 
+            src="/images/logistics_global.webp" 
             alt="Shahid Enterprises FAQ" 
             fill 
             priority 

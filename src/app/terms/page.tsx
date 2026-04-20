@@ -14,7 +14,7 @@ export default function TermsPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/hero_bg.png" 
+            src="/images/hero_bg.webp" 
             alt="Terms & Conditions" 
             fill 
             className={heroStyles.heroImage}

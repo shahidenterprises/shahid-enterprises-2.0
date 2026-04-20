@@ -49,7 +49,7 @@ const HaccpCertificate: React.FC<{ className?: string }> = ({ className }) => {
       {/* Certificate Photo */}
       <div style={{ position: 'relative', width: '100%', aspectRatio: '0.72' }}>
         <Image
-          src="/images/cert_haccp_original.jpg"
+          src="/images/cert_haccp_original.webp"
           alt="HACCP Certificate of Registration — Shahid Enterprises, Certificate #HACCP 191583"
           fill
           style={{ objectFit: 'contain', background: '#f5f5f0' }}

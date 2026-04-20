@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: 'Certified Quality Standards | Shahid Enterprises',
     description: 'Verifiable international certifications ensuring safe and compliant natural casing production.',
     url: 'https://shahidenterprises.com/certifications',
-    images: [{ url: '/images/packaging.png' }],
+    images: [{ url: '/images/packaging.webp' }],
   },
 };
 
@@ -29,7 +29,7 @@ export default function CertificationsPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/packaging.png" 
+            src="/images/packaging.webp" 
             alt="Shahid Enterprises Certifications" 
             fill 
             priority 

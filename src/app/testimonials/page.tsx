@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: 'Customer Satisfaction & Reviews | Shahid Enterprises',
     description: 'Hear from our international partners about their long-term supply experience with us.',
     url: 'https://shahidenterprises.com/testimonials',
-    images: [{ url: '/images/goat_casings.png' }],
+    images: [{ url: '/images/goat_casings.webp' }],
   },
 };
 
@@ -95,7 +95,7 @@ export default function TestimonialsPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/goat_casings.png" 
+            src="/images/goat_casings.webp" 
             alt="Shahid Enterprises Testimonials" 
             fill 
             priority 
