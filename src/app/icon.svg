@@ -1,25 +1,31 @@
 <svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  {/* Official Seal Favicon (Simplified for Legibility) */}
-  <circle cx="256" cy="256" r="230" stroke="black" strokeWidth="24" />
-  <circle cx="256" cy="256" r="180" stroke="black" strokeWidth="4" />
-  
-  <text 
-    x="256" 
-    y="320" 
-    textAnchor="middle" 
-    fill="black" 
-    style={{ fontSize: '220px', fontWeight: '900', fontFamily: 'serif' }}
-  >
-    S.E.
-  </text>
-  
-  <defs>
-    <path id="curve" d="M100,256 A156,156 0 0,1 412,256" />
-  </defs>
-  
-  <text fill="black" style={{ fontSize: '48px', fontWeight: '800', textTransform: 'uppercase' }}>
-    <textPath href="#curve" startOffset="50%" textAnchor="middle">
-      SHAHID
-    </textPath>
-  </text>
+  {/* Simplified Sausage Icon for high-visibility Favicon */}
+  <path 
+    d="M60 250c0 0-10 80 50 120s280 60 340 0s10-120 10-120" 
+    stroke="black" 
+    strokeWidth="24" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+  />
+  <path 
+    d="M30 200c0 0-15-20 10-40s410 40 440 80s-10 80-60 60" 
+    stroke="black" 
+    strokeWidth="28" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+  />
+  <path 
+    d="M80 180c0 0 10-60 80-100s240-20 300 40s10 110 10 110" 
+    stroke="black" 
+    strokeWidth="24" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+  />
+  <path 
+    d="M100 190c20-10 40 10 60 0s40-10 60 0s40 10 60 0s40-10 60 0s40 10 60 0" 
+    stroke="black" 
+    strokeWidth="12" 
+    strokeLinecap="round" 
+    strokeLinejoin="round" 
+  />
 </svg>
