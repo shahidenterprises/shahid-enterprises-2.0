@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Testimonials.module.css';
 import heroStyles from '../PageHero.module.css';
@@ -82,7 +83,18 @@ export default function TestimonialsPage() {
     <>
       {/* Hero */}
       <section className={heroStyles.pageHero}>
-        <div className="container">
+        <div className={heroStyles.heroBg}>
+          <Image 
+            src="/images/goat_casings.png" 
+            alt="Shahid Enterprises Testimonials" 
+            fill 
+            priority 
+            className={heroStyles.heroImage}
+            sizes="100vw"
+          />
+        </div>
+        <div className={heroStyles.heroOverlay} />
+        <div className={`container ${heroStyles.heroContent}`}>
           <div className="accent-line accent-line--center" style={{ marginBottom: '1.25rem' }}></div>
           <h1>Client Testimonials</h1>
           <p>Hear from our international partners about their experience with Shahid Enterprises.</p>
