@@ -22,7 +22,7 @@ const certs = [
   },
   {
     title: 'HACCP Certified',
-    image: '/images/cert_haccp_original.jpg',
+    image: '/images/cert_haccp_8k.png',
     desc: 'Our Hazard Analysis and Critical Control Points (HACCP) certification demonstrates our systematic approach to food safety. Every step of our process is monitored and documented to prevent contamination.',
     tag: 'Food Safety',
     isHaccp: true,
