@@ -1,31 +1,18 @@
 <svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  {/* High-Visibility Favicon with Bold Brand Colors */}
+  {/* Solid Silhouette High-Density Favicon in Brand Green */}
   <path 
-    d="M60 250c0 0-10 80 50 120s280 60 340 0s10-120 10-120" 
-    stroke="#0b5d1e" 
-    strokeWidth="45" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
-  />
-  {/* Main Sausage Body filled for visibility on all backgrounds */}
-  <path 
-    d="M30 200c0 0-15-20 10-40s410 40 440 80s-10 80-60 60" 
+    fill-rule="evenodd" 
+    clip-rule="evenodd" 
+    d="M482.72 135.21c-5.11-12.39-16.14-23.46-30.82-31.11-14.68-7.66-32.96-12.06-47.53-12.06-14.57 0-29.14 4.39-43.82 11.16-14.67 6.78-29.35 15.11-43.82 23.4-28.93 16.58-57.86 33.15-86.79 49.71-14.47 8.28-28.94 16.56-43.41 24.84-14.47 8.28-28.94 16.56-43.41 24.84-14.47 8.28-28.94 16.56-43.41 24.84-43.41 24.84-86.82 49.68-130.23 74.52-12.11 6.92-23.73 13.56-29.41 26.68-5.69 13.12-1 30.55 10.36 43.19s28.16 20.31 42.13 25.13c13.97 4.82 27.94 7.23 41.91 9.64 27.94 4.82 55.88 9.64 83.82 14.46s55.88 9.64 83.82 14.46c6.98 1.21 14.77 2.21 21.05-2.07 6.28-4.28 11.23-13.43 12.87-21.73s1.29-17.41.93-26.11l-1.83-43.4-1.83-43.4-1.83-43.42-3.66-86.84c-3.1-73.65-6.22-147.16-9.33-220.59z" 
     fill="#0b5d1e"
-    stroke="#0b5d1e" 
-    strokeWidth="45" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
   />
   <path 
-    d="M80 180c0 0 10-60 80-100s240-20 300 40s10 110 10 110" 
-    stroke="#0b5d1e" 
-    strokeWidth="45" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
+    d="M480 160c-20 40-60 80-120 120s-140 80-220 100s-120 20-140-20s10-80 60-120s140-80 220-100s120-20 140 20" 
+    fill="#0b5d1e"
   />
-  {/* Highlight line in contrasting white */}
+  {/* Arched Sauce Line in Contrast White */}
   <path 
-    d="M100 190c20-10 40 10 60 0s40-10 60 0s40 10 60 0s40-10 60 0" 
+    d="M100 240c20-15 40 15 60 0s40-15 60 0s40 15 60 0s40-15 60 0s40 15 60 0" 
     stroke="white" 
     strokeWidth="20" 
     strokeLinecap="round" 
