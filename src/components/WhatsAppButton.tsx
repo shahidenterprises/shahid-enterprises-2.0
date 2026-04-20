@@ -3,7 +3,7 @@
 import styles from './WhatsAppButton.module.css';
 
 export default function WhatsAppButton() {
-  const phone = '92XXXXXXXXXX'; // placeholder
+  const phone = '923059312383'; // Verified business number
   const message = encodeURIComponent('Hello Shahid Enterprises, I am interested in your natural casings. Please share details.');
 
   return (

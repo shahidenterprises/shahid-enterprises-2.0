@@ -71,7 +71,7 @@ export default function ContactPage() {
                     </div>
                     <p>
                       <strong>Phone</strong>
-                      +92-XXX-XXXXXXX
+                      +92 305 9312383
                     </p>
                   </div>
                   <div className={styles.infoItem}>
@@ -88,7 +88,7 @@ export default function ContactPage() {
                   </div>
 
                   <a
-                    href="https://wa.me/92XXXXXXXXXX?text=Hello%20Shahid%20Enterprises%2C%20I%20am%20interested%20in%20your%20natural%20casings."
+                    href="https://wa.me/923059312383?text=Hello%20Shahid%20Enterprises%2C%20I%20am%20interested%20in%20your%20natural%20casings."
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.whatsappInline}
