@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Products.module.css';
 import heroStyles from '../PageHero.module.css';
 import SectionHeading from '@/components/SectionHeading';
@@ -22,7 +23,7 @@ const products = [
       'Consistent length and caliber uniformity',
       'EU and Halal compliant processing',
     ],
-    image: 'Afghani Sheep Casings',
+    image: '/images/afghani_sheep.png',
   },
   {
     title: 'Goat Casings',
@@ -35,7 +36,7 @@ const products = [
       'Halal certified sourcing',
       'Custom caliber sorting available',
     ],
-    image: 'Goat Casings',
+    image: '/images/goat_casings.png',
     reverse: true,
   },
   {
@@ -49,7 +50,7 @@ const products = [
       'Temperature-controlled processing',
       'Consistent quality batch after batch',
     ],
-    image: 'Sausage Casings',
+    image: '/images/hero_bg.png',
   },
 ];
 
@@ -72,13 +73,14 @@ export default function ProductsPage() {
             {products.map((product, i) => (
               <AnimatedSection key={i}>
                 <div className={`${styles.productItem} ${product.reverse ? styles.reverse : ''}`}>
-                  <div className={styles.productImagePlaceholder}>
-                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
-                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                      <circle cx="9" cy="9" r="2" />
-                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                    </svg>
-                    <span>{product.image} Image</span>
+                  <div className={styles.productImage}>
+                    <Image 
+                      src={product.image} 
+                      alt={product.title} 
+                      fill 
+                      className={styles.pImg}
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
                   </div>
                   <div className={styles.productInfo}>
                     <h3>{product.title}</h3>

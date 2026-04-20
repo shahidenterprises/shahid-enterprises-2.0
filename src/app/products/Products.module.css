@@ -11,18 +11,18 @@
 .productItem {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
-  padding: 2.5rem;
+  gap: 3.5rem;
+  align-items: stretch;
   background: #fff;
   border-radius: var(--radius-xl);
   border: 1px solid var(--color-border-light);
+  overflow: hidden;
   transition: all var(--transition-base);
 }
 
 .productItem:hover {
-  box-shadow: var(--shadow-lg);
-  border-color: transparent;
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
 }
 
 .productItem.reverse {
@@ -33,27 +33,28 @@
   direction: ltr;
 }
 
-.productImagePlaceholder {
+.productImage {
+  position: relative;
   width: 100%;
-  aspect-ratio: 4/3;
+  min-height: 400px;
   background: var(--color-bg-alt);
-  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.pImg {
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.productItem:hover .pImg {
+  transform: scale(1.06);
+}
+
+.productInfo {
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 0.75rem;
-  color: var(--color-text-light);
-  border: 1.5px dashed var(--color-border);
-}
-
-.productImagePlaceholder svg {
-  opacity: 0.3;
-}
-
-.productImagePlaceholder span {
-  font-size: 0.82rem;
-  font-weight: 500;
 }
 
 .productInfo h3 {

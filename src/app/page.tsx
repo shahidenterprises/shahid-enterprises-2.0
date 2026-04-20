@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Home.module.css';
 import SectionHeading from '@/components/SectionHeading';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -34,7 +35,16 @@ export default function HomePage() {
     <>
       {/* ---- HERO ---- */}
       <section className={styles.hero} id="hero">
-        <div className={styles.heroBg} />
+        <div className={styles.heroBg}>
+          <Image 
+            src="/images/hero_bg.png" 
+            alt="Premium Natural Sheep Casings" 
+            fill 
+            priority 
+            className={styles.heroImage}
+            sizes="100vw"
+          />
+        </div>
         <div className={styles.heroPattern} />
         <div className={styles.heroContent}>
           <AnimatedSection>
@@ -146,7 +156,9 @@ export default function HomePage() {
           <div className={styles.productsGrid}>
             <AnimatedSection delay={0}>
               <Link href="/products" className={styles.productCard}>
-                <div className={styles.productCardBg} style={{ background: 'linear-gradient(135deg, #0B5D1E, #1a8a3e)' }}></div>
+                <div className={styles.productCardImage}>
+                  <Image src="/images/afghani_sheep.png" alt="Natural Sheep Casings" fill sizes="(max-width: 1024px) 100vw, 33vw" />
+                </div>
                 <div className={styles.productCardContent}>
                   <h3>Natural Sheep Casings</h3>
                   <p>Premium quality, sorted by caliber. Available in salted and dry-salted variants for sausage production.</p>
@@ -156,7 +168,9 @@ export default function HomePage() {
             </AnimatedSection>
             <AnimatedSection delay={100}>
               <Link href="/products" className={styles.productCard}>
-                <div className={styles.productCardBg} style={{ background: 'linear-gradient(135deg, #073D14, #0B5D1E)' }}></div>
+                <div className={styles.productCardImage}>
+                  <Image src="/images/goat_casings.png" alt="Goat Casings" fill sizes="(max-width: 1024px) 100vw, 33vw" />
+                </div>
                 <div className={styles.productCardContent}>
                   <h3>Goat Casings</h3>
                   <p>High-quality natural goat casings, processed to international food safety standards for specialized products.</p>
@@ -166,7 +180,9 @@ export default function HomePage() {
             </AnimatedSection>
             <AnimatedSection delay={200}>
               <Link href="/products" className={styles.productCard}>
-                <div className={styles.productCardBg} style={{ background: 'linear-gradient(135deg, #5c3a0e, #8B6914)' }}></div>
+                <div className={styles.productCardImage}>
+                  <Image src="/images/packaging.png" alt="Sausage Casings" fill sizes="(max-width: 1024px) 100vw, 33vw" />
+                </div>
                 <div className={styles.productCardContent}>
                   <h3>Sausage Casings</h3>
                   <p>Ready-to-use processed casings with consistent caliber, ideal for automated filling lines and artisan production.</p>
