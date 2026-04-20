@@ -7,8 +7,18 @@ import SectionHeading from '@/components/SectionHeading';
 import AnimatedSection from '@/components/AnimatedSection';
 
 export const metadata: Metadata = {
-  title: 'Products & Services',
-  description: 'Explore our range of premium natural sheep casings, goat casings, and sausage casings. Bulk supply, OEM solutions, and export packaging available.',
+  title: 'Export Products | Natural Sheep, Goat & Sausage Casings Pakistan',
+  description: 'Explore our range of premium natural sheep and goat casings. Multiple calibers, quality grades (AA-C), and salted/dry-salted variants. EU approved and Halal certified.',
+  keywords: ['natural sheep casings wholesale', 'goat casings export calibers', 'salted sausage casings supplier', 'halal casings exporter Pakistan', 'B2B casings supplier'],
+  alternates: {
+    canonical: 'https://shahidenterprises.com/products',
+  },
+  openGraph: {
+    title: 'Our Natural Casing Products | Shahid Enterprises',
+    description: 'High-quality natural sheep and goat casings for international meat processors.',
+    url: 'https://shahidenterprises.com/products',
+    images: [{ url: '/images/afghani_sheep.png' }],
+  },
 };
 
 const products = [
@@ -62,7 +72,7 @@ export default function ProductsPage() {
         <div className={heroStyles.heroBg}>
           <Image 
             src="/images/afghani_sheep.png" 
-            alt="Shahid Enterprises Product Catalog" 
+            alt="Comprehensive catalog of premium natural sheep and goat casings for international export" 
             fill 
             priority 
             className={heroStyles.heroImage}
@@ -108,9 +118,34 @@ export default function ProductsPage() {
                         </li>
                       ))}
                     </ul>
-                    <Link href="/contact" className="btn btn--primary">
-                      Request Quote →
-                    </Link>
+
+                    <div className={styles.productSpecs}>
+                      <div className={styles.specRow}>
+                        <span className={styles.specLabel}>MOQ:</span>
+                        <span className={styles.specValue}>[To be filled by client]</span>
+                      </div>
+                      <div className={styles.specRow}>
+                        <span className={styles.specLabel}>Lead Time:</span>
+                        <span className={styles.specValue}>[To be filled by client]</span>
+                      </div>
+                      <div className={styles.specRow}>
+                        <span className={styles.specLabel}>Packaging:</span>
+                        <span className={styles.specValue}>Food-grade salted barrels / export drums</span>
+                      </div>
+                      <div className={styles.specRow}>
+                        <span className={styles.specLabel}>Available Variants:</span>
+                        <span className={styles.specValue}>Salted / Dry-salted</span>
+                      </div>
+                    </div>
+
+                    <div className={styles.ctaGroup}>
+                      <Link href="/contact" className="btn btn--primary">
+                        Request Quote →
+                      </Link>
+                      <Link href="/contact" className="btn btn--outline">
+                        Request Sample
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </AnimatedSection>

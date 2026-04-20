@@ -8,8 +8,18 @@ import AnimatedSection from '@/components/AnimatedSection';
 import TestimonialCard from '@/components/TestimonialCard';
 
 export const metadata: Metadata = {
-  title: 'Client Testimonials & Reviews',
+  title: 'Client Reviews & Case Studies | Global Casing Export — Shahid Enterprises',
   description: 'Read what international buyers say about Shahid Enterprises. Trusted by meat processors across Europe, Gulf countries, and Asia for premium natural casings.',
+  keywords: ['natural casing reviews', 'sheep casing supplier testimonials', 'trusted casing exporter Pakistan', 'B2B food supplier reviews'],
+  alternates: {
+    canonical: 'https://shahidenterprises.com/testimonials',
+  },
+  openGraph: {
+    title: 'Customer Satisfaction & Reviews | Shahid Enterprises',
+    description: 'Hear from our international partners about their long-term supply experience with us.',
+    url: 'https://shahidenterprises.com/testimonials',
+    images: [{ url: '/images/goat_casings.png' }],
+  },
 };
 
 const testimonials = [

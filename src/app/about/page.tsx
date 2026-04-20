@@ -6,8 +6,18 @@ import SectionHeading from '@/components/SectionHeading';
 import AnimatedSection from '@/components/AnimatedSection';
 
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: 'About Us | 50 Years of Natural Casing Heritage — Shahid Enterprises',
   description: 'Learn about Shahid Enterprises — Pakistan\'s trusted natural casing manufacturer and exporter since the 1970s. Decades of quality, expertise, and global reach.',
+  keywords: ['natural casing history', 'Pakistan casing manufacturer about', 'Shahid Enterprises history', 'sheep casing export heritage'],
+  alternates: {
+    canonical: 'https://shahidenterprises.com/about',
+  },
+  openGraph: {
+    title: 'About Shahid Enterprises | Natural Casing Experts',
+    description: 'Our journey from a local family business to an international leader in natural casings.',
+    url: 'https://shahidenterprises.com/about',
+    images: [{ url: '/images/factory.png' }],
+  },
 };
 
 export default function AboutPage() {
@@ -18,7 +28,7 @@ export default function AboutPage() {
         <div className={heroStyles.heroBg}>
           <Image 
             src="/images/factory.png" 
-            alt="Shahid Enterprises Heritage" 
+            alt="Shahid Enterprises heritage natural casing processing facility in Multan, Pakistan" 
             fill 
             priority 
             className={heroStyles.heroImage}
@@ -41,7 +51,7 @@ export default function AboutPage() {
               <div className={styles.storyImage}>
                 <Image 
                   src="/images/factory.png" 
-                  alt="Shahid Enterprises Processing Facility" 
+                  alt="Modern cleaning and grading facility for high-quality natural sheep casings" 
                   fill 
                   className={styles.stImg}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -98,6 +108,40 @@ export default function AboutPage() {
                 </div>
               </AnimatedSection>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Section */}
+      <section className={styles.founderSection}>
+        <div className="container">
+          <div className={styles.founderGrid}>
+            <AnimatedSection>
+              <div className={styles.founderImage}>
+                <Image 
+                  src="/images/founder.png" 
+                  alt="Founder of Shahid Enterprises — 50+ years of expertise in the natural casings industry" 
+                  fill 
+                  className={styles.stImg}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={100}>
+              <div className={styles.founderContent}>
+                <div className="accent-line" style={{ marginBottom: '1rem' }}></div>
+                <span className={styles.founderTitle}>Founder &amp; Principal</span>
+                <h3>[Founder Name to be filled by client]</h3>
+                <p>
+                  With more than 50 years of dedicated experience in the natural casings industry, our founder has been the 
+                  driving force behind Shahid Enterprises&apos; commitment to quality and ethical trade.
+                </p>
+                <p>
+                  [Founder biography placeholder: Add 2-3 paragraphs about their journey, 
+                  contributions to the industry, and vision for the company&apos;s global future.]
+                </p>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -190,6 +234,74 @@ export default function AboutPage() {
               <AnimatedSection key={i} delay={i * 100}>
                 <div className={styles.qualityStep}>
                   <div className={styles.qualityNumber}>{step.num}</div>
+                  <h4>{step.title}</h4>
+                  <p>{step.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Export Process */}
+      <section className={styles.processSection}>
+        <div className="container">
+          <AnimatedSection>
+            <SectionHeading
+              label="How We Work"
+              title="Our Seamless Export Process"
+              subtitle="From your initial inquiry to final delivery, we ensure a transparent and efficient global supply chain."
+            />
+          </AnimatedSection>
+          <div className={styles.processGrid}>
+            {[
+                { 
+                  num: '01', 
+                  title: 'Send Inquiry', 
+                  desc: 'Fill out our contact form or WhatsApp us with your required calibers and specifications.',
+                  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                },
+                { 
+                  num: '02', 
+                  title: 'Receive Quote', 
+                  desc: 'Our export team reviews your requirements and provides a competitive quote within 24 hours.',
+                  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M16 8l2-2 2 2M12 18l-2-2-2 2M8 12l2-2 2 2"/></svg>
+                },
+                { 
+                  num: '03', 
+                  title: 'Request Samples', 
+                  desc: 'New buyers can request trial samples to verify our premium quality and sorting standards.',
+                  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 3v18h18"/><polyline points="18 17 12 11 8 15 3 10"/></svg>
+                },
+                { 
+                  num: '04', 
+                  title: 'Confirm Order', 
+                  desc: 'Once samples are approved, we finalize the purchase order and mutually agreed payment terms.',
+                  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                },
+                { 
+                  num: '05', 
+                  title: 'Production & QC', 
+                  desc: 'HACCP-monitored processing begins, with rigorous grading and sanitation protocols at every step.',
+                  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                },
+                { 
+                  num: '06', 
+                  title: 'Documentation', 
+                  desc: 'All necessary health, halal, and export certificates are prepared for seamless customs clearance.',
+                  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                },
+                { 
+                  num: '07', 
+                  title: 'Shipment & Delivery', 
+                  desc: 'Tracked sea or air freight delivery ensures your order arrives on time and in perfect condition.',
+                  icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                },
+            ].map((step, i) => (
+              <AnimatedSection key={i} delay={i * 80}>
+                <div className={styles.processCard}>
+                  <div className={styles.processNumber}>{step.num}</div>
+                  <div className={styles.processIcon}>{step.icon}</div>
                   <h4>{step.title}</h4>
                   <p>{step.desc}</p>
                 </div>

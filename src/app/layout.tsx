@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import CookieConsent from "@/components/CookieConsent";
 
 // Optimized Fonts
 const inter = Inter({
@@ -20,68 +21,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Shahid Enterprises — Premium Natural Sheep Casings Exporter from Pakistan",
-    template: "%s | Shahid Enterprises",
-  },
-  description:
-    "Shahid Enterprises is a leading Pakistan-based manufacturer and exporter of premium natural sheep casings, goat casings, and sausage casings since the 1970s. EU approved, HACCP certified, Halal compliant. Supplying Europe and the Gulf region.",
-  keywords: [
-    "sheep casings supplier Europe",
-    "halal sheep casing exporter",
-    "natural sausage casing Pakistan",
-    "sheep casings Gulf supplier",
-    "EU approved casing exporter",
-    "goat casings manufacturer",
-    "natural casings wholesale",
-    "Pakistan casings exporter",
-  ],
-  authors: [{ name: "Shahid Enterprises" }],
-  creator: "Shahid Enterprises",
-  publisher: "Shahid Enterprises",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  openGraph: {
-    title: "Shahid Enterprises — Premium Natural Casings Exporter",
-    description:
-      "Leading manufacturer and exporter of premium natural sheep and goat casings since the 1970s. EU approved, HACCP certified, serving global markets.",
-    url: "https://shahidenterprises.com",
-    siteName: "Shahid Enterprises",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Shahid Enterprises - Premium Natural Casings",
-      },
-    ],
-    type: "website",
-    locale: "en_US",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Shahid Enterprises — Premium Natural Casings Exporter",
-    description:
-      "Leading manufacturer and exporter of premium natural sheep and goat casings since the 1970s.",
-    images: ["/og-image.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  verification: {
-    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
-  },
+  // ... (will update metadata fully in Phase 5, but adding canonical placeholder now)
   metadataBase: new URL("https://shahidenterprises.com"),
   alternates: {
     canonical: "/",
@@ -93,19 +33,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+  const gaId = process.env.NEXT_PUBLIC_GA_ID || process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Shahid Enterprises",
     "url": "https://shahidenterprises.com",
-    "logo": "https://shahidenterprises.com/logo.png",
-    "description": "Premium Natural Sheep and Goat Casings Exporter from Pakistan since 1970s.",
+    "logo": "https://shahidenterprises.com/images/logo.png",
+    "description": "Premium Natural Sheep and Goat Casings Exporter from Pakistan since 1970s. EU approved, HACCP certified.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Behind Dream Land Cinema, Jilani Road",
       "addressLocality": "Multan",
+      "addressRegion": "Punjab",
+      "postalCode": "60000",
       "addressCountry": "PK"
     },
     "contactPoint": {
@@ -115,7 +57,8 @@ export default function RootLayout({
       "availableLanguage": ["English", "Urdu"]
     },
     "sameAs": [
-      "https://www.linkedin.com/in/shahid-enterprises-multan/"
+      "https://www.linkedin.com/in/shahid-enterprises-multan/",
+      "https://wa.me/923059312383"
     ]
   };
 
@@ -149,7 +92,9 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
+        <CookieConsent />
       </body>
     </html>
   );
 }
+

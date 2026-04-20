@@ -1,4 +1,29 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Shahid Enterprises | Premium Natural Sheep & Goat Casings Exporter Pakistan',
+  description: 'Leading Pakistan-based manufacturer and exporter of premium natural sheep casings, goat casings, and sausage casings since the 1970s. EU approved, HACCP certified, Halal compliant.',
+  keywords: ['natural sheep casings exporter', 'halal sausage casings supplier', 'goat casings Pakistan', 'EU approved casings exporter', 'natural casings wholesale Europe', 'sheep casings Gulf market'],
+  alternates: {
+    canonical: 'https://shahidenterprises.com/',
+  },
+  openGraph: {
+    title: 'Shahid Enterprises | Premium Natural Casings Exporter',
+    description: 'Supplying top-grade natural sheep and goat casings to Europe & the Gulf since 1970.',
+    url: 'https://shahidenterprises.com',
+    siteName: 'Shahid Enterprises',
+    images: [{ url: '/images/hero_home_8k.png', width: 1200, height: 630 }],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Shahid Enterprises | Premium Natural Casings Exporter',
+    description: 'Pakistan\'s trusted name in natural casings manufacturing and export.',
+    images: ['/images/hero_home_8k.png'],
+  },
+};
 import Image from 'next/image';
 import styles from './Home.module.css';
 import SectionHeading from '@/components/SectionHeading';
@@ -38,7 +63,7 @@ export default function HomePage() {
         <div className={styles.heroBg}>
           <Image 
             src="/images/hero_home_8k.png" 
-            alt="Shahid Enterprises Premium Natural Casings" 
+            alt="Premium natural sheep casings and goat casings for export — Shahid Enterprises Pakistan" 
             fill 
             priority 
             className={styles.heroImage}
@@ -78,8 +103,8 @@ export default function HomePage() {
       <section className={styles.statsBar} id="stats">
         <div className={styles.statsGrid}>
           <StatCounter end={50} suffix="+" label="Years Experience" />
-          <StatCounter end={30} suffix="+" label="Export Countries" />
-          <StatCounter end={1000} suffix="+" label="Satisfied Clients" />
+          <StatCounter end={20} suffix="+" label="Export Countries" />
+          <StatCounter end={500} suffix="+" label="Satisfied Clients" />
           <StatCounter end={100} suffix="%" label="Quality Assured" />
         </div>
       </section>
@@ -157,7 +182,7 @@ export default function HomePage() {
             <AnimatedSection delay={0}>
               <Link href="/products" className={styles.productCard}>
                 <div className={styles.productCardImage}>
-                  <Image src="/images/afghani_sheep.png" alt="Natural Sheep Casings" fill sizes="(max-width: 1024px) 100vw, 33vw" />
+                  <Image src="/images/afghani_sheep.png" alt="High-quality natural sheep casings processed for European export" fill sizes="(max-width: 1024px) 100vw, 33vw" />
                 </div>
                 <div className={styles.productCardContent}>
                   <h3>Natural Sheep Casings</h3>
@@ -169,7 +194,7 @@ export default function HomePage() {
             <AnimatedSection delay={100}>
               <Link href="/products" className={styles.productCard}>
                 <div className={styles.productCardImage}>
-                  <Image src="/images/goat_casings.png" alt="Goat Casings" fill sizes="(max-width: 1024px) 100vw, 33vw" />
+                  <Image src="/images/goat_casings.png" alt="Halal certified natural goat casings for international meat processors" fill sizes="(max-width: 1024px) 100vw, 33vw" />
                 </div>
                 <div className={styles.productCardContent}>
                   <h3>Goat Casings</h3>
@@ -181,7 +206,7 @@ export default function HomePage() {
             <AnimatedSection delay={200}>
               <Link href="/products" className={styles.productCard}>
                 <div className={styles.productCardImage}>
-                  <Image src="/images/packaging.png" alt="Sausage Casings" fill sizes="(max-width: 1024px) 100vw, 33vw" />
+                  <Image src="/images/packaging.png" alt="Export-grade salted sausage casings in professional packaging" fill sizes="(max-width: 1024px) 100vw, 33vw" />
                 </div>
                 <div className={styles.productCardContent}>
                   <h3>Sausage Casings</h3>

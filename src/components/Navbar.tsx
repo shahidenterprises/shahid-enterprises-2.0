@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
 
@@ -12,6 +13,7 @@ const navItems = [
   { href: '/certifications', label: 'Certifications' },
   { href: '/testimonials', label: 'Testimonials' },
   { href: '/export-markets', label: 'Global Reach' },
+  { href: '/faq', label: 'FAQ' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -40,7 +42,15 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''} ${mobileOpen ? styles.menuOpen : ''}`} id="main-nav">
       <div className={styles.navInner}>
         <Link href="/" className={styles.logo}>
-          <div className={styles.logoIcon}>SE</div>
+          <div className={styles.logoIcon}>
+            <Image 
+              src="/images/logo.png" 
+              alt="Shahid Enterprises Logo" 
+              width={38} 
+              height={38} 
+              className={styles.logoImg}
+            />
+          </div>
           <span>Shahid Enterprises</span>
         </Link>
 

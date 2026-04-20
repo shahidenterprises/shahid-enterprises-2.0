@@ -19,29 +19,35 @@ export default function StatCounter({ end, suffix = '', prefix = '', label, dura
     const el = ref.current;
     if (!el) return;
 
+    let animationFrameId: number;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
-          let start = 0;
-          const step = end / (duration / 16);
-          const timer = setInterval(() => {
-            start += step;
-            if (start >= end) {
-              setCount(end);
-              clearInterval(timer);
-            } else {
-              setCount(Math.floor(start));
+          const startTime = performance.now();
+
+          const animate = (currentTime: number) => {
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            setCount(Math.floor(progress * end));
+
+            if (progress < 1) {
+              animationFrameId = requestAnimationFrame(animate);
             }
-          }, 16);
+          };
+
+          animationFrameId = requestAnimationFrame(animate);
           observer.unobserve(el);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 }
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+    };
   }, [end, duration]);
 
   return (
