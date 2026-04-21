@@ -38,19 +38,8 @@ const EuCertificate: React.FC<{ className?: string }> = ({ className }) => {
         }}>
           EU Establishment Record — Shahid Enterprises (06-MINFAL-SHE)
         </span>
-        <div style={{ marginLeft: 'auto' }}>
-          <svg width="20" height="20" viewBox="0 0 54 36" xmlns="http://www.w3.org/2000/svg">
-            <rect fill="#003399" width="54" height="36" />
-            <g fill="#FFCC00" transform="translate(27 18) scale(0.12)">
-              {[...Array(12)].map((_, i) => (
-                <path 
-                  key={i} 
-                  d="M0,-100 L22.5,-30.9 H95.1 L36.3,11.8 L58.8,80.9 L0,38.2 L-58.8,80.9 L-36.3,11.8 L-95.1,-30.9 H-22.5 Z" 
-                  transform={`rotate(${i * 30}) translate(0, -150)`} 
-                />
-              ))}
-            </g>
-          </svg>
+        <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
+          <img src="/images/eu_logo.svg" alt="EU Logo" width="28" height="20" style={{ borderRadius: '2px' }} />
         </div>
       </div>
 

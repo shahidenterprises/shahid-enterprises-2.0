@@ -32,9 +32,7 @@ export default function CertificationStrip() {
               style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
             >
               <div className={styles.certStripIcon}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
-                </svg>
+                <img src="/images/eu_logo.svg" alt="EU Export Licensed" width="20" height="20" />
               </div>
               <span>EU Export Licensed</span>
             </button>
