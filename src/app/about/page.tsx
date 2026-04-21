@@ -112,15 +112,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder Section */}
+      {/* CEO Message Section */}
       <section className={styles.founderSection}>
         <div className="container">
           <div className={styles.founderGrid}>
             <AnimatedSection>
               <div className={styles.founderImage}>
                 <Image 
-                  src="/images/founder.png" 
-                  alt="Founder of Shahid Enterprises — 50+ years of expertise in the natural casings industry" 
+                  src="/images/ceo.webp" 
+                  alt="Muhammad Abdullah, CEO of Shahid Enterprises — Driving global growth in the natural casings industry" 
                   fill 
                   className={styles.stImg}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -130,15 +130,22 @@ export default function AboutPage() {
             <AnimatedSection delay={100}>
               <div className={styles.founderContent}>
                 <div className="accent-line" style={{ marginBottom: '1rem' }}></div>
-                <span className={styles.founderTitle}>Founder &amp; Principal</span>
-                <h3>[Founder Name to be filled by client]</h3>
+                <span className={styles.founderTitle}>CEO &amp; Principal</span>
+                <h3>Muhammad Abdullah</h3>
                 <p>
-                  With more than 50 years of dedicated experience in the natural casings industry, our founder has been the 
-                  driving force behind Shahid Enterprises&apos; commitment to quality and ethical trade.
+                  At Shahid Enterprises, our mission is to redefine the standards of excellence in the global natural casings market. 
+                  Building on a foundation of more than 50 years of heritage, we combine traditional craftsmanship with modern 
+                  innovation to serve the world&apos;s most demanding food processors.
                 </p>
                 <p>
-                  [Founder biography placeholder: Add 2-3 paragraphs about their journey, 
-                  contributions to the industry, and vision for the company&apos;s global future.]
+                  Our growth over the decades is built on a single, unwavering principle: **Trust**. We understand that 
+                  in the international export business, reliability and transparency are just as important as the product itself. 
+                  This is why every casing that leaves our facility is treated with the highest respect for quality and food safety.
+                </p>
+                <p>
+                  We view our clients not just as customers, but as long-term partners. We respect your trust in us, 
+                  and we are committed to supporting your business with sustainable sourcing, ethical trade practices, 
+                  and a vision for a shared global future of growth and high-quality production.
                 </p>
               </div>
             </AnimatedSection>

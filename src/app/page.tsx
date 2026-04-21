@@ -31,6 +31,7 @@ import AnimatedSection from '@/components/AnimatedSection';
 import StatCounter from '@/components/StatCounter';
 import TestimonialCard from '@/components/TestimonialCard';
 import CertificationStrip from '@/components/CertificationStrip';
+import { EUFlag, UAEFlag } from '@/components/MarketIcons';
 
 const testimonials = [
   {
@@ -236,14 +237,18 @@ export default function HomePage() {
           <div className={styles.marketsGrid}>
             <AnimatedSection delay={0}>
               <div className={styles.marketCard}>
-                <div className={styles.marketEmoji}>🇪🇺</div>
+                <div className={styles.marketEmoji}>
+                  <EUFlag className={styles.marketIconSvg} />
+                </div>
                 <h4>Europe</h4>
                 <p>Germany, Netherlands, UK, France, Italy, Spain, Poland & more</p>
               </div>
             </AnimatedSection>
             <AnimatedSection delay={100}>
               <div className={styles.marketCard}>
-                <div className={styles.marketEmoji}>🇦🇪</div>
+                <div className={styles.marketEmoji}>
+                  <UAEFlag className={styles.marketIconSvg} />
+                </div>
                 <h4>Gulf & Middle East</h4>
                 <p>UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman</p>
               </div>

@@ -7,11 +7,13 @@ import styles from '../app/certifications/Certifications.module.css';
 import AnimatedSection from './AnimatedSection';
 import CertificateModal from './CertificateModal';
 import HaccpCertificate from './HaccpCertificate';
+import HalalCertificate from './HalalCertificate';
+import FbrCertificate from './FbrCertificate';
 
 const certs = [
   {
     title: 'EU Export License',
-    image: '/images/cert_eu.png',
+    image: '/images/logistics_global.webp', // Using a professional logistics image for EU license preview
     desc: 'Our manufacturing facility holds a valid European Union export license, enabling us to supply natural casings to all EU member states. Our processes comply with EU Regulation standards for food products of animal origin.',
     tag: 'EU Approved',
     icon: (
@@ -37,9 +39,10 @@ const certs = [
   },
   {
     title: 'Halal Certified',
-    image: '/images/cert_halal.png',
+    image: '/images/cert_halal_8k.webp',
     desc: 'All our products are sourced and processed in full compliance with Islamic dietary laws. Our Halal certification covers the entire supply chain from sourcing to final packaging, ensuring complete Halal integrity.',
     tag: 'Halal Compliant',
+    isHalal: true,
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
@@ -48,9 +51,10 @@ const certs = [
   },
   {
     title: 'FBR Approved',
-    image: '/images/cert_fbr.png',
+    image: '/images/cert_fbr_8k.webp',
     desc: 'Registered and approved by the Federal Board of Revenue of Pakistan. Our operations fully comply with all national regulations for export businesses, ensuring transparent and lawful trade practices.',
     tag: 'Government Approved',
+    isFbr: true,
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 2 2 4-4"/>
@@ -60,7 +64,16 @@ const certs = [
 ];
 
 export default function CertsList() {
-  const [isHaccpModalOpen, setIsHaccpModalOpen] = useState(false);
+  const [activeModal, setActiveModal] = useState<null | 'haccp' | 'halal' | 'fbr'>(null);
+
+  const renderActiveCertificate = () => {
+    switch (activeModal) {
+      case 'haccp': return <HaccpCertificate />;
+      case 'halal': return <HalalCertificate />;
+      case 'fbr': return <FbrCertificate />;
+      default: return null;
+    }
+  };
 
   return (
     <>
@@ -85,9 +98,13 @@ export default function CertsList() {
                 <p>{cert.desc}</p>
                 <div className={styles.certFooter}>
                   <span className={styles.certTag}>{cert.tag}</span>
-                  {cert.isHaccp ? (
+                  {(cert.isHaccp || cert.isHalal || cert.isFbr) ? (
                     <button 
-                      onClick={() => setIsHaccpModalOpen(true)}
+                      onClick={() => {
+                        if (cert.isHaccp) setActiveModal('haccp');
+                        if (cert.isHalal) setActiveModal('halal');
+                        if (cert.isFbr) setActiveModal('fbr');
+                      }}
                       className="btn btn--outline btn--small"
                     >
                       View Document
@@ -105,10 +122,10 @@ export default function CertsList() {
       </div>
 
       <CertificateModal 
-        isOpen={isHaccpModalOpen} 
-        onClose={() => setIsHaccpModalOpen(false)}
+        isOpen={activeModal !== null} 
+        onClose={() => setActiveModal(null)}
       >
-        <HaccpCertificate />
+        {renderActiveCertificate()}
       </CertificateModal>
     </>
   );
