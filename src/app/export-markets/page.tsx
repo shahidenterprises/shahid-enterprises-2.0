@@ -23,14 +23,14 @@ export const metadata: Metadata = {
 
 const regions = [
   {
-    emoji: '🇪🇺',
+    flag: '/images/flag_eu.svg',
     title: 'Europe',
     desc: 'Our largest export market. We supply EU-licensed natural casings to major meat processors and distributors across Western and Eastern Europe.',
     countries: ['Germany', 'Netherlands', 'United Kingdom', 'France', 'Italy', 'Spain', 'Poland', 'Belgium', 'Czech Republic', 'Greece'],
     features: ['EU Export License compliant', 'Full documentation & traceability', 'Temperature-controlled shipping', 'Consistent supply schedules'],
   },
   {
-    emoji: '🇦🇪',
+    flag: '/images/flag_uae.svg',
     title: 'Gulf & Middle East',
     desc: 'A rapidly growing market for our Halal-certified casings. We serve major food processors and distributors across the GCC and wider Middle East.',
     countries: ['UAE', 'Saudi Arabia', 'Qatar', 'Kuwait', 'Bahrain', 'Oman', 'Turkey', 'Jordan'],
@@ -94,7 +94,15 @@ export default function ExportMarketsPage() {
               <AnimatedSection key={i} delay={i * 100}>
                 <div className={styles.regionCard}>
                   <div className={styles.regionHeader}>
-                    <div className={styles.regionEmoji}>{region.emoji}</div>
+                    <div className={styles.regionFlag}>
+                      <Image 
+                        src={region.flag} 
+                        alt={`${region.title} Flag`} 
+                        width={40} 
+                        height={28} 
+                        className={styles.fImg}
+                      />
+                    </div>
                     <h3>{region.title}</h3>
                   </div>
                   <p>{region.desc}</p>
