@@ -196,7 +196,7 @@ export default function HomePage() {
             <AnimatedSection delay={100}>
               <Link href="/products" className={styles.productCard}>
                 <div className={styles.productCardImage}>
-                  <Image src="/images/goat_casings.webp" alt="Halal certified natural goat casings for international meat processors" fill sizes="(max-width: 1024px) 100vw, 33vw" />
+                  <Image src="/images/goat_casings.jpg" alt="Halal certified natural goat casings for international meat processors" fill sizes="(max-width: 1024px) 100vw, 33vw" />
                 </div>
                 <div className={styles.productCardContent}>
                   <h3>Goat Casings</h3>

@@ -46,7 +46,7 @@ const products = [
       'Halal certified sourcing',
       'Custom caliber sorting available',
     ],
-    image: '/images/goat_casings.webp',
+    image: '/images/goat_casings.jpg',
     reverse: true,
   },
   {
