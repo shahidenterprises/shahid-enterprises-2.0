@@ -38,10 +38,8 @@ const HalalCertificate: React.FC<{ className?: string }> = ({ className }) => {
         }}>
           Halal Certification — Shahid Enterprises
         </span>
-        <div style={{ marginLeft: 'auto' }}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-          </svg>
+        <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
+          <img src="/images/halal_logo.svg" alt="Halal Icon" width="20" height="20" />
         </div>
       </div>
 
