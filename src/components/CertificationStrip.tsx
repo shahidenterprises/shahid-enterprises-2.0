@@ -4,9 +4,20 @@ import React, { useState } from 'react';
 import styles from '../app/Home.module.css';
 import CertificateModal from './CertificateModal';
 import HaccpCertificate from './HaccpCertificate';
+import HalalCertificate from './HalalCertificate';
+import FbrCertificate from './FbrCertificate';
 
 export default function CertificationStrip() {
-  const [isHaccpModalOpen, setIsHaccpModalOpen] = useState(false);
+  const [activeModal, setActiveModal] = useState<null | 'haccp' | 'halal' | 'fbr'>(null);
+
+  const renderCertificate = () => {
+    switch (activeModal) {
+      case 'haccp': return <HaccpCertificate />;
+      case 'halal': return <HalalCertificate />;
+      case 'fbr': return <FbrCertificate />;
+      default: return null;
+    }
+  };
 
   return (
     <>
@@ -24,7 +35,7 @@ export default function CertificationStrip() {
             
             <button 
               className={styles.certStripItem} 
-              onClick={() => setIsHaccpModalOpen(true)}
+              onClick={() => setActiveModal('haccp')}
               style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
             >
               <div className={styles.certStripIcon}>
@@ -38,32 +49,40 @@ export default function CertificationStrip() {
               <span>HACCP Approved</span>
             </button>
 
-            <div className={styles.certStripItem}>
+            <button 
+              className={styles.certStripItem} 
+              onClick={() => setActiveModal('halal')}
+              style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
+            >
               <div className={styles.certStripIcon}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                 </svg>
               </div>
               <span>Halal Certified</span>
-            </div>
+            </button>
             
-            <div className={styles.certStripItem}>
+            <button 
+              className={styles.certStripItem} 
+              onClick={() => setActiveModal('fbr')}
+              style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
+            >
               <div className={styles.certStripIcon}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 2 2 4-4"/>
                 </svg>
               </div>
               <span>FBR Approved</span>
-            </div>
+            </button>
           </div>
         </div>
       </section>
 
       <CertificateModal 
-        isOpen={isHaccpModalOpen} 
-        onClose={() => setIsHaccpModalOpen(false)}
+        isOpen={activeModal !== null} 
+        onClose={() => setActiveModal(null)}
       >
-        <HaccpCertificate />
+        {renderCertificate()}
       </CertificateModal>
     </>
   );
