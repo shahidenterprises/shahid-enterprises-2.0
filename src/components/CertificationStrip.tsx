@@ -6,15 +6,17 @@ import CertificateModal from './CertificateModal';
 import HaccpCertificate from './HaccpCertificate';
 import HalalCertificate from './HalalCertificate';
 import FbrCertificate from './FbrCertificate';
+import EuCertificate from './EuCertificate';
 
 export default function CertificationStrip() {
-  const [activeModal, setActiveModal] = useState<null | 'haccp' | 'halal' | 'fbr'>(null);
+  const [activeModal, setActiveModal] = useState<null | 'haccp' | 'halal' | 'fbr' | 'eu'>(null);
 
   const renderCertificate = () => {
     switch (activeModal) {
       case 'haccp': return <HaccpCertificate />;
       case 'halal': return <HalalCertificate />;
       case 'fbr': return <FbrCertificate />;
+      case 'eu': return <EuCertificate />;
       default: return null;
     }
   };
@@ -24,14 +26,18 @@ export default function CertificationStrip() {
       <section className={styles.certStrip} id="certs-strip">
         <div className="container">
           <div className={styles.certStripGrid}>
-            <div className={styles.certStripItem}>
+            <button 
+              className={styles.certStripItem} 
+              onClick={() => setActiveModal('eu')}
+              style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
+            >
               <div className={styles.certStripIcon}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
                 </svg>
               </div>
               <span>EU Export Licensed</span>
-            </div>
+            </button>
             
             <button 
               className={styles.certStripItem} 

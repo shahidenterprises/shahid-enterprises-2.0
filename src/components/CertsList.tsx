@@ -9,13 +9,15 @@ import CertificateModal from './CertificateModal';
 import HaccpCertificate from './HaccpCertificate';
 import HalalCertificate from './HalalCertificate';
 import FbrCertificate from './FbrCertificate';
+import EuCertificate from './EuCertificate';
 
 const certs = [
   {
     title: 'EU Export License',
-    image: '/images/logistics_global.webp', // Using a professional logistics image for EU license preview
-    desc: 'Our manufacturing facility holds a valid European Union export license, enabling us to supply natural casings to all EU member states. Our processes comply with EU Regulation standards for food products of animal origin.',
+    image: '/images/cert_eu_8k.webp',
+    desc: 'Our manufacturing facility holds a valid European Union export license (Reg # 06-MINFAL-SHE), enabling us to supply natural casings to all EU member states in full compliance with international food safety standards.',
     tag: 'EU Approved',
+    isEu: true,
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>
@@ -64,13 +66,14 @@ const certs = [
 ];
 
 export default function CertsList() {
-  const [activeModal, setActiveModal] = useState<null | 'haccp' | 'halal' | 'fbr'>(null);
+  const [activeModal, setActiveModal] = useState<null | 'haccp' | 'halal' | 'fbr' | 'eu'>(null);
 
   const renderActiveCertificate = () => {
     switch (activeModal) {
       case 'haccp': return <HaccpCertificate />;
       case 'halal': return <HalalCertificate />;
       case 'fbr': return <FbrCertificate />;
+      case 'eu': return <EuCertificate />;
       default: return null;
     }
   };
@@ -98,12 +101,13 @@ export default function CertsList() {
                 <p>{cert.desc}</p>
                 <div className={styles.certFooter}>
                   <span className={styles.certTag}>{cert.tag}</span>
-                  {(cert.isHaccp || cert.isHalal || cert.isFbr) ? (
+                  {(cert.isHaccp || cert.isHalal || cert.isFbr || cert.isEu) ? (
                     <button 
                       onClick={() => {
                         if (cert.isHaccp) setActiveModal('haccp');
                         if (cert.isHalal) setActiveModal('halal');
                         if (cert.isFbr) setActiveModal('fbr');
+                        if (cert.isEu) setActiveModal('eu');
                       }}
                       className="btn btn--outline btn--small"
                     >
