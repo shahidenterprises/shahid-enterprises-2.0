@@ -139,10 +139,18 @@ export default function ProductsPage() {
                     </div>
 
                     <div className={styles.ctaGroup}>
-                      <Link href="/contact" className="btn btn--primary">
+                      <Link 
+                        href="/contact" 
+                        id={`product-cta-quote-${product.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="btn btn--primary"
+                      >
                         Request Quote →
                       </Link>
-                      <Link href="/contact" className="btn btn--outline">
+                      <Link 
+                        href="/contact" 
+                        id={`product-cta-sample-${product.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="btn btn--outline"
+                      >
                         Request Sample
                       </Link>
                     </div>
@@ -207,8 +215,8 @@ export default function ProductsPage() {
             <h2>Need a Custom Solution?</h2>
             <p>Our export team is ready to discuss your specific requirements and provide competitive quotes.</p>
             <div className={styles.ctaBtns}>
-              <Link href="/contact" className="btn btn--accent btn--large">Get a Quote →</Link>
-              <Link href="/certifications" className="btn btn--secondary btn--large">View Certifications</Link>
+              <Link href="/contact" id="products-footer-cta-quote" className="btn btn--accent btn--large">Get a Quote →</Link>
+              <Link href="/certifications" id="products-footer-cta-certs" className="btn btn--secondary btn--large">View Certifications</Link>
             </div>
           </AnimatedSection>
         </div>

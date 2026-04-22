@@ -188,8 +188,8 @@ export default function ExportMarketsPage() {
             <h2>Become a Partner</h2>
             <p>Whether you&apos;re an established buyer or entering a new market, we&apos;re ready to supply premium casings to your region.</p>
             <div className={styles.ctaBtns}>
-              <Link href="/contact" className="btn btn--accent btn--large">Contact Export Team →</Link>
-              <Link href="/products" className="btn btn--secondary btn--large">View Products</Link>
+              <Link href="/contact" id="markets-footer-cta-contact" className="btn btn--accent btn--large">Contact Export Team →</Link>
+              <Link href="/products" id="markets-footer-cta-products" className="btn btn--secondary btn--large">View Products</Link>
             </div>
           </AnimatedSection>
         </div>

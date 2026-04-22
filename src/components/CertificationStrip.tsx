@@ -32,7 +32,7 @@ export default function CertificationStrip() {
               style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
             >
               <div className={styles.certStripIcon}>
-                <img src="/images/eu_logo.svg" alt="EU Export Licensed" width="20" height="20" />
+                <img src="/images/eu_logo.svg" alt="EU Export Licensed" width="40" height="40" />
               </div>
               <span>EU Export Licensed</span>
             </button>
@@ -43,7 +43,7 @@ export default function CertificationStrip() {
               style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
             >
               <div className={styles.certStripIcon}>
-                <svg width="24" height="24" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="48" height="48" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M70 60 L150 30 L230 60 V160 C230 210 150 250 150 250 C150 250 70 210 70 160 V60Z" fill="#0A2540"/>
                   <path d="M110 90 V170 M190 90 V170 M110 130 H190" stroke="#FFFFFF" strokeWidth="14" strokeLinecap="square" />
                   <circle cx="215" cy="75" r="18" fill="#00D4FF"/>
@@ -59,7 +59,7 @@ export default function CertificationStrip() {
               style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
             >
               <div className={styles.certStripIcon}>
-                <img src="/images/halal_logo.svg" alt="Halal Certified" width="20" height="20" />
+                <img src="/images/halal_logo.svg" alt="Halal Certified" width="40" height="40" />
               </div>
               <span>Halal Certified</span>
             </button>
@@ -70,7 +70,7 @@ export default function CertificationStrip() {
               style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
             >
               <div className={styles.certStripIcon}>
-                <img src="/images/fbr_logo.svg" alt="FBR Approved" width="20" height="20" />
+                <img src="/images/fbr_logo.svg" alt="FBR Approved" width="40" height="40" />
               </div>
               <span>FBR Approved</span>
             </button>

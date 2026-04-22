@@ -67,6 +67,7 @@ export default function ContactForm() {
         <p>Thank you for reaching out. Our export team will respond within 24 hours.</p>
         <button 
           onClick={() => setSubmitted(false)} 
+          id="contact-success-reset-btn"
           className="btn btn--outline btn--large"
           style={{ marginTop: '2rem' }}
         >
@@ -78,34 +79,34 @@ export default function ContactForm() {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit} id="contact-form">
-      {error && <div className={styles.error}>{error}</div>}
+      {error && <div className={styles.error} id="contact-form-error">{error}</div>}
 
       <div className={styles.row}>
         <div className={styles.field}>
-          <label htmlFor="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="Name" required />
+          <label htmlFor="contact-name">Full Name</label>
+          <input type="text" id="contact-name" name="name" placeholder="Name" required />
         </div>
         <div className={styles.field}>
-          <label htmlFor="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="Email" required />
+          <label htmlFor="contact-email">Email Address</label>
+          <input type="email" id="contact-email" name="email" placeholder="Email" required />
         </div>
       </div>
 
       <div className={styles.row}>
         <div className={styles.field}>
-          <label htmlFor="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="Phone" />
+          <label htmlFor="contact-phone">Phone Number</label>
+          <input type="tel" id="contact-phone" name="phone" placeholder="Phone" />
         </div>
         <div className={styles.field}>
-          <label htmlFor="company">Company Name</label>
-          <input type="text" id="company" name="company" placeholder="Company" />
+          <label htmlFor="contact-company">Company Name</label>
+          <input type="text" id="contact-company" name="company" placeholder="Company" />
         </div>
       </div>
 
       <div className={styles.row}>
         <div className={styles.field}>
-          <label htmlFor="country">Country</label>
-          <select id="country" name="country" required defaultValue="">
+          <label htmlFor="contact-country">Country</label>
+          <select id="contact-country" name="country" required defaultValue="">
             <option value="" disabled>Select Country</option>
             {countries.slice(1).map(c => (
               <option key={c} value={c}>{c}</option>
@@ -113,8 +114,8 @@ export default function ContactForm() {
           </select>
         </div>
         <div className={styles.field}>
-          <label htmlFor="product">Product Interest</label>
-          <select id="product" name="product" required defaultValue="">
+          <label htmlFor="contact-product">Product Interest</label>
+          <select id="contact-product" name="product" required defaultValue="">
             <option value="" disabled>Select Interest</option>
             {products.slice(1).map(p => (
               <option key={p} value={p}>{p}</option>
@@ -124,14 +125,14 @@ export default function ContactForm() {
       </div>
 
       <div className={styles.field} style={{ display: 'none' }} aria-hidden="true">
-        <label htmlFor="website_url">Website URL</label>
-        <input type="text" id="website_url" name="website_url" tabIndex={-1} autoComplete="off" />
+        <label htmlFor="contact-website-url">Website URL</label>
+        <input type="text" id="contact-website-url" name="website_url" tabIndex={-1} autoComplete="off" />
       </div>
 
       <div className={styles.field}>
-        <label htmlFor="message">Message</label>
+        <label htmlFor="contact-message">Message</label>
         <textarea
-          id="message"
+          id="contact-message"
           name="message"
           placeholder="How can we help you?"
           required
@@ -140,6 +141,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
+        id="contact-form-submit-btn"
         className={`btn btn--primary btn--large ${styles.submitBtn}`}
         disabled={loading}
       >

@@ -40,6 +40,11 @@ export default function AboutPage() {
           <div className="accent-line accent-line--center" style={{ marginBottom: '1.25rem' }}></div>
           <h1>Our Legacy of Excellence</h1>
           <p>Five decades of manufacturing premium natural casings, trusted by meat processors across Europe and the Gulf.</p>
+          <div style={{ marginTop: '2rem' }}>
+            <Link href="/contact" id="about-hero-cta-quote" className="btn btn--accent">
+              Work With Us →
+            </Link>
+          </div>
         </div>
       </section>
 

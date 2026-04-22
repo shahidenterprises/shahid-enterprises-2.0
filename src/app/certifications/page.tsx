@@ -126,8 +126,8 @@ export default function CertificationsPage() {
             <h2>Quality You Can Trust</h2>
             <p>Partner with a certified, experienced supplier. Request documentation or schedule a facility review.</p>
             <div className={styles.trustBtns}>
-              <Link href="/contact" className="btn btn--accent btn--large">Contact Our Team →</Link>
-              <Link href="/products" className="btn btn--secondary btn--large">View Products</Link>
+              <Link href="/contact" id="certs-footer-cta-contact" className="btn btn--accent btn--large">Contact Our Team →</Link>
+              <Link href="/products" id="certs-footer-cta-products" className="btn btn--secondary btn--large">View Products</Link>
             </div>
           </AnimatedSection>
         </div>

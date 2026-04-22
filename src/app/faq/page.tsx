@@ -121,6 +121,23 @@ export default function FAQPage() {
             </div>
           ))}
         </div>
+      <section className={styles.faqCta} id="faq-cta-section">
+        <div className="container" style={{ textAlign: 'center', padding: '4rem 0' }}>
+          <AnimatedSection>
+            <h2 id="faq-cta-title">Still have questions?</h2>
+            <p style={{ marginBottom: '2rem', color: 'var(--color-text-secondary)' }}>
+              Our expert support team is always ready to help you with your specific requirements.
+            </p>
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Link href="/contact" id="faq-cta-email" className="btn btn--primary">
+                Email Our Team
+              </Link>
+              <a href="https://wa.me/923059312383" id="faq-cta-whatsapp" className="btn btn--outline" target="_blank" rel="noopener noreferrer">
+                WhatsApp Inquiry
+              </a>
+            </div>
+          </AnimatedSection>
+        </div>
       </section>
     </>
   );

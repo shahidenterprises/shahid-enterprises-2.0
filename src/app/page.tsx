@@ -85,10 +85,10 @@ export default function HomePage() {
               EU approved, HACCP certified, and Halal compliant — serving international meat processing industries for over 50 years.
             </p>
             <div className={styles.heroCtas}>
-              <Link href="/contact" className="btn btn--accent btn--large">
+              <Link href="/contact" id="hero-cta-quote" className="btn btn--accent btn--large">
                 Get a Quote →
               </Link>
-              <Link href="/products" className="btn btn--secondary btn--large">
+              <Link href="/products" id="hero-cta-products" className="btn btn--secondary btn--large">
                 View Products
               </Link>
             </div>
@@ -102,7 +102,7 @@ export default function HomePage() {
 
       {/* ---- STATS BAR ---- */}
       <section className={styles.statsBar} id="stats">
-        <div className={styles.statsGrid}>
+        <div className={styles.statsGrid} id="stats-grid">
           <StatCounter end={50} suffix="+" label="Years Experience" />
           <StatCounter end={20} suffix="+" label="Export Countries" />
           <StatCounter end={500} suffix="+" label="Satisfied Clients" />
@@ -134,9 +134,9 @@ export default function HomePage() {
               subtitle="From traditional sheep casings to custom-sized goat casings — we offer a complete range for global meat processors."
             />
           </AnimatedSection>
-          <div className={styles.productsGrid}>
+          <div className={styles.productsGrid} id="products-grid">
             <AnimatedSection delay={0}>
-              <Link href="/products" className={styles.productCard}>
+              <Link href="/products" id="product-preview-sheep" className={styles.productCard}>
                 <div className={styles.productCardImage}>
                   <Image src="/images/afghani_casings.webp" alt="Premium Afghani sheep casings being processed — natural casings for European and Gulf export" fill sizes="(max-width: 1024px) 100vw, 33vw" />
                 </div>
@@ -148,7 +148,7 @@ export default function HomePage() {
               </Link>
             </AnimatedSection>
             <AnimatedSection delay={100}>
-              <Link href="/products" className={styles.productCard}>
+              <Link href="/products" id="product-preview-goat" className={styles.productCard}>
                 <div className={styles.productCardImage}>
                   <Image src="/images/goat_casings.jpg" alt="Halal certified natural goat casings for international meat processors" fill sizes="(max-width: 1024px) 100vw, 33vw" />
                 </div>
@@ -160,7 +160,7 @@ export default function HomePage() {
               </Link>
             </AnimatedSection>
             <AnimatedSection delay={200}>
-              <Link href="/products" className={styles.productCard}>
+              <Link href="/products" id="product-preview-sausage" className={styles.productCard}>
                 <div className={styles.productCardImage}>
                   <Image src="/images/packaging.webp" alt="Export-grade salted sausage casings in professional packaging" fill sizes="(max-width: 1024px) 100vw, 33vw" />
                 </div>
@@ -188,9 +188,9 @@ export default function HomePage() {
               subtitle="Our casings are trusted by meat processors and food manufacturers across Europe and the Gulf."
             />
           </AnimatedSection>
-          <div className={styles.marketsGrid}>
+          <div className={styles.marketsGrid} id="markets-grid">
             <AnimatedSection delay={0}>
-              <div className={styles.marketCard}>
+              <div className={styles.marketCard} id="market-card-europe">
                 <div className={styles.marketEmoji}>
                   <EUFlag className={styles.marketIconSvg} />
                 </div>
@@ -199,7 +199,7 @@ export default function HomePage() {
               </div>
             </AnimatedSection>
             <AnimatedSection delay={100}>
-              <div className={styles.marketCard}>
+              <div className={styles.marketCard} id="market-card-gulf">
                 <div className={styles.marketEmoji}>
                   <UAEFlag className={styles.marketIconSvg} />
                 </div>
@@ -221,7 +221,7 @@ export default function HomePage() {
               subtitle="Hear from our international partners about their experience working with Shahid Enterprises."
             />
           </AnimatedSection>
-          <div className={styles.testimonialsGrid}>
+          <div className={styles.testimonialsGrid} id="testimonials-grid">
             {testimonials.map((t, i) => (
               <AnimatedSection key={i} delay={i * 100}>
                 <TestimonialCard {...t} />
@@ -238,10 +238,10 @@ export default function HomePage() {
             <h2>Ready to Source Premium Natural Casings?</h2>
             <p>Connect with our export team today. We respond to all inquiries within 24 hours.</p>
             <div className={styles.ctaBtns}>
-              <Link href="/contact" className="btn btn--accent btn--large">
+              <Link href="/contact" id="cta-banner-quote" className="btn btn--accent btn--large">
                 Request a Quote →
               </Link>
-              <Link href="/products" className="btn btn--secondary btn--large">
+              <Link href="/products" id="cta-banner-products" className="btn btn--secondary btn--large">
                 Browse Products
               </Link>
             </div>

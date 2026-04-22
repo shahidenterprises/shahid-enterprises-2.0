@@ -21,10 +21,56 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  // ... (will update metadata fully in Phase 5, but adding canonical placeholder now)
   metadataBase: new URL("https://shahidenterprises.com"),
+  title: {
+    default: "Shahid Enterprises | Premium Natural Sheep & Goat Casings Exporter",
+    template: "%s | Shahid Enterprises",
+  },
+  description: "Leading Pakistan-based manufacturer and exporter of premium natural sheep and goat casings since 1970. EU approved, HACCP certified, and Halal compliant.",
+  keywords: ["natural sheep casings", "goat casings", "sausage casings exporter", "Pakistan casings manufacturer", "EU approved casings", "Halal casings"],
+  authors: [{ name: "Shahid Enterprises" }],
+  creator: "Shahid Enterprises",
+  publisher: "Shahid Enterprises",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   alternates: {
     canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://shahidenterprises.com",
+    siteName: "Shahid Enterprises",
+    title: "Shahid Enterprises | Premium Natural Casings Exporter",
+    description: "Quality Natural Sheep and Goat Casings from Pakistan. Serving international industries since 1970.",
+    images: [
+      {
+        url: "/images/hero_home_8k.webp",
+        width: 1200,
+        height: 630,
+        alt: "Shahid Enterprises Premium Natural Casings",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shahid Enterprises | Premium Natural Casings Exporter",
+    description: "Quality Natural Sheep and Goat Casings from Pakistan. Serving international industries since 1970.",
+    images: ["/images/hero_home_8k.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 

@@ -42,18 +42,19 @@ export default function Navbar() {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''} ${mobileOpen ? styles.menuOpen : ''}`} id="main-nav">
       <div className={styles.navInner}>
-        <Link href="/" className={styles.logo}>
+        <Link href="/" className={styles.logo} id="nav-logo">
           <div className={styles.logoIcon}>
             <Logo width={42} height={42} />
           </div>
           <span>Shahid Enterprises</span>
         </Link>
 
-        <div className={styles.navLinks}>
+        <div className={styles.navLinks} id="desktop-nav-links">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
+              id={`nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
               className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
             >
               {item.label}
@@ -61,7 +62,11 @@ export default function Navbar() {
           ))}
         </div>
 
-        <Link href="/contact" className={`btn btn--accent btn--small ${styles.navCta} ${styles.desktopOnly}`}>
+        <Link 
+          href="/contact" 
+          id="nav-cta-quote"
+          className={`btn btn--accent btn--small ${styles.navCta} ${styles.desktopOnly}`}
+        >
           Get a Quote
         </Link>
 
@@ -77,17 +82,23 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div className={`${styles.mobileMenu} ${mobileOpen ? styles.open : ''}`}>
+      <div className={`${styles.mobileMenu} ${mobileOpen ? styles.open : ''}`} id="mobile-nav-menu">
         {navItems.map((item) => (
           <Link
             key={item.href}
             href={item.href}
+            id={`mobile-nav-link-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
             className={`${styles.navLink} ${pathname === item.href ? styles.active : ''}`}
           >
             {item.label}
           </Link>
         ))}
-        <Link href="/contact" className="btn btn--accent" style={{ marginTop: '1rem' }}>
+        <Link 
+          href="/contact" 
+          id="mobile-nav-cta-quote"
+          className="btn btn--accent" 
+          style={{ marginTop: '1rem' }}
+        >
           Get a Quote
         </Link>
       </div>
