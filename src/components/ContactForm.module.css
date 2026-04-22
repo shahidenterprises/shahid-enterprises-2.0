@@ -1,7 +1,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 2.25rem; /* Increased for breathing room */
+  gap: 1.5rem; /* Reverting to balanced desktop gap */
   max-width: 600px;
   margin: 0 auto;
 }
@@ -9,7 +9,7 @@
 .row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.75rem; /* Increased for breathing room */
+  gap: 1.25rem; /* Reverting to balanced desktop gap */
 }
 
 .field {
@@ -131,12 +131,19 @@
 @media (max-width: 640px) {
   .row {
     grid-template-columns: 1fr;
-    gap: 1.75rem;
+    gap: 1rem;
   }
   
   .form {
     padding: 0 0.5rem;
-    gap: 1.75rem;
+    gap: 1rem;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
   }
 }
 
