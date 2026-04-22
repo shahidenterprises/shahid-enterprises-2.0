@@ -69,7 +69,7 @@ export default function WhyChooseUsGrid() {
                 <p>{card.desc}</p>
               </Link>
             ) : (
-              <button onClick={card.onClick} className={styles.whyCard} style={{ textAlign: 'center', width: '100%', background: 'none', cursor: 'pointer' }}>
+              <button onClick={card.onClick} className={styles.whyCard}>
                 <div className={styles.whyIcon}>{card.icon}</div>
                 <h3>{card.title}</h3>
                 <p>{card.desc}</p>

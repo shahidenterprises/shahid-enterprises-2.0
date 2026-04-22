@@ -165,7 +165,10 @@
   text-decoration: none;
   color: inherit;
   width: 100%;
-  border: 1px solid var(--color-border-light);
+  box-sizing: border-box;
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .whyCard:hover {
