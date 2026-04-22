@@ -4,6 +4,7 @@ import styles from './About.module.css';
 import heroStyles from '../PageHero.module.css';
 import SectionHeading from '@/components/SectionHeading';
 import AnimatedSection from '@/components/AnimatedSection';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'About Us | 50 Years of Natural Casing Heritage — Shahid Enterprises',

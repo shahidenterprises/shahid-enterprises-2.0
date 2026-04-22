@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './FAQ.module.css';
 import heroStyles from '../PageHero.module.css';
 import AnimatedSection from '@/components/AnimatedSection';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'FAQ | Natural Casings Export — Shahid Enterprises Pakistan',
@@ -121,6 +122,7 @@ export default function FAQPage() {
             </div>
           ))}
         </div>
+      </section>
       <section className={styles.faqCta} id="faq-cta-section">
         <div className="container" style={{ textAlign: 'center', padding: '4rem 0' }}>
           <AnimatedSection>
