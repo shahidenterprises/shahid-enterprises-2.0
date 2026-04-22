@@ -32,8 +32,7 @@ import StatCounter from '@/components/StatCounter';
 import TestimonialCard from '@/components/TestimonialCard';
 import CertificationStrip from '@/components/CertificationStrip';
 import { EUFlag, UAEFlag } from '@/components/MarketIcons';
-
-const testimonials = [
+import WhyChooseUsGrid from '@/components/WhyChooseUsGrid';const testimonials = [
   {
     text: "Shahid Enterprises has been our trusted supplier for over 8 years. Their casings are consistently high quality and meet all EU standards. Highly recommended for any serious meat processor.",
     author: "Hans Mueller",
@@ -121,52 +120,7 @@ export default function HomePage() {
               subtitle="We combine traditional craftsmanship with modern quality standards to deliver premium casings that meet the highest international benchmarks."
             />
           </AnimatedSection>
-          <div className={styles.whyGrid}>
-            <AnimatedSection delay={0}>
-              <div className={styles.whyCard}>
-                <div className={styles.whyIcon}>
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                  </svg>
-                </div>
-                <h3>Certified Quality</h3>
-                <p>EU approved, HACCP certified, and Halal compliant products meeting the strictest international standards.</p>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={100}>
-              <div className={styles.whyCard}>
-                <div className={styles.whyIcon}>
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-                  </svg>
-                </div>
-                <h3>50+ Years Experience</h3>
-                <p>Since the 1970s, we have refined our processes and built lasting relationships with buyers in Europe and the Gulf.</p>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={200}>
-              <div className={styles.whyCard}>
-                <div className={styles.whyIcon}>
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
-                  </svg>
-                </div>
-                <h3>Global Reach</h3>
-                <p>Exporting to countries across Europe and the Gulf states with reliable logistics.</p>
-              </div>
-            </AnimatedSection>
-            <AnimatedSection delay={300}>
-              <div className={styles.whyCard}>
-                <div className={styles.whyIcon}>
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
-                  </svg>
-                </div>
-                <h3>Custom Packaging</h3>
-                <p>Export-grade packaging with OEM options, custom calibers, and bulk supply solutions for every need.</p>
-              </div>
-            </AnimatedSection>
-          </div>
+          <WhyChooseUsGrid />
         </div>
       </section>
 

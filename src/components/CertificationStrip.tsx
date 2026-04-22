@@ -70,9 +70,7 @@ export default function CertificationStrip() {
               style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
             >
               <div className={styles.certStripIcon}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 2 2 4-4"/>
-                </svg>
+                <img src="/images/fbr_logo.svg" alt="FBR Approved" width="20" height="20" />
               </div>
               <span>FBR Approved</span>
             </button>
