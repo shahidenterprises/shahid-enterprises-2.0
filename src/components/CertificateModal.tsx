@@ -20,7 +20,7 @@ export default function CertificateModal({ isOpen, onClose, children }: Certific
       const timer = setTimeout(() => {
         setShouldRender(false);
         document.body.style.overflow = '';
-      }, 400); // Match transition duration
+      }, 300); // Match transition duration (0.3s)
       return () => clearTimeout(timer);
     }
   }, [isOpen]);
