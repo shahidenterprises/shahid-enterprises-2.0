@@ -83,8 +83,8 @@ export default function WhyChooseUsGrid() {
         isOpen={isContactModalOpen} 
         onClose={() => setIsContactModalOpen(false)}
       >
-        <div style={{ padding: '1rem' }}>
-          <h2 style={{ textAlign: 'center', marginBottom: '1.5rem', fontSize: '1.8rem', letterSpacing: '-0.02em' }}>Inquire About Custom Packaging</h2>
+        <div style={{ padding: '2.5rem 2rem' }}>
+          <h2 style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '2rem', letterSpacing: '-0.03em', fontWeight: 700 }}>Custom Packaging Inquiry</h2>
           <ContactForm />
         </div>
       </CertificateModal>
