@@ -71,7 +71,7 @@
 }
 
 .submitBtn {
-  margin: 2rem auto 0; /* Vertical spacing */
+  margin: 1.5rem auto 0; /* Reduced top margin to push button slightly above */
   width: max-content; /* Refined smaller width */
   padding: 0.85rem 2.5rem;
   font-size: 0.95rem;
