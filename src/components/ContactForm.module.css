@@ -71,7 +71,7 @@
 }
 
 .submitBtn {
-  margin: 1.5rem auto 0; /* Reduced top margin to push button slightly above */
+  margin: 1rem auto 2rem; /* Move higher (1rem top) but keep card tall (2rem bottom) */
   width: max-content; /* Refined smaller width */
   padding: 0.85rem 2.5rem;
   font-size: 0.95rem;
