@@ -82,16 +82,17 @@
 }
 
 .modalBody {
-  padding: 2.5rem 2.5rem;
+  padding: 6rem 5rem; /* Significantly increased for a premium "airy" look */
 }
 
 .modalTitle {
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  letter-spacing: -0.03em;
-  font-weight: 700;
+  margin-bottom: 4rem; /* More space between title and form fields */
+  font-size: 2.25rem;
+  letter-spacing: -0.04em;
+  font-weight: 800;
   color: var(--color-text);
+  line-height: 1.1;
 }
 
 @media (max-width: 768px) {
@@ -108,11 +109,11 @@
   }
 
   .modalBody {
-    padding: 2rem 1.25rem;
+    padding: 3.5rem 1.5rem; /* Better breathing room on mobile */
   }
 
   .modalTitle {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
   }
 }
