@@ -4,18 +4,17 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(4, 15, 8, 0.99); /* Almost solid dark green to ensure zero background text bleed */
+  background: rgba(4, 15, 8, 0.99);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   z-index: 9999;
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* Centered for desktop */
   justify-content: center;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
-  overflow-y: auto; /* The entire modal scrolls within this layer */
-  -webkit-overflow-scrolling: touch;
+  overflow: hidden; /* No scroll on desktop by default */
 }
 
 .visible {
@@ -24,16 +23,16 @@
 }
 
 .modalContent {
-  width: 92%; /* Prevents bleeding outside mobile boundaries */
+  width: 92%;
   max-width: 850px;
-  margin: 5vh auto; /* Standard top-center positioning with breathing room */
   position: relative;
   transform: translateY(20px);
   transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.3s ease;
   border-radius: var(--radius-xl);
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
-  background: #ffffff; /* Solid white for maximum isolation */
+  background: #ffffff;
   z-index: 10000;
+  overflow: hidden; /* Fixes button clipping */
 }
 
 .visible .modalContent {
@@ -82,7 +81,7 @@
 }
 
 .modalBody {
-  padding: 6rem 5rem; /* Significantly increased for a premium "airy" look */
+  padding: 3rem 4rem; /* Reduced padding for better desktop fit */
 }
 
 .modalTitle {
@@ -96,9 +95,16 @@
 }
 
 @media (max-width: 768px) {
+  .overlay {
+    align-items: flex-start;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
   .modalContent {
-    margin: 2rem auto; /* Consistent top margin on mobile */
+    margin: 2rem auto;
     width: 94%;
+    overflow: visible; /* Allow scrolling content on mobile if needed */
   }
   
   .closeButton {
@@ -109,11 +115,6 @@
   }
 
   .modalBody {
-    padding: 3.5rem 1.5rem; /* Better breathing room on mobile */
-  }
-
-  .modalTitle {
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+    padding: 3rem 1.25rem;
   }
 }

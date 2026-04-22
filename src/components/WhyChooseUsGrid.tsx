@@ -84,7 +84,6 @@ export default function WhyChooseUsGrid() {
         onClose={() => setIsContactModalOpen(false)}
       >
         <div className={styles.modalBody}>
-          <h2 className={styles.modalTitle}>Custom Packaging Inquiry</h2>
           <ContactForm />
         </div>
       </CertificateModal>
