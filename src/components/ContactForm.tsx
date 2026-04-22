@@ -138,15 +138,13 @@ export default function ContactForm() {
         />
       </div>
 
-      <div style={{ marginTop: '0.5rem' }}>
-        <button
-          type="submit"
-          className={`btn btn--primary btn--large ${styles.submitBtn}`}
-          disabled={loading}
-        >
-          {loading ? 'Sending...' : 'Send Inquiry →'}
-        </button>
-      </div>
+      <button
+        type="submit"
+        className={`btn btn--primary btn--large ${styles.submitBtn}`}
+        disabled={loading}
+      >
+        {loading ? 'Sending...' : 'Send Inquiry →'}
+      </button>
     </form>
   );
 }

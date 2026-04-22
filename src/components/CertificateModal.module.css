@@ -99,7 +99,7 @@
 @media (max-width: 768px) {
   .modalContent {
     margin: 2rem auto;
-    width: 90%; /* Slimmer mobile form as requested */
+    width: 90%;
   }
   
   .closeButton {
@@ -110,6 +110,6 @@
   }
 
   .modalBody {
-    padding: 2rem 1.25rem; /* Much more compact mobile padding */
+    padding: 1.5rem 1rem; /* Faster framing for squaring on mobile */
   }
 }
