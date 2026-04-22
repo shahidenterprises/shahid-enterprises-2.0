@@ -81,13 +81,35 @@
   border-radius: 4px;
 }
 
+.modalBody {
+  padding: 2.5rem 2.5rem;
+}
+
+.modalTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
 @media (max-width: 768px) {
   .overlay {
-    padding: 1rem;
+    padding: 1.5rem 1rem; /* More balanced mobile padding */
   }
   
   .closeButton {
     top: 10px;
     right: 10px;
+  }
+
+  .modalBody {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .modalTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }
