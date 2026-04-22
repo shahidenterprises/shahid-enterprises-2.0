@@ -9,12 +9,13 @@
   -webkit-backdrop-filter: blur(15px);
   z-index: 9999;
   display: flex;
-  align-items: center; /* Centered for desktop */
+  align-items: flex-start; /* Restore scrollable top-alignment */
   justify-content: center;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
-  overflow: hidden; /* No scroll on desktop by default */
+  overflow-y: auto; /* Fully scrollable for all devices */
+  -webkit-overflow-scrolling: touch;
 }
 
 .visible {
@@ -25,6 +26,7 @@
 .modalContent {
   width: 92%;
   max-width: 850px;
+  margin: 5vh auto; /* Breathing room for scrolling */
   position: relative;
   transform: translateY(20px);
   transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.3s ease;
@@ -32,7 +34,7 @@
   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
   background: #ffffff;
   z-index: 10000;
-  overflow: hidden; /* Fixes button clipping */
+  overflow: hidden;
 }
 
 .visible .modalContent {
@@ -81,7 +83,7 @@
 }
 
 .modalBody {
-  padding: 3rem 4rem; /* Reduced padding for better desktop fit */
+  padding: 3.5rem 4rem; /* Balanced desktop padding */
 }
 
 .modalTitle {
@@ -95,16 +97,9 @@
 }
 
 @media (max-width: 768px) {
-  .overlay {
-    align-items: flex-start;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
   .modalContent {
     margin: 2rem auto;
-    width: 94%;
-    overflow: visible; /* Allow scrolling content on mobile if needed */
+    width: 90%; /* Slimmer mobile form as requested */
   }
   
   .closeButton {
@@ -115,6 +110,6 @@
   }
 
   .modalBody {
-    padding: 2.5rem 1.25rem; /* More compact for mobile */
+    padding: 2rem 1.25rem; /* Much more compact mobile padding */
   }
 }
