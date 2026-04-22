@@ -71,10 +71,11 @@
 }
 
 .submitBtn {
-  margin: 2rem auto 0; /* Centered and well-spaced */
-  width: max-content; /* Smaller, refined button width */
-  padding: 0.85rem 2.5rem; /* Narrower padding */
-  font-size: 0.95rem; /* Slightly smaller text */
+  margin: 2rem auto 0; /* Vertical spacing */
+  width: max-content; /* Refined smaller width */
+  padding: 0.85rem 2.5rem;
+  font-size: 0.95rem;
+  align-self: center; /* Forces horizontal centering in flex-column form */
 }
 
 .success {
