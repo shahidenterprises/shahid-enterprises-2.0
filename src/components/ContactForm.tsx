@@ -13,13 +13,10 @@ const countries = [
 
 const products = [
   'Select Product Interest',
-  'Natural Sheep Casings',
+  'Afghani Casings',
   'Goat Casings',
-  'Sausage Casings',
   'Bulk Supply',
   'OEM / Custom Sizing',
-  'Export Packaging',
-  'Multiple Products',
   'Other'
 ];
 
