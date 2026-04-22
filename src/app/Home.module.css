@@ -222,6 +222,7 @@
   color: var(--color-secondary);
   text-transform: uppercase;
   letter-spacing: 0.15em;
+  margin-top: 1rem; /* Pushes the text a little below */
   margin-bottom: 0.75rem;
 }
 
@@ -253,6 +254,7 @@
   
   .modalLabel {
     font-size: 0.7rem;
+    margin-top: 0.5rem; /* Reduced top margin for mobile */
     margin-bottom: 0.4rem;
   }
 }
