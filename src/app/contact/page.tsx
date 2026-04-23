@@ -27,7 +27,7 @@ export default function ContactPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/hero_bg.webp" 
+            src="/images/banner_contact.png" 
             alt="Contact Shahid Enterprises" 
             fill 
             priority 
@@ -37,7 +37,6 @@ export default function ContactPage() {
         </div>
         <div className={heroStyles.heroOverlay} />
         <div className={`container ${heroStyles.heroContent}`}>
-          <div className="accent-line accent-line--center" style={{ marginBottom: '1.25rem' }}></div>
           <h1>Contact Us</h1>
           <p>Ready to place an order or need more information? Our export team is here to help.</p>
         </div>

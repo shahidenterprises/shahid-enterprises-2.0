@@ -95,8 +95,8 @@ export default function TestimonialsPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/goat_casings.webp" 
-            alt="Shahid Enterprises Testimonials" 
+            src="/images/banner_testimonials.png" 
+            alt="Shahid Enterprises Client Testimonials" 
             fill 
             priority 
             className={heroStyles.heroImage}
@@ -105,9 +105,8 @@ export default function TestimonialsPage() {
         </div>
         <div className={heroStyles.heroOverlay} />
         <div className={`container ${heroStyles.heroContent}`}>
-          <div className="accent-line accent-line--center" style={{ marginBottom: '1.25rem' }}></div>
           <h1>Client Testimonials</h1>
-          <p>Hear from our international partners about their experience with Shahid Enterprises.</p>
+          <p>Hear from our international partners about their long-term trust in Shahid Enterprises.</p>
         </div>
       </section>
 

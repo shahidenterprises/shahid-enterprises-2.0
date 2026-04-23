@@ -29,7 +29,7 @@ export default function CertificationsPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/packaging.webp" 
+            src="/images/banner_certifications.png" 
             alt="Shahid Enterprises Certifications" 
             fill 
             priority 
@@ -39,9 +39,8 @@ export default function CertificationsPage() {
         </div>
         <div className={heroStyles.heroOverlay} />
         <div className={`container ${heroStyles.heroContent}`}>
-          <div className="accent-line accent-line--center" style={{ marginBottom: '1.25rem' }}></div>
           <h1>Certifications &amp; Quality</h1>
-          <p>International certifications that guarantee the highest standards of quality, safety, and compliance.</p>
+          <p>International certifications that guarantee the highest standards of quality, safety, and global compliance.</p>
         </div>
       </section>
 
