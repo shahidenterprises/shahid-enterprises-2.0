@@ -139,19 +139,10 @@ export default function AboutPage() {
                 <span className={styles.founderTitle}>CEO &amp; Principal</span>
                 <h3>Muhammad Abdullah</h3>
                 <p>
-                  At Shahid Enterprises, our mission is to redefine the standards of excellence in the global natural casings market. 
-                  Building on a foundation of more than 50 years of heritage, we combine traditional craftsmanship with modern 
-                  innovation to serve the world&apos;s most demanding food processors.
+                  At Shahid Enterprises, we combine over 50 years of heritage with modern innovation to deliver premium natural casings to the global market. Our steady growth is anchored in a single, unwavering principle: **Trust**.
                 </p>
                 <p>
-                  Our growth over the decades is built on a single, unwavering principle: **Trust**. We understand that 
-                  in the international export business, reliability and transparency are just as important as the product itself. 
-                  This is why every casing that leaves our facility is treated with the highest respect for quality and food safety.
-                </p>
-                <p>
-                  We view our clients not just as customers, but as long-term partners. We respect your trust in us, 
-                  and we are committed to supporting your business with sustainable sourcing, ethical trade practices, 
-                  and a vision for a shared global future of growth and high-quality production.
+                  We recognize that in international trade, reliability and transparency are as vital as the product itself. Every shipment from our facility reflects our strict adherence to global food safety standards. We view our clients as long-term partners and remain dedicated to supporting your success through sustainable sourcing and ethical business practices.
                 </p>
               </div>
             </AnimatedSection>
