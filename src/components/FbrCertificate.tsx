@@ -10,10 +10,7 @@ const FbrCertificate: React.FC<{ className?: string }> = ({ className }) => {
       style={{
         width: '100%',
         maxWidth: '700px',
-        background: '#1a1a1a',
-        borderRadius: '12px',
         overflow: 'hidden',
-        boxShadow: '0 30px 80px rgba(0,0,0,0.5)',
       }}
     >
       {/* Header Bar */}
@@ -23,6 +20,7 @@ const FbrCertificate: React.FC<{ className?: string }> = ({ className }) => {
         display: 'flex',
         alignItems: 'center',
         gap: '12px',
+        borderRadius: '12px 12px 0 0',
       }}>
         <div style={{ display: 'flex', gap: '8px' }}>
           <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#ff5f57' }} />
@@ -51,7 +49,7 @@ const FbrCertificate: React.FC<{ className?: string }> = ({ className }) => {
           src="/images/cert_fbr_8k.webp"
           alt="Official FBR Income Tax Registration Certificate — Shahid Enterprises Pakistan"
           fill
-          style={{ objectFit: 'contain', background: '#f5f5f0' }}
+          style={{ objectFit: 'contain' }}
           sizes="700px"
           quality={100}
         />
