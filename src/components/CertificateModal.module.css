@@ -128,8 +128,8 @@
   }
 
   .modalTitle {
-    font-size: 1.6rem; /* Smaller mobile title to save space */
-    margin-bottom: 2rem;
+    font-size: 1.4rem; /* Slightly smaller to save space */
+    margin-bottom: 1rem; /* Less gap below title */
   }
 }
 

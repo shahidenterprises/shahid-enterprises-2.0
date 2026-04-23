@@ -389,28 +389,30 @@
   }
 
   .field label {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     margin-bottom: 0;
     color: rgba(255, 255, 255, 0.9);
   }
 
   .field input,
   .field select,
-  .field textarea {
-    padding: 0.45rem 0.75rem;
-    font-size: 0.85rem;
+  .field textarea,
+  .customSelect {
+    padding: 0.5rem 0.75rem;
+    font-size: 16px; /* Crucial: 16px prevents iOS auto-zoom */
     border-radius: var(--radius-sm);
   }
 
   .field textarea {
-    min-height: 44px; /* Even smaller to save space */
+    min-height: 50px;
   }
 
   .submitBtn {
     width: 100%;
-    margin-top: 0.35rem;
-    padding: 0.6rem 1.25rem;
-    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem; /* Extra space at the very bottom */
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
   }
 }
 
