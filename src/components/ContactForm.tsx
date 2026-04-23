@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useEffect, useRef } from 'react';
 import styles from './ContactForm.module.css';
 
 const countries = [
@@ -20,6 +20,69 @@ const products = [
   'Other'
 ];
 
+interface CustomSelectProps {
+  options: string[];
+  name: string;
+  placeholder: string;
+  required?: boolean;
+}
+
+function CustomSelect({ options, name, placeholder, required }: CustomSelectProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selected, setSelected] = useState('');
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  return (
+    <div className={`${styles.customSelectWrapper} ${isOpen ? styles.isOpen : ''}`} ref={wrapperRef}>
+      <div 
+        className={styles.customSelect} 
+        onClick={() => setIsOpen(!isOpen)}
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
+      >
+        <span className={`${styles.customSelectValue} ${!selected ? styles.placeholder : ''}`}>
+          {selected || placeholder}
+        </span>
+        <svg className={styles.arrow} width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </div>
+      
+      {isOpen && (
+        <div className={styles.optionsList} role="listbox">
+          {options.map((option) => (
+            <div
+              key={option}
+              className={`${styles.option} ${selected === option ? styles.selected : ''}`}
+              onClick={() => {
+                setSelected(option);
+                setIsOpen(false);
+              }}
+              role="option"
+              aria-selected={selected === option}
+            >
+              {option}
+            </div>
+          ))}
+        </div>
+      )}
+      
+      {/* Hidden input for form submission */}
+      <input type="hidden" name={name} value={selected} required={required} />
+    </div>
+  );
+}
+
 interface ContactFormProps {
   theme?: 'light' | 'dark';
   compact?: boolean;
@@ -32,12 +95,24 @@ export default function ContactForm({ theme = 'light', compact = false }: Contac
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget; // Capture the form reference
+    const form = e.currentTarget;
     setError('');
     setLoading(true);
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
+
+    // Validation for custom selects
+    if (!data.country || data.country === 'Select Country') {
+      setError('Please select a country');
+      setLoading(false);
+      return;
+    }
+    if (!data.product || data.product === 'Select Product Interest') {
+      setError('Please select a product interest');
+      setLoading(false);
+      return;
+    }
 
     try {
       const res = await fetch('/api/contact', {
@@ -51,7 +126,7 @@ export default function ContactForm({ theme = 'light', compact = false }: Contac
         throw new Error(result.error || 'Something went wrong');
       }
 
-      form.reset(); // Use the captured reference
+      form.reset();
       setSubmitted(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to send. Please try again.');
@@ -115,21 +190,21 @@ export default function ContactForm({ theme = 'light', compact = false }: Contac
       <div className={styles.row}>
         <div className={styles.field}>
           <label htmlFor="contact-country">Country</label>
-          <select id="contact-country" name="country" required defaultValue="">
-            <option value="" disabled>Select Country</option>
-            {countries.slice(1).map(c => (
-              <option key={c} value={c}>{c}</option>
-            ))}
-          </select>
+          <CustomSelect 
+            options={countries.slice(1)} 
+            name="country" 
+            placeholder="Select Country" 
+            required 
+          />
         </div>
         <div className={styles.field}>
           <label htmlFor="contact-product">Product Interest</label>
-          <select id="contact-product" name="product" required defaultValue="">
-            <option value="" disabled>Select Interest</option>
-            {products.slice(1).map(p => (
-              <option key={p} value={p}>{p}</option>
-            ))}
-          </select>
+          <CustomSelect 
+            options={products.slice(1)} 
+            name="product" 
+            placeholder="Select Interest" 
+            required 
+          />
         </div>
       </div>
 
