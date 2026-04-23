@@ -26,8 +26,11 @@
 .modalContent {
   width: 92%;
   max-width: 850px;
-  margin: auto; /* Crucial for vertical centering with flex and overflow-y */
-  padding: 5vh 0; /* Vertical breathing room */
+  margin: auto;
+  padding: 5vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the certificate component inside the modal wrapper */
   position: relative;
   transform: translateY(20px);
   transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.3s ease;
@@ -157,11 +160,10 @@
   .navButton {
     width: 46px;
     height: 46px;
-    top: auto;
-    bottom: 2.5rem;
-    transform: none;
-    background: rgba(0, 0, 0, 0.5);
-    border-color: rgba(255, 255, 255, 0.2);
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7); /* Slightly darker for better mobile contrast */
+    border-color: rgba(255, 255, 255, 0.3);
   }
 
   .navButton:hover {
@@ -173,10 +175,10 @@
   }
 
   .prevButton {
-    left: 1.5rem;
+    left: 1rem;
   }
 
   .nextButton {
-    right: 1.5rem;
+    right: 1rem;
   }
 }
