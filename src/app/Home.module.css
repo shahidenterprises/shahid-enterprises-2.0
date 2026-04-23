@@ -219,16 +219,16 @@
   display: block;
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--color-secondary);
+  color: var(--color-secondary); /* Keep accent for label */
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  margin-top: 1rem; /* Pushes the text a little below */
+  margin-top: 1rem;
   margin-bottom: 0.75rem;
 }
 
 .modalTitle {
   font-size: 2.5rem;
-  color: var(--color-text);
+  color: #fff; /* White title */
   font-weight: 800;
   letter-spacing: -0.04em;
   margin: 0;

@@ -20,7 +20,11 @@ const products = [
   'Other'
 ];
 
-export default function ContactForm() {
+interface ContactFormProps {
+  theme?: 'light' | 'dark';
+}
+
+export default function ContactForm({ theme = 'light' }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -78,7 +82,11 @@ export default function ContactForm() {
   }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit} id="contact-form">
+    <form 
+      className={`${styles.form} ${theme === 'dark' ? styles.darkTheme : ''}`} 
+      onSubmit={handleSubmit} 
+      id="contact-form"
+    >
       {error && <div className={styles.error} id="contact-form-error">{error}</div>}
 
       <div className={styles.row}>

@@ -24,8 +24,6 @@
 
 .modalContent {
   width: 92%;
-  max-width: 850px;
-  height: auto;
   max-height: 90vh; /* Fit within viewport */
   margin: auto;
   display: flex;
@@ -37,11 +35,24 @@
   border-radius: var(--radius-xl);
   background: transparent;
   z-index: 10000;
-  overflow: hidden; /* Ensure content doesn't overflow */
+  overflow: hidden; /* Default for certificates */
+}
+
+/* Size variants */
+.md { max-width: 700px; }
+.lg { max-width: 850px; }
+.xl { max-width: 1000px; }
+
+/* Scrollable variant for forms */
+.scrollable {
+  display: block; /* Override flex for scrolling */
+  overflow-y: auto;
+  padding: 2rem 0;
 }
 
 .visible .modalContent {
   transform: translateY(0);
+  opacity: 1;
 }
 
 .closeButton {
@@ -95,7 +106,7 @@
   font-size: 2.25rem;
   letter-spacing: -0.04em;
   font-weight: 800;
-  color: var(--color-text);
+  color: #fff;
   line-height: 1.1;
 }
 

@@ -9,9 +9,19 @@ interface CertificateModalProps {
   onNext?: () => void;
   onPrev?: () => void;
   children: React.ReactNode;
+  scrollable?: boolean;
+  size?: 'md' | 'lg' | 'xl';
 }
 
-export default function CertificateModal({ isOpen, onClose, onNext, onPrev, children }: CertificateModalProps) {
+export default function CertificateModal({ 
+  isOpen, 
+  onClose, 
+  onNext, 
+  onPrev, 
+  children,
+  scrollable = false,
+  size = 'md'
+}: CertificateModalProps) {
   const [shouldRender, setShouldRender] = useState(false);
 
   useEffect(() => {
@@ -87,7 +97,7 @@ export default function CertificateModal({ isOpen, onClose, onNext, onPrev, chil
       )}
       
       <div 
-        className={styles.modalContent} 
+        className={`${styles.modalContent} ${styles[size]} ${scrollable ? styles.scrollable : ''}`} 
         onClick={(e) => e.stopPropagation()}
       >
         {children}
