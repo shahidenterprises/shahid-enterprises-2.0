@@ -22,9 +22,10 @@ const products = [
 
 interface ContactFormProps {
   theme?: 'light' | 'dark';
+  compact?: boolean;
 }
 
-export default function ContactForm({ theme = 'light' }: ContactFormProps) {
+export default function ContactForm({ theme = 'light', compact = false }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -83,7 +84,7 @@ export default function ContactForm({ theme = 'light' }: ContactFormProps) {
 
   return (
     <form 
-      className={`${styles.form} ${theme === 'dark' ? styles.darkTheme : ''}`} 
+      className={`${styles.form} ${theme === 'dark' ? styles.darkTheme : ''} ${compact ? styles.compact : ''}`} 
       onSubmit={handleSubmit} 
       id="contact-form"
     >

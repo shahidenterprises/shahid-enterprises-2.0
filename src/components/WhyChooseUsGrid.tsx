@@ -82,16 +82,16 @@ export default function WhyChooseUsGrid() {
       <CertificateModal 
         isOpen={isContactModalOpen} 
         onClose={() => setIsContactModalOpen(false)}
-        scrollable={true}
+        scrollable={false}
         size="lg"
       >
         <div className={styles.modalBody}>
-          <div className={styles.modalHeader}>
-            <span className={styles.modalLabel}>Premium Natural Casings</span>
+          <div className={styles.modalHeader} style={{ marginBottom: '1.5rem' }}>
+            <span className={styles.modalLabel} style={{ marginTop: 0 }}>Premium Natural Casings</span>
             <h2 className={styles.modalTitle}>Custom Export Inquiry</h2>
             <div className={styles.modalDivider}></div>
           </div>
-          <ContactForm theme="dark" />
+          <ContactForm theme="dark" compact={true} />
         </div>
       </CertificateModal>
     </>
