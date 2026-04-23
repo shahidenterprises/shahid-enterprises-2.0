@@ -35,7 +35,7 @@
   border-radius: var(--radius-xl);
   background: transparent;
   z-index: 10000;
-  overflow: hidden; /* Default for certificates */
+  overflow: visible; /* Allow dropdowns to spill out */
 }
 
 /* Size variants */
