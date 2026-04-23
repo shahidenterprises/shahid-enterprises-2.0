@@ -124,7 +124,7 @@
   }
 
   .modalBody {
-    padding: 1.5rem 1rem; /* Faster framing for squaring on mobile */
+    padding: 1rem 1rem; /* Extremely compact mobile padding */
   }
 }
 
