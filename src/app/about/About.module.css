@@ -209,15 +209,18 @@
   position: relative;
   width: 100%;
   aspect-ratio: 4/5;
-  background: var(--color-bg-alt);
+  background: #f8f9fa; /* Subtle light grey background for contain fit */
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border-light);
 }
 
 .founderImage .stImg {
-  object-fit: cover;
-  object-position: center 15%;
+  object-fit: contain; /* Zooms out to show full original image */
+  background: white;
+  filter: contrast(1.02) brightness(1.02);
+  image-rendering: -webkit-optimize-contrast; /* Sharper cleaner look */
 }
 
 .founderContent h3 {
