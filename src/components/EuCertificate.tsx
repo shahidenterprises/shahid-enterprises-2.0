@@ -10,46 +10,57 @@ const EuCertificate: React.FC<{ className?: string }> = ({ className }) => {
       style={{
         width: '100%',
         maxWidth: '700px',
+        maxHeight: '85vh',
+        display: 'flex',
+        flexDirection: 'column',
         overflow: 'hidden',
       }}
     >
       {/* Header Bar */}
       <div style={{
-        padding: '16px 24px',
+        padding: '12px 24px',
         background: '#003399',
         display: 'flex',
         alignItems: 'center',
         gap: '12px',
         borderRadius: '12px 12px 0 0',
+        flexShrink: 0,
       }}>
         <div style={{ display: 'flex', gap: '8px' }}>
-          <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#ff5f57' }} />
-          <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#ffbd2e' }} />
-          <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#28c840' }} />
+          <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#ff5f57' }} />
+          <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#ffbd2e' }} />
+          <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#28c840' }} />
         </div>
         <span style={{
           color: 'rgba(255,255,255,0.85)',
-          fontSize: '13px',
+          fontSize: '12px',
           fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
           fontWeight: 500,
           marginLeft: 8,
         }}>
-          EU Establishment Record — Shahid Enterprises (06-MINFAL-SHE)
+          EU Establishment Record — Shahid Enterprises
         </span>
         <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
-          <img src="/images/eu_logo.svg" alt="EU Logo" width="28" height="20" style={{ borderRadius: '2px' }} />
+          <img src="/images/eu_logo.svg" alt="EU Logo" width="24" height="16" style={{ borderRadius: '2px' }} />
         </div>
       </div>
 
       {/* Certificate Photo */}
-      <div style={{ position: 'relative', width: '100%', aspectRatio: '0.72' }}>
+      <div style={{ 
+        position: 'relative', 
+        width: '100%', 
+        flex: 1,
+        minHeight: 0,
+        background: '#fff'
+      }}>
         <Image
           src="/images/cert_eu_8k.webp"
-          alt="Official EU Export License for Shahid Enterprises — Registration Number 06-MINFAL-SHE"
+          alt="Official EU Export License for Shahid Enterprises"
           fill
           style={{ objectFit: 'contain' }}
           sizes="700px"
           quality={100}
+          priority
         />
       </div>
 

@@ -10,48 +10,59 @@ const FbrCertificate: React.FC<{ className?: string }> = ({ className }) => {
       style={{
         width: '100%',
         maxWidth: '700px',
+        maxHeight: '85vh',
+        display: 'flex',
+        flexDirection: 'column',
         overflow: 'hidden',
       }}
     >
       {/* Header Bar */}
       <div style={{
-        padding: '16px 24px',
+        padding: '12px 24px',
         background: '#0b5d1e',
         display: 'flex',
         alignItems: 'center',
         gap: '12px',
         borderRadius: '12px 12px 0 0',
+        flexShrink: 0,
       }}>
         <div style={{ display: 'flex', gap: '8px' }}>
-          <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#ff5f57' }} />
-          <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#ffbd2e' }} />
-          <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#28c840' }} />
+          <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#ff5f57' }} />
+          <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#ffbd2e' }} />
+          <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#28c840' }} />
         </div>
         <span style={{
           color: 'rgba(255,255,255,0.85)',
-          fontSize: '13px',
+          fontSize: '12px',
           fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
           fontWeight: 500,
           marginLeft: 8,
         }}>
-          FBR Registration Certificate — Shahid Enterprises
+          FBR Certificate — Shahid Enterprises
         </span>
         <div style={{ marginLeft: 'auto' }}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
             <rect width="18" height="18" x="3" y="3" rx="2"/><path d="m9 12 2 2 4-4"/>
           </svg>
         </div>
       </div>
 
       {/* Certificate Photo */}
-      <div style={{ position: 'relative', width: '100%', aspectRatio: '0.72' }}>
+      <div style={{ 
+        position: 'relative', 
+        width: '100%', 
+        flex: 1,
+        minHeight: 0,
+        background: '#fff'
+      }}>
         <Image
           src="/images/cert_fbr_8k.webp"
-          alt="Official FBR Income Tax Registration Certificate — Shahid Enterprises Pakistan"
+          alt="Official FBR Certificate — Shahid Enterprises"
           fill
           style={{ objectFit: 'contain' }}
           sizes="700px"
           quality={100}
+          priority
         />
       </div>
 
