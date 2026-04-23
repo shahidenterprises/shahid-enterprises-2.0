@@ -124,7 +124,7 @@
   }
 
   .modalBody {
-    padding: 1rem 1rem; /* Extremely compact mobile padding */
+    padding: 0.75rem 0.75rem; /* Ultra compact for mobile */
   }
 }
 

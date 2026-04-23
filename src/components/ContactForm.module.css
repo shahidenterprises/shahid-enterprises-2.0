@@ -213,20 +213,20 @@
 @media (max-width: 640px) {
   .row {
     grid-template-columns: 1fr;
-    gap: 0.5rem;
+    gap: 0.35rem;
   }
   
   .form {
     padding: 0;
-    gap: 0.5rem;
+    gap: 0.35rem;
   }
 
   .field {
-    gap: 0.25rem;
+    gap: 0.15rem;
   }
 
   .field label {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     margin-bottom: 0;
     color: rgba(255, 255, 255, 0.9);
   }
@@ -234,19 +234,20 @@
   .field input,
   .field select,
   .field textarea {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.88rem;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.85rem;
+    border-radius: var(--radius-sm);
   }
 
   .field textarea {
-    min-height: 60px;
+    min-height: 44px; /* Even smaller to save space */
   }
 
   .submitBtn {
     width: 100%;
-    margin-top: 0.5rem;
-    padding: 0.7rem 1.5rem;
-    font-size: 0.88rem;
+    margin-top: 0.35rem;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
   }
 }
 

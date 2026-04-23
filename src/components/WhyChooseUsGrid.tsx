@@ -86,10 +86,10 @@ export default function WhyChooseUsGrid() {
         size="lg"
       >
         <div className={styles.modalBody}>
-          <div className={styles.modalHeader} style={{ marginBottom: '1.5rem' }}>
-            <span className={styles.modalLabel} style={{ marginTop: 0 }}>Premium Natural Casings</span>
+          <div className={styles.modalHeader} style={{ marginBottom: '1rem' }}>
+            <span className={styles.modalLabel} style={{ marginTop: '-0.5rem' }}>Premium Natural Casings</span>
             <h2 className={styles.modalTitle}>Custom Export Inquiry</h2>
-            <div className={styles.modalDivider}></div>
+            <div className={styles.modalDivider} style={{ marginTop: '0.75rem' }}></div>
           </div>
           <ContactForm theme="dark" compact={true} />
         </div>
