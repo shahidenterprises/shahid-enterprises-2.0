@@ -44,7 +44,7 @@ const certs = [
     tag: 'Halal Compliant',
     isHalal: true,
     icon: (
-      <img src="/images/halal_logo.svg" alt="Halal Certified" width="20" height="20" />
+      <img src="/images/halal_logo_new.png" alt="Halal Certified" width="24" height="24" />
     ),
   },
   {
