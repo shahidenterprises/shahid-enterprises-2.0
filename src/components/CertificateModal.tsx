@@ -6,10 +6,12 @@ import styles from './CertificateModal.module.css';
 interface CertificateModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onNext?: () => void;
+  onPrev?: () => void;
   children: React.ReactNode;
 }
 
-export default function CertificateModal({ isOpen, onClose, children }: CertificateModalProps) {
+export default function CertificateModal({ isOpen, onClose, onNext, onPrev, children }: CertificateModalProps) {
   const [shouldRender, setShouldRender] = useState(false);
 
   useEffect(() => {
@@ -24,6 +26,23 @@ export default function CertificateModal({ isOpen, onClose, children }: Certific
       return () => clearTimeout(timer);
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight' && onNext) {
+        onNext();
+      } else if (e.key === 'ArrowLeft' && onPrev) {
+        onPrev();
+      } else if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onNext, onPrev, onClose]);
 
   if (!shouldRender && !isOpen) return null;
 
@@ -42,6 +61,30 @@ export default function CertificateModal({ isOpen, onClose, children }: Certific
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </button>
+
+      {onPrev && (
+        <button 
+          className={`${styles.navButton} ${styles.prevButton}`}
+          onClick={(e) => { e.stopPropagation(); onPrev(); }}
+          aria-label="Previous certificate"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+      )}
+
+      {onNext && (
+        <button 
+          className={`${styles.navButton} ${styles.nextButton}`}
+          onClick={(e) => { e.stopPropagation(); onNext(); }}
+          aria-label="Next certificate"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      )}
       
       <div 
         className={styles.modalContent} 

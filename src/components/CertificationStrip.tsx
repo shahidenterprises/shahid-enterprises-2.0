@@ -11,6 +11,22 @@ import EuCertificate from './EuCertificate';
 export default function CertificationStrip() {
   const [activeModal, setActiveModal] = useState<null | 'haccp' | 'halal' | 'fbr' | 'eu'>(null);
 
+  const certOrder: ('eu' | 'haccp' | 'halal' | 'fbr')[] = ['eu', 'haccp', 'halal', 'fbr'];
+
+  const handleNext = () => {
+    if (!activeModal) return;
+    const currentIndex = certOrder.indexOf(activeModal as any);
+    const nextIndex = (currentIndex + 1) % certOrder.length;
+    setActiveModal(certOrder[nextIndex]);
+  };
+
+  const handlePrev = () => {
+    if (!activeModal) return;
+    const currentIndex = certOrder.indexOf(activeModal as any);
+    const prevIndex = (currentIndex - 1 + certOrder.length) % certOrder.length;
+    setActiveModal(certOrder[prevIndex]);
+  };
+
   const renderCertificate = () => {
     switch (activeModal) {
       case 'haccp': return <HaccpCertificate />;
@@ -81,6 +97,8 @@ export default function CertificationStrip() {
       <CertificateModal 
         isOpen={activeModal !== null} 
         onClose={() => setActiveModal(null)}
+        onNext={handleNext}
+        onPrev={handlePrev}
       >
         {renderCertificate()}
       </CertificateModal>
