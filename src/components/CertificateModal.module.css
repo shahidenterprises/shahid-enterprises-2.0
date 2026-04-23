@@ -24,7 +24,7 @@
 
 .modalContent {
   width: 92%;
-  max-height: 82vh; /* Reduced to provide more viewport buffer for dropdowns */
+  max-height: 90vh; /* Fit within viewport */
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -97,12 +97,12 @@
 }
 
 .modalBody {
-  padding: 2.5rem 3rem; /* Restored a bit of padding for better framing */
+  padding: 2rem 3rem; /* More compact padding */
 }
 
 .modalTitle {
   text-align: center;
-  margin-bottom: 2.5rem; /* Reduced to sit the form higher but keep title clear */
+  margin-bottom: 4rem; /* More space between title and form fields */
   font-size: 2.25rem;
   letter-spacing: -0.04em;
   font-weight: 800;
@@ -112,9 +112,8 @@
 
 @media (max-width: 768px) {
   .modalContent {
-    margin: auto; /* Keep centered */
+    margin: 2rem auto;
     width: 90%;
-    max-height: 85vh;
   }
   
   .closeButton {
@@ -125,7 +124,12 @@
   }
 
   .modalBody {
-    padding: 1.5rem 1rem; /* Restored padding to fix top heading cut-off */
+    padding: 1.5rem 0.75rem 0.75rem; /* Balanced mobile padding */
+  }
+
+  .modalTitle {
+    font-size: 1.6rem; /* Smaller mobile title to save space */
+    margin-bottom: 2rem;
   }
 }
 

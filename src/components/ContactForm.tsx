@@ -103,17 +103,6 @@ export default function ContactForm({ theme = 'light', compact = false }: Contac
 
       <div className={styles.row}>
         <div className={styles.field}>
-          <label htmlFor="contact-phone">Phone Number</label>
-          <input type="tel" id="contact-phone" name="phone" placeholder="Phone" />
-        </div>
-        <div className={styles.field}>
-          <label htmlFor="contact-company">Company Name</label>
-          <input type="text" id="contact-company" name="company" placeholder="Company" />
-        </div>
-      </div>
-
-      <div className={styles.row}>
-        <div className={styles.field}>
           <label htmlFor="contact-country">Country</label>
           <select id="contact-country" name="country" required defaultValue="">
             <option value="" disabled>Select Country</option>
@@ -130,6 +119,17 @@ export default function ContactForm({ theme = 'light', compact = false }: Contac
               <option key={p} value={p}>{p}</option>
             ))}
           </select>
+        </div>
+      </div>
+
+      <div className={styles.row}>
+        <div className={styles.field}>
+          <label htmlFor="contact-phone">Phone Number</label>
+          <input type="tel" id="contact-phone" name="phone" placeholder="Phone" />
+        </div>
+        <div className={styles.field}>
+          <label htmlFor="contact-company">Company Name</label>
+          <input type="text" id="contact-company" name="company" placeholder="Company" />
         </div>
       </div>
 
