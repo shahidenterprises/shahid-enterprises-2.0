@@ -125,9 +125,10 @@ export default function AboutPage() {
             <AnimatedSection>
               <div className={styles.founderImage}>
                 <Image 
-                  src="/images/ceo.webp" 
+                  src="/images/ceo_premium.png" 
                   alt="Muhammad Abdullah, CEO of Shahid Enterprises — Driving global growth in the natural casings industry" 
                   fill 
+                  priority
                   className={styles.stImg}
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
