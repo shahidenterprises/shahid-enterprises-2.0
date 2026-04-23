@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieConsent from "@/components/CookieConsent";
 
-// Optimized Fonts
+// Optimized Typography Configuration
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
