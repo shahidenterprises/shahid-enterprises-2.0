@@ -8,12 +8,12 @@ const EuCertificate: React.FC<{ className?: string }> = ({ className }) => {
     <div
       className={className}
       style={{
-        width: '100%',
-        maxWidth: '700px',
-        maxHeight: '85vh',
+        width: 'min(92vw, calc(85vh * 0.72))',
+        height: 'min(85vh, calc(92vw / 0.72))',
         display: 'flex',
         flexDirection: 'column',
         overflow: 'hidden',
+        borderRadius: '12px',
       }}
     >
       {/* Header Bar */}
