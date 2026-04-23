@@ -368,7 +368,8 @@
   }
   
   .optionsScroll {
-    max-height: none; /* Attempt to show whole list */
+    max-height: 200px; /* Scrollable on mobile */
+    overflow-y: auto;
   }
 }
 
