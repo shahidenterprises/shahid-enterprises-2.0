@@ -139,7 +139,7 @@ export default function AboutPage() {
                 <span className={styles.founderTitle}>CEO &amp; Principal</span>
                 <h3>Muhammad Abdullah</h3>
                 <p>
-                  At Shahid Enterprises, we combine over 50 years of heritage with modern innovation to deliver premium natural casings to the global market. Our steady growth is anchored in a single, unwavering principle: **Trust**.
+                  At Shahid Enterprises, we combine over 50 years of heritage with modern innovation to deliver premium natural casings to the global market. Our steady growth is anchored in a single, unwavering principle: <strong>Trust</strong>.
                 </p>
                 <p>
                   We recognize that in international trade, reliability and transparency are as vital as the product itself. Every shipment from our facility reflects our strict adherence to global food safety standards. We view our clients as long-term partners and remain dedicated to supporting your success through sustainable sourcing and ethical business practices.
