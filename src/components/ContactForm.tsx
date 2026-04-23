@@ -30,13 +30,7 @@ interface CustomSelectProps {
 function CustomSelect({ options, name, placeholder, required }: CustomSelectProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState('');
-  const [searchTerm, setSearchTerm] = useState('');
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  const filteredOptions = options.filter(opt => 
-    opt.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -47,15 +41,6 @@ function CustomSelect({ options, name, placeholder, required }: CustomSelectProp
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
-
-  useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
-    }
-    if (!isOpen) {
-      setSearchTerm('');
-    }
-  }, [isOpen]);
 
   return (
     <div className={`${styles.customSelectWrapper} ${isOpen ? styles.isOpen : ''}`} ref={wrapperRef}>
@@ -75,36 +60,21 @@ function CustomSelect({ options, name, placeholder, required }: CustomSelectProp
       
       {isOpen && (
         <div className={styles.optionsList} role="listbox">
-          <div className={styles.searchWrapper}>
-            <input
-              ref={inputRef}
-              type="text"
-              className={styles.searchInput}
-              placeholder="Search..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
           <div className={styles.optionsScroll}>
-            {filteredOptions.length > 0 ? (
-              filteredOptions.map((option) => (
-                <div
-                  key={option}
-                  className={`${styles.option} ${selected === option ? styles.selected : ''}`}
-                  onClick={() => {
-                    setSelected(option);
-                    setIsOpen(false);
-                  }}
-                  role="option"
-                  aria-selected={selected === option}
-                >
-                  {option}
-                </div>
-              ))
-            ) : (
-              <div className={styles.noResults}>No matches found</div>
-            )}
+            {options.map((option) => (
+              <div
+                key={option}
+                className={`${styles.option} ${selected === option ? styles.selected : ''}`}
+                onClick={() => {
+                  setSelected(option);
+                  setIsOpen(false);
+                }}
+                role="option"
+                aria-selected={selected === option}
+              >
+                {option}
+              </div>
+            ))}
           </div>
         </div>
       )}
