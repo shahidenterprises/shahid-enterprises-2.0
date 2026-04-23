@@ -294,30 +294,16 @@
 }
 
 .optionsScroll {
-  max-height: 450px; /* Increased to show more items at once */
-  overflow-y: auto;
-  padding: 0.35rem;
-}
-
-/* Elegant scrollbar styling */
-.optionsScroll::-webkit-scrollbar {
-  width: 5px;
-}
-
-.optionsScroll::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-}
-
-.darkTheme .optionsScroll::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
+  max-height: none; /* Show whole list */
+  overflow-y: visible; /* No internal scroll needed if showing whole list */
+  padding: 0.25rem;
 }
 
 .option {
-  padding: 0.65rem 0.85rem; /* More compact to show more items */
+  padding: 0.45rem 0.85rem; /* Ultra compact to fit all items */
   border-radius: var(--radius-sm);
   cursor: pointer;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   transition: all 0.2s ease;
   color: var(--color-text);
   margin-bottom: 1px;
@@ -338,18 +324,6 @@
 .selected {
   background: #2a2a2a !important; /* Neutral dark instead of green */
   color: #fff !important;
-}
-
-/* Multi-column layout for country list */
-.wideList {
-  width: 150%; /* Wider than the field to fit 2 columns */
-  min-width: 450px;
-}
-
-.grid2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px 4px;
 }
 
 @keyframes slideDown {

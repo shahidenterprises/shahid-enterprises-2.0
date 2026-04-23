@@ -9,8 +9,9 @@
   -webkit-backdrop-filter: blur(15px);
   z-index: 9999;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Push to top for long dropdown space */
   justify-content: center;
+  padding-top: 3vh; /* Strategic spacing for header visibility */
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
@@ -25,7 +26,6 @@
 .modalContent {
   width: 92%;
   max-height: 90vh; /* Fit within viewport */
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -198,7 +198,6 @@ export default function ContactForm({ theme = 'light', compact = false }: Contac
             name="country" 
             placeholder="Select Country" 
             required 
-            columns={2}
           />
         </div>
         <div className={styles.field}>
