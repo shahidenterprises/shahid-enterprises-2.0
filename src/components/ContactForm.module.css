@@ -336,8 +336,20 @@
 }
 
 .selected {
-  background: var(--color-primary) !important;
+  background: #2a2a2a !important; /* Neutral dark instead of green */
   color: #fff !important;
+}
+
+/* Multi-column layout for country list */
+.wideList {
+  width: 150%; /* Wider than the field to fit 2 columns */
+  min-width: 450px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px 4px;
 }
 
 @keyframes slideDown {
@@ -352,13 +364,23 @@
 }
 
 @media (max-width: 640px) {
+  .wideList {
+    width: 100%;
+    min-width: 100%;
+    left: 0;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr 1fr; /* Keep 2 columns on mobile if possible */
+  }
+
   .customSelect {
     padding: 0.45rem 0.75rem;
     font-size: 0.85rem;
   }
   
   .optionsScroll {
-    max-height: 300px; /* Increased for mobile too */
+    max-height: none; /* Attempt to show whole list */
   }
 }
 

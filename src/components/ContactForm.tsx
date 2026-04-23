@@ -25,9 +25,10 @@ interface CustomSelectProps {
   name: string;
   placeholder: string;
   required?: boolean;
+  columns?: number;
 }
 
-function CustomSelect({ options, name, placeholder, required }: CustomSelectProps) {
+function CustomSelect({ options, name, placeholder, required, columns = 1 }: CustomSelectProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState('');
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -43,7 +44,7 @@ function CustomSelect({ options, name, placeholder, required }: CustomSelectProp
   }, []);
 
   return (
-    <div className={`${styles.customSelectWrapper} ${isOpen ? styles.isOpen : ''}`} ref={wrapperRef}>
+    <div className={`${styles.customSelectWrapper} ${isOpen ? styles.isOpen : ''} ${columns > 1 ? styles.hasColumns : ''}`} ref={wrapperRef}>
       <div 
         className={styles.customSelect} 
         onClick={() => setIsOpen(!isOpen)}
@@ -59,8 +60,8 @@ function CustomSelect({ options, name, placeholder, required }: CustomSelectProp
       </div>
       
       {isOpen && (
-        <div className={styles.optionsList} role="listbox">
-          <div className={styles.optionsScroll}>
+        <div className={`${styles.optionsList} ${columns > 1 ? styles.wideList : ''}`} role="listbox">
+          <div className={`${styles.optionsScroll} ${columns === 2 ? styles.grid2 : ''}`}>
             {options.map((option) => (
               <div
                 key={option}
@@ -197,6 +198,7 @@ export default function ContactForm({ theme = 'light', compact = false }: Contac
             name="country" 
             placeholder="Select Country" 
             required 
+            columns={2}
           />
         </div>
         <div className={styles.field}>
