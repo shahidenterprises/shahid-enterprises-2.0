@@ -55,11 +55,10 @@
   margin: 0 auto;
   padding: 0 var(--container-padding);
   position: relative;
+  gap: 1.5rem; /* Base gap for inner elements */
 }
 
 .backButton {
-  position: absolute;
-  left: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,6 +70,7 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all var(--transition-base);
   z-index: 2102;
+  margin-right: -0.5rem; /* Slight negative margin to keep logo centered-ish */
 }
 
 .navbar.scrolled .backButton {
@@ -90,6 +90,7 @@
 }
 
 .logo {
+  margin-right: auto; /* Push other items to the right */
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -228,11 +229,12 @@
 
 @media (max-width: 1024px) {
   .navInner {
-    padding-left: 3.5rem; /* Space for back button */
+    padding-left: var(--container-padding);
+    gap: 1rem;
   }
 
   .backButton {
-    left: 1rem;
+    margin-right: 0;
   }
 
   .navLinks {
