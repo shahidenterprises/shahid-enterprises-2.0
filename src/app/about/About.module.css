@@ -363,12 +363,44 @@
 }
 
 @media (max-width: 1024px) {
+  .storyGrid,
+  .founderGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .valuesGrid,
+  .processGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .qualityGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .galleryGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+@media (max-width: 768px) {
+  .videoCard {
+    aspect-ratio: 4/3;
+  }
+  
+  .videoOverlay {
+    padding: 2.5rem 2rem 2rem;
+  }
+  
+  .videoOverlay h3 {
+    font-size: 1.75rem;
+  }
+}
+
 @media (max-width: 640px) {
+  .valuesGrid,
+  .qualityGrid,
+  .processGrid,
   .galleryGrid {
     grid-template-columns: 1fr;
   }
@@ -379,6 +411,10 @@
   
   .videoOverlay h3 {
     font-size: 1.5rem;
+  }
+
+  .timelineList {
+    padding-left: 2rem;
   }
 }
 

@@ -54,6 +54,39 @@
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--container-padding);
+  position: relative;
+}
+
+.backButton {
+  position: absolute;
+  left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #fff;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-base);
+  z-index: 2102;
+}
+
+.navbar.scrolled .backButton {
+  color: var(--color-primary);
+  background: var(--color-bg-alt);
+  border-color: var(--color-border-light);
+}
+
+.backButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-3px);
+}
+
+.navbar.scrolled .backButton:hover {
+  background: #fff;
+  box-shadow: var(--shadow-sm);
 }
 
 .logo {
@@ -194,6 +227,14 @@
 }
 
 @media (max-width: 1024px) {
+  .navInner {
+    padding-left: 3.5rem; /* Space for back button */
+  }
+
+  .backButton {
+    left: 1rem;
+  }
+
   .navLinks {
     display: none;
   }

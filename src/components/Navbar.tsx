@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import Logo from './Logo';
@@ -22,6 +23,9 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -42,6 +46,19 @@ export default function Navbar() {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''} ${mobileOpen ? styles.menuOpen : ''}`} id="main-nav">
       <div className={styles.navInner}>
+        {!isHomePage && (
+          <button 
+            onClick={() => router.back()} 
+            className={styles.backButton}
+            aria-label="Go back"
+            id="nav-back-button"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+          </button>
+        )}
+
         <Link href="/" className={styles.logo} id="nav-logo">
           <div className={styles.logoIcon}>
             <Logo width={42} height={42} />
