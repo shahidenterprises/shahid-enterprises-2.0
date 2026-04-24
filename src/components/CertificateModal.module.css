@@ -110,9 +110,9 @@
   line-height: 1.1;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1024px), screen and (max-height: 600px) {
   .overlay {
-    overflow-y: auto; /* Enable scrolling for the whole modal on mobile */
+    overflow-y: auto; /* Enable scrolling for the whole modal on mobile/landscape */
     -webkit-overflow-scrolling: touch;
     padding-bottom: 2rem; /* Safety space at the bottom */
   }
