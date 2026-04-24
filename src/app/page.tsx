@@ -138,7 +138,7 @@ export default function HomePage() {
             <AnimatedSection delay={0}>
               <Link href="/products" id="product-preview-sheep" className={styles.productCard}>
                 <div className={styles.productCardImage}>
-                  <Image src="/images/afghani_casings.webp" alt="Premium Afghani sheep casings being processed — natural casings for European and Gulf export" fill sizes="(max-width: 1024px) 100vw, 33vw" />
+                  <Image src="/images/afghani_casings.webp" alt="Premium Afghani sheep casings being processed — natural casings for European and Gulf export" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px" />
                 </div>
                 <div className={styles.productCardContent}>
                   <h3>Afghani Casings</h3>
@@ -150,7 +150,7 @@ export default function HomePage() {
             <AnimatedSection delay={100}>
               <Link href="/products" id="product-preview-goat" className={styles.productCard}>
                 <div className={styles.productCardImage}>
-                  <Image src="/images/goat_casings.jpg" alt="Halal certified natural goat casings for international meat processors" fill sizes="(max-width: 1024px) 100vw, 33vw" />
+                  <Image src="/images/goat_casings.jpg" alt="Halal certified natural goat casings for international meat processors" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 450px" />
                 </div>
                 <div className={styles.productCardContent}>
                   <h3>Goat Casings</h3>

@@ -60,7 +60,7 @@ export default function AboutPage() {
                   alt="Modern cleaning and grading facility for high-quality natural sheep casings" 
                   fill 
                   className={styles.stImg}
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 />
               </div>
             </AnimatedSection>
@@ -130,7 +130,7 @@ export default function AboutPage() {
                   fill 
                   priority
                   className={styles.stImg}
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 />
               </div>
             </AnimatedSection>

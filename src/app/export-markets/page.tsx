@@ -74,7 +74,7 @@ export default function ExportMarketsPage() {
                 alt="Global logistics and supply chain map for Shahid Enterprises natural casings" 
                 fill 
                 className={styles.mImg}
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1100px"
                 priority
               />
               <div className={styles.mapOverlay}>

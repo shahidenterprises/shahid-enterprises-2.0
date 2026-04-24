@@ -88,7 +88,7 @@ export default function ProductsPage() {
                       alt={product.title} 
                       fill 
                       className={styles.pImg}
-                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                     />
                   </div>
                   <div className={styles.productInfo}>
