@@ -75,7 +75,7 @@ export default function CertificationStrip() {
               style={{ cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
             >
               <div className={styles.certStripIcon}>
-                <img src="/images/halal_logo_new.png" alt="Halal Certified" width="48" height="48" />
+                <img src="/images/halal_logo_new.webp" alt="Halal Certified" width="48" height="48" />
               </div>
               <span>Halal Certified</span>
             </button>

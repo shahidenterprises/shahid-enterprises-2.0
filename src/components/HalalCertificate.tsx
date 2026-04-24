@@ -41,7 +41,7 @@ const HalalCertificate: React.FC<{ className?: string }> = ({ className }) => {
           Halal Certification — Shahid Enterprises
         </span>
         <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center' }}>
-          <img src="/images/halal_logo_new.png" alt="Halal Icon" width="24" height="24" />
+          <img src="/images/halal_logo_new.webp" alt="Halal Icon" width="24" height="24" />
         </div>
       </div>
 

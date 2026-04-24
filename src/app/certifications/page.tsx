@@ -29,7 +29,7 @@ export default function CertificationsPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/banner_certifications.png" 
+            src="/images/banner_certifications.webp" 
             alt="Shahid Enterprises Certifications" 
             fill 
             priority 

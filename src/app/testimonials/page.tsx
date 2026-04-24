@@ -95,7 +95,7 @@ export default function TestimonialsPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/banner_testimonials.png" 
+            src="/images/banner_testimonials.webp" 
             alt="Shahid Enterprises Client Testimonials" 
             fill 
             priority 

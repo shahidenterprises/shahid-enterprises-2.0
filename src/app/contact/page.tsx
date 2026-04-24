@@ -27,7 +27,7 @@ export default function ContactPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/banner_contact.png" 
+            src="/images/banner_contact.webp" 
             alt="Contact Shahid Enterprises" 
             fill 
             priority 
