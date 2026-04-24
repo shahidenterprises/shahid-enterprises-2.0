@@ -108,10 +108,7 @@ export default function ProductsPage() {
                     </ul>
 
                     <div className={styles.productSpecs}>
-                      <div className={styles.specRow}>
-                        <span className={styles.specLabel}>MOQ:</span>
-                        <span className={styles.specValue}>[To be filled by client]</span>
-                      </div>
+
 
                       <div className={styles.specRow}>
                         <span className={styles.specLabel}>Packaging:</span>
@@ -164,7 +161,7 @@ export default function ProductsPage() {
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect width="20" height="20" x="2" y="2" rx="2" /><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 7h5M17 17h5" /></svg>
                 ),
                 title: 'Bulk Supply',
-                desc: 'Large volume orders with flexible MOQ, competitive pricing, and reliable supply schedules.',
+                desc: 'Large volume orders with competitive pricing and reliable supply schedules.',
               },
               {
                 icon: (
