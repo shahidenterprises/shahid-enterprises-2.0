@@ -159,18 +159,7 @@ export default function HomePage() {
                 </div>
               </Link>
             </AnimatedSection>
-            <AnimatedSection delay={200}>
-              <Link href="/products" id="product-preview-sausage" className={styles.productCard}>
-                <div className={styles.productCardImage}>
-                  <Image src="/images/packaging.webp" alt="Export-grade salted sausage casings in professional packaging" fill sizes="(max-width: 1024px) 100vw, 33vw" />
-                </div>
-                <div className={styles.productCardContent}>
-                  <h3>Sausage Casings</h3>
-                  <p>Ready-to-use processed casings with consistent caliber, ideal for automated filling lines and artisan production.</p>
-                  <span className={styles.productCardLink}>Learn More →</span>
-                </div>
-              </Link>
-            </AnimatedSection>
+
           </div>
         </div>
       </section>

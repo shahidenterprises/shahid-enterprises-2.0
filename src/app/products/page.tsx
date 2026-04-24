@@ -49,19 +49,7 @@ const products = [
     image: '/images/goat_casings.jpg',
     reverse: true,
   },
-  {
-    title: 'Sausage Casings Processing',
-    desc: 'Ready-to-use processed casings for automated and artisan production lines. We offer casings that are pre-flushed, measured, and ready for immediate filling.',
-    features: [
-      'Pre-flushed and ready-to-stuff',
-      'Uniform caliber for automated lines',
-      'Available on tubes, in hanks, or bundles',
-      'Custom length cutting available',
-      'Temperature-controlled processing',
-      'Consistent quality batch after batch',
-    ],
-    image: '/images/hero_bg.webp',
-  },
+
 ];
 
 export default function ProductsPage() {
@@ -124,10 +112,7 @@ export default function ProductsPage() {
                         <span className={styles.specLabel}>MOQ:</span>
                         <span className={styles.specValue}>[To be filled by client]</span>
                       </div>
-                      <div className={styles.specRow}>
-                        <span className={styles.specLabel}>Lead Time:</span>
-                        <span className={styles.specValue}>[To be filled by client]</span>
-                      </div>
+
                       <div className={styles.specRow}>
                         <span className={styles.specLabel}>Packaging:</span>
                         <span className={styles.specValue}>Food-grade salted barrels / export drums</span>
@@ -141,15 +126,8 @@ export default function ProductsPage() {
                     <div className={styles.ctaGroup}>
                       <Link 
                         href="/contact" 
-                        id={`product-cta-quote-${product.title.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="btn btn--primary"
-                      >
-                        Request Quote →
-                      </Link>
-                      <Link 
-                        href="/contact" 
                         id={`product-cta-sample-${product.title.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="btn btn--outline"
+                        className="btn btn--primary"
                       >
                         Request Sample
                       </Link>
