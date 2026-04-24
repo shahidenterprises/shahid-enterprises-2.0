@@ -248,6 +248,59 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Facility Gallery */}
+      <section className={styles.gallerySection}>
+        <div className="container">
+          <AnimatedSection>
+            <SectionHeading
+              label="Our Facility"
+              title="State-of-the-Art Processing"
+              subtitle="A glimpse inside our modern cleaning and grading facility in Multan, where precision meets tradition."
+            />
+          </AnimatedSection>
+          <div className={styles.galleryGrid}>
+            {[1, 2, 3, 4].map((num) => (
+              <AnimatedSection key={num} delay={num * 100}>
+                <div className={styles.galleryItem}>
+                  <Image 
+                    src={`/images/factory_interior_${num}.webp`} 
+                    alt={`Inside Shahid Enterprises' natural casing processing facility - View ${num}`}
+                    fill
+                    className={styles.stImg}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 25vw, 300px"
+                  />
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Video Feature */}
+      <section className={styles.videoSection}>
+        <div className="container">
+          <AnimatedSection>
+            <div className={styles.videoCard}>
+              <video 
+                autoPlay 
+                muted 
+                loop 
+                playsInline 
+                className={styles.factoryVideo}
+              >
+                <source src="/videos/factory_tour.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className={styles.videoOverlay}>
+                <div className="accent-line" style={{ marginBottom: '1rem' }}></div>
+                <h3>Watch Our Process</h3>
+                <p>See how we maintain the highest standards of hygiene and quality in every casing we produce.</p>
+              </div>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Export Process */}
       <section className={styles.processSection}>
         <div className="container">
