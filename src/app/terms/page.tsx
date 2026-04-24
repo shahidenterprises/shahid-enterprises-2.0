@@ -14,11 +14,12 @@ export default function TermsPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/hero_bg.webp" 
+            src="/images/banner_terms_8k.png" 
             alt="Terms & Conditions" 
             fill 
             className={heroStyles.heroImage}
             sizes="100vw"
+            priority
           />
         </div>
         <div className={heroStyles.heroOverlay} />

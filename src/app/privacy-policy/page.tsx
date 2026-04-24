@@ -14,11 +14,12 @@ export default function PrivacyPolicyPage() {
       <section className={heroStyles.pageHero}>
         <div className={heroStyles.heroBg}>
           <Image 
-            src="/images/hero_bg.webp" 
+            src="/images/banner_privacy_8k.png" 
             alt="Privacy Policy" 
             fill 
             className={heroStyles.heroImage}
             sizes="100vw"
+            priority
           />
         </div>
         <div className={heroStyles.heroOverlay} />
