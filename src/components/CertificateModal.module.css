@@ -111,9 +111,16 @@
 }
 
 @media (max-width: 768px) {
+  .overlay {
+    overflow-y: auto; /* Enable scrolling for the whole modal on mobile */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2rem; /* Safety space at the bottom */
+  }
+
   .modalContent {
-    margin: 2rem auto;
+    margin: 1rem auto;
     width: 90%;
+    max-height: none; /* Let it expand so the overlay handles scrolling */
   }
   
   .closeButton {
