@@ -546,3 +546,38 @@
     margin-right: auto;
   }
 }
+
+/* Landscape Optimizations for Mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    padding: 6rem 0 4rem;
+    min-height: auto; /* Allow scrolling naturally */
+  }
+
+  .heroBadge {
+    margin-bottom: 1rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem !important;
+    margin-bottom: 0.75rem;
+  }
+
+  .heroSub {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .scrollIndicator {
+    display: none; /* Hide scroll indicator in short viewports */
+  }
+
+  .statsBar,
+  .whySection,
+  .productsPreview,
+  .testimonialsSection,
+  .marketsSection {
+    padding: 3rem 0; /* More compact sections in landscape */
+  }
+}
