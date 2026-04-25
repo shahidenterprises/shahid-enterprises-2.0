@@ -120,13 +120,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="QCUSA14Kebt7Xq4tGVM5TCPO9FLJL__7AOKPKLXPW7E" />
+
+        {/* Google Analytics GA4 — loaded in <head> */}
         {gaId && (
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-              strategy="afterInteractive"
+              strategy="beforeInteractive"
             />
-            <Script id="google-analytics" strategy="afterInteractive">
+            <Script id="google-analytics" strategy="beforeInteractive">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -136,6 +140,8 @@ export default function RootLayout({
             </Script>
           </>
         )}
+
+        {/* Structured Data / JSON-LD */}
         <Script
           id="structured-data"
           type="application/ld+json"
