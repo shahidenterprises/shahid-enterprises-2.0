@@ -16,7 +16,7 @@ const faqSections = [
     items: [
       {
         q: 'What is your minimum order quantity (MOQ)?',
-        a: 'Our standard MOQ is [1000] hanks per shipment. We also offer trial/sample orders for new buyers. Contact us to discuss your specific requirements.',
+        a: 'Our standard MOQ is [3000] hanks per shipment. We also offer trial/sample orders for new buyers. Contact us to discuss your specific requirements.',
       },
       {
         q: 'Can I request product samples before placing a bulk order?',
