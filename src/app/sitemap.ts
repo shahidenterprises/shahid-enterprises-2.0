@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://shahidenterprises.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://contactshahidenterprises.com';
 
   return [
     {

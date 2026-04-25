@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://shahidenterprises.com/sitemap.xml',
+    sitemap: 'https://contactshahidenterprises.com/sitemap.xml',
   };
 }

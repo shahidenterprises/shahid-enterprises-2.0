@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   description: 'Get in touch with Shahid Enterprises for export inquiries, natural casing quotes, and global partnerships. Responsive support for B2B buyers in Europe & the Gulf.',
   keywords: ['contact natural casing supplier', 'sheep casing export inquiry', 'Shahid Enterprises Multan contact', 'B2B food export Pakistan'],
   alternates: {
-    canonical: 'https://shahidenterprises.com/contact',
+    canonical: 'https://contactshahidenterprises.com/contact',
   },
   openGraph: {
     title: 'Get in Touch | Shahid Enterprises Export Team',
     description: 'Direct lines for international procurement and quality documentation requests.',
-    url: 'https://shahidenterprises.com/contact',
+    url: 'https://contactshahidenterprises.com/contact',
     images: [{ url: '/images/hero_bg.webp' }],
   },
 };

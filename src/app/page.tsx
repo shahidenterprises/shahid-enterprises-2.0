@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   description: 'Leading Pakistan-based manufacturer and exporter of premium natural sheep casings, goat casings, and sausage casings since the 1970s. EU approved, HACCP certified, Halal compliant.',
   keywords: ['natural sheep casings exporter', 'halal sausage casings supplier', 'goat casings Pakistan', 'EU approved casings exporter', 'natural casings wholesale Europe', 'sheep casings Gulf market'],
   alternates: {
-    canonical: 'https://shahidenterprises.com/',
+    canonical: 'https://contactshahidenterprises.com/',
   },
   openGraph: {
     title: 'Shahid Enterprises | Premium Natural Casings Exporter',
     description: 'Supplying top-grade natural sheep and goat casings to Europe & the Gulf since 1970.',
-    url: 'https://shahidenterprises.com',
+    url: 'https://contactshahidenterprises.com',
     siteName: 'Shahid Enterprises',
     images: [{ url: '/images/hero_home_8k.webp', width: 1200, height: 630 }],
     locale: 'en_US',
