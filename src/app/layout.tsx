@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     url: "https://www.shahid-enterprises.com",
     siteName: "Shahid Enterprises",
     title: "Shahid Enterprises | Premium Natural Casings Exporter",
-    description: "Quality Natural Sheep and Goat Casings from Pakistan. Serving international industries since 1970.",
+    description: "Premium Natural Sheep and Goat Casings from Pakistan. EU approved, HACCP certified exporter serving global food industries with quality since 1970.",
     images: [
       {
         url: "/images/hero_home_8k.webp",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Shahid Enterprises | Premium Natural Casings Exporter",
-    description: "Quality Natural Sheep and Goat Casings from Pakistan. Serving international industries since 1970.",
+    description: "Premium Natural Sheep and Goat Casings from Pakistan. EU approved, HACCP certified exporter serving global food industries with quality since 1970.",
     images: ["/images/hero_home_8k.webp"],
   },
   robots: {
