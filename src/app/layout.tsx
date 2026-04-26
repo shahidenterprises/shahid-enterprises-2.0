@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://www.shahid-enterprises.com",
   },
   icons: {
     icon: [

@@ -6,6 +6,9 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'Terms & Conditions | Shahid Enterprises Pakistan',
   description: 'Standard export terms and conditions for ordering natural sheep and goat casings from Shahid Enterprises. Governing law, payment terms, and delivery estimates.',
+  alternates: {
+    canonical: 'https://www.shahid-enterprises.com/terms',
+  },
 };
 
 export default function TermsPage() {

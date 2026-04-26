@@ -6,6 +6,9 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'Privacy Policy | Shahid Enterprises — Natural Casings Exporter',
   description: 'Learn how Shahid Enterprises collects, uses, and protects your data. GDPR compliant privacy practices for our international B2B partners.',
+  alternates: {
+    canonical: 'https://www.shahid-enterprises.com/privacy-policy',
+  },
 };
 
 export default function PrivacyPolicyPage() {
