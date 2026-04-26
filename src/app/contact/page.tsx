@@ -124,17 +124,6 @@ export default function ContactPage() {
                 </div>
               </AnimatedSection>
 
-              {/* Google Maps Embed */}
-              <AnimatedSection delay={300}>
-                <div style={{ marginTop: '2rem' }}>
-                  <iframe
-                    src="https://maps.google.com/maps?q=Jilani+Road+Multan+Pakistan&output=embed"
-                    width="100%"
-                    height="400"
-                    style={{ border: 0, borderRadius: '12px' }}
-                    loading="lazy"
-                    title="Shahid Enterprises Location"
-                  />
                 </div>
               </AnimatedSection>
             </div>
