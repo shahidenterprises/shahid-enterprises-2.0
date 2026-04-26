@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   description: 'Learn about Shahid Enterprises — Pakistan\'s trusted natural casing manufacturer and exporter since the 1970s. Decades of quality, expertise, and global reach.',
   keywords: ['natural casing history', 'Pakistan casing manufacturer about', 'Shahid Enterprises history', 'sheep casing export heritage'],
   alternates: {
-    canonical: 'https://contactshahidenterprises.com/about',
+    canonical: 'https://www.shahid-enterprises.com/about',
   },
   openGraph: {
     title: 'About Shahid Enterprises | Natural Casing Experts',
     description: 'Our journey from a local family business to an international leader in natural casings.',
-    url: 'https://contactshahidenterprises.com/about',
+    url: 'https://www.shahid-enterprises.com/about',
     images: [{ url: '/images/factory.webp' }],
   },
 };

@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description: 'Read what international buyers say about Shahid Enterprises. Trusted by meat processors across Europe, Gulf countries, and Asia for premium natural casings.',
   keywords: ['natural casing reviews', 'sheep casing supplier testimonials', 'trusted casing exporter Pakistan', 'B2B food supplier reviews'],
   alternates: {
-    canonical: 'https://contactshahidenterprises.com/testimonials',
+    canonical: 'https://www.shahid-enterprises.com/testimonials',
   },
   openGraph: {
     title: 'Customer Satisfaction & Reviews | Shahid Enterprises',
     description: 'Hear from our international partners about their long-term supply experience with us.',
-    url: 'https://contactshahidenterprises.com/testimonials',
+    url: 'https://www.shahid-enterprises.com/testimonials',
     images: [{ url: '/images/goat_casings.webp' }],
   },
 };

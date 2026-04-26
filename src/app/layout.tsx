@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://contactshahidenterprises.com"),
+  metadataBase: new URL("https://www.shahid-enterprises.com"),
   title: {
     default: "Shahid Enterprises | Premium Natural Sheep & Goat Casings Exporter",
     template: "%s | Shahid Enterprises",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://contactshahidenterprises.com",
+    url: "https://www.shahid-enterprises.com",
     siteName: "Shahid Enterprises",
     title: "Shahid Enterprises | Premium Natural Casings Exporter",
     description: "Quality Natural Sheep and Goat Casings from Pakistan. Serving international industries since 1970.",
@@ -94,8 +94,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Shahid Enterprises",
-    "url": "https://contactshahidenterprises.com",
-    "logo": "https://contactshahidenterprises.com/images/logo.png",
+    "url": "https://www.shahid-enterprises.com",
+    "logo": "https://www.shahid-enterprises.com/images/logo.png",
     "description": "Premium Natural Sheep and Goat Casings Exporter from Pakistan since 1970s. EU approved, HACCP certified.",
     "address": {
       "@type": "PostalAddress",

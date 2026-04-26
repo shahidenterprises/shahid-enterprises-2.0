@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description: 'Shahid Enterprises holds EU Export License, HACCP, Halal, and FBR certifications. Our quality assurance ensures the highest international food safety standards.',
   keywords: ['EU export license natural casings', 'HACCP certified casings exporter', 'Halal casing certification Pakistan', 'food safety export standards'],
   alternates: {
-    canonical: 'https://contactshahidenterprises.com/certifications',
+    canonical: 'https://www.shahid-enterprises.com/certifications',
   },
   openGraph: {
     title: 'Certified Quality Standards | Shahid Enterprises',
     description: 'Verifiable international certifications ensuring safe and compliant natural casing production.',
-    url: 'https://contactshahidenterprises.com/certifications',
+    url: 'https://www.shahid-enterprises.com/certifications',
     images: [{ url: '/images/packaging.webp' }],
   },
 };
