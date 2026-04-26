@@ -3,7 +3,7 @@
   background: #000;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
