@@ -28,7 +28,9 @@ export default function StatCounter({ end, suffix = '', prefix = '', label, dura
           const startTime = performance.now();
 
           const animate = (currentTime: number) => {
-            const progress = Math.min((currentTime - startTime) / duration, 1);
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
             setCount(Math.floor(progress * end));
 
             if (progress < 1) {
@@ -37,10 +39,12 @@ export default function StatCounter({ end, suffix = '', prefix = '', label, dura
           };
 
           animationFrameId = requestAnimationFrame(animate);
-          observer.unobserve(el);
         }
       },
-      { threshold: 0.1 }
+      { 
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px' 
+      }
     );
 
     observer.observe(el);

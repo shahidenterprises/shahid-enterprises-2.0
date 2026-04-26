@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     description: "Premium Natural Sheep and Goat Casings from Pakistan. EU approved, HACCP certified exporter serving global food industries with quality since 1970.",
     images: [
       {
-        url: "/images/hero_home_8k.webp",
+        url: "https://www.shahid-enterprises.com/images/hero_home_8k.webp",
         width: 1200,
         height: 630,
         alt: "Shahid Enterprises Premium Natural Casings",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shahid Enterprises | Premium Natural Casings Exporter",
     description: "Premium Natural Sheep and Goat Casings from Pakistan. EU approved, HACCP certified exporter serving global food industries with quality since 1970.",
-    images: ["/images/hero_home_8k.webp"],
+    images: ["https://www.shahid-enterprises.com/images/hero_home_8k.webp"],
   },
   robots: {
     index: true,
@@ -128,9 +128,9 @@ export default function RootLayout({
           <>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-              strategy="beforeInteractive"
+              strategy="afterInteractive"
             />
-            <Script id="google-analytics" strategy="beforeInteractive">
+            <Script id="google-analytics" strategy="afterInteractive">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}

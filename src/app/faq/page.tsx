@@ -6,8 +6,14 @@ import AnimatedSection from '@/components/AnimatedSection';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'FAQ | Natural Casings Export — Shahid Enterprises Pakistan',
-  description: 'Answers to common questions about ordering natural sheep and goat casings from Shahid Enterprises — MCQ, lead times, payment terms, shipping, and samples.',
+  title: "FAQ | Natural Casings Export — Shahid Enterprises Pakistan",
+  description: "Answers to common questions about MOQ, payment terms, lead times, shipping, samples, and certifications for natural casings export.",
+  openGraph: {
+    title: "FAQ | Natural Casings Export — Shahid Enterprises Pakistan",
+    description: "Answers to common questions about MOQ, payment terms, lead times, shipping, samples, and certifications for natural casings export.",
+    url: "https://www.shahid-enterprises.com/faq",
+    images: [{ url: "https://www.shahid-enterprises.com/images/logistics_global.webp", width: 1200, height: 630 }],
+  },
 };
 
 const faqSections = [

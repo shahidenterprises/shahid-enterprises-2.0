@@ -6,17 +6,13 @@ import ContactForm from '@/components/ContactForm';
 import AnimatedSection from '@/components/AnimatedSection';
 
 export const metadata: Metadata = {
-  title: 'Contact Our Export Team | Quotes & Inquiries — Shahid Enterprises',
-  description: 'Get in touch with Shahid Enterprises for export inquiries, natural casing quotes, and global partnerships. Responsive support for B2B buyers in Europe & the Gulf.',
-  keywords: ['contact natural casing supplier', 'sheep casing export inquiry', 'Shahid Enterprises Multan contact', 'B2B food export Pakistan'],
-  alternates: {
-    canonical: 'https://www.shahid-enterprises.com/contact',
-  },
+  title: "Contact Shahid Enterprises | Get a Quote for Natural Casings",
+  description: "Contact our export team for pricing, samples, and bulk orders. We respond within 24 hours via email, WhatsApp, or contact form.",
   openGraph: {
-    title: 'Get in Touch | Shahid Enterprises Export Team',
-    description: 'Direct lines for international procurement and quality documentation requests.',
-    url: 'https://www.shahid-enterprises.com/contact',
-    images: [{ url: '/images/hero_bg.webp' }],
+    title: "Contact Shahid Enterprises | Get a Quote for Natural Casings",
+    description: "Contact our export team for pricing, samples, and bulk orders. We respond within 24 hours via email, WhatsApp, or contact form.",
+    url: "https://www.shahid-enterprises.com/contact",
+    images: [{ url: "https://www.shahid-enterprises.com/images/banner_contact.webp", width: 1200, height: 630 }],
   },
 };
 
@@ -125,6 +121,20 @@ export default function ContactPage() {
                     <span>Sunday</span>
                     <span>Closed</span>
                   </div>
+                </div>
+              </AnimatedSection>
+
+              {/* Google Maps Embed */}
+              <AnimatedSection delay={300}>
+                <div style={{ marginTop: '2rem' }}>
+                  <iframe
+                    src="https://maps.google.com/maps?q=Jilani+Road+Multan+Pakistan&output=embed"
+                    width="100%"
+                    height="400"
+                    style={{ border: 0, borderRadius: '12px' }}
+                    loading="lazy"
+                    title="Shahid Enterprises Location"
+                  />
                 </div>
               </AnimatedSection>
             </div>

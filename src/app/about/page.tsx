@@ -7,18 +7,14 @@ import AnimatedSection from '@/components/AnimatedSection';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About Us | 50 Years of Natural Casing Heritage — Shahid Enterprises',
-  description: 'Learn about Shahid Enterprises — Pakistan\'s trusted natural casing manufacturer and exporter since the 1970s. Decades of quality, expertise, and global reach.',
-  keywords: ['natural casing history', 'Pakistan casing manufacturer about', 'Shahid Enterprises history', 'sheep casing export heritage'],
-  alternates: {
-    canonical: 'https://www.shahid-enterprises.com/about',
-  },
+  title: "About Us | 50 Years of Natural Casing Heritage",
+  description: "Learn about Shahid Enterprises — a family-owned natural casing manufacturer from Multan, Pakistan with 50+ years of heritage and international certifications.",
   openGraph: {
-    title: 'About Shahid Enterprises | Natural Casing Experts',
-    description: 'Our journey from a local family business to an international leader in natural casings.',
-    url: 'https://www.shahid-enterprises.com/about',
-    images: [{ url: '/images/factory.webp' }],
-  },
+    title: "About Us | 50 Years of Natural Casing Heritage — Shahid Enterprises",
+    description: "Learn about Shahid Enterprises — a family-owned natural casing manufacturer from Multan, Pakistan with 50+ years of heritage and international certifications.",
+    url: "https://www.shahid-enterprises.com/about",
+    images: [{ url: "https://www.shahid-enterprises.com/images/factory.webp", width: 1200, height: 630 }],
+  }
 };
 
 export default function AboutPage() {
@@ -259,19 +255,50 @@ export default function AboutPage() {
             />
           </AnimatedSection>
           <div className={styles.galleryGrid}>
-            {[1, 2, 3, 4].map((num) => (
-              <AnimatedSection key={num} delay={num * 100}>
-                <div className={styles.galleryItem}>
-                  <Image 
-                    src={`/images/factory_interior_${num}.webp`} 
-                    alt={`Inside Shahid Enterprises' natural casing processing facility - View ${num}`}
-                    fill
-                    className={styles.stImg}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 25vw, 300px"
-                  />
-                </div>
-              </AnimatedSection>
-            ))}
+            <AnimatedSection key={1} delay={100}>
+              <div className={styles.galleryItem}>
+                <Image 
+                  src="/images/factory_interior_1.webp" 
+                  alt="Natural sheep casing grading and caliber sorting facility — Shahid Enterprises, Multan Pakistan"
+                  fill
+                  className={styles.stImg}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 25vw, 300px"
+                />
+              </div>
+            </AnimatedSection>
+            <AnimatedSection key={2} delay={200}>
+              <div className={styles.galleryItem}>
+                <Image 
+                  src="/images/factory_interior_2.webp" 
+                  alt="Hygienic casing processing line at Shahid Enterprises manufacturing facility, HACCP certified"
+                  fill
+                  className={styles.stImg}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 25vw, 300px"
+                />
+              </div>
+            </AnimatedSection>
+            <AnimatedSection key={3} delay={300}>
+              <div className={styles.galleryItem}>
+                <Image 
+                  src="/images/factory_interior_3.webp" 
+                  alt="Export-grade natural casings quality inspection and packaging — Shahid Enterprises Multan"
+                  fill
+                  className={styles.stImg}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 25vw, 300px"
+                />
+              </div>
+            </AnimatedSection>
+            <AnimatedSection key={4} delay={400}>
+              <div className={styles.galleryItem}>
+                <Image 
+                  src="/images/factory_interior_4.webp" 
+                  alt="Salting and barrel packaging of natural sheep casings for international export — Shahid Enterprises"
+                  fill
+                  className={styles.stImg}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 25vw, 300px"
+                />
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

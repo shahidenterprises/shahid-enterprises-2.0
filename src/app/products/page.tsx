@@ -7,17 +7,13 @@ import SectionHeading from '@/components/SectionHeading';
 import AnimatedSection from '@/components/AnimatedSection';
 
 export const metadata: Metadata = {
-  title: 'Export Products | Natural Sheep, Goat & Sausage Casings Pakistan',
-  description: 'Explore our range of premium natural sheep and goat casings. Multiple calibers, quality grades (AA-C), and salted/dry-salted variants. EU approved and Halal certified.',
-  keywords: ['natural sheep casings wholesale', 'goat casings export calibers', 'salted sausage casings supplier', 'halal casings exporter Pakistan', 'B2B casings supplier'],
-  alternates: {
-    canonical: 'https://www.shahid-enterprises.com/products',
-  },
+  title: "Natural Sheep & Goat Casings for Export | Shahid Enterprises",
+  description: "Buy premium natural sheep casings and goat casings in bulk. All calibers available. EU approved, Halal certified. Request a quote today.",
   openGraph: {
-    title: 'Our Natural Casing Products | Shahid Enterprises',
-    description: 'High-quality natural sheep and goat casings for international meat processors.',
-    url: 'https://www.shahid-enterprises.com/products',
-    images: [{ url: '/images/afghani_sheep.webp' }],
+    title: "Natural Sheep & Goat Casings for Export | Shahid Enterprises",
+    description: "Buy premium natural sheep casings and goat casings in bulk. All calibers available. EU approved, Halal certified. Request a quote today.",
+    url: "https://www.shahid-enterprises.com/products",
+    images: [{ url: "https://www.shahid-enterprises.com/images/afghani_casings.webp", width: 1200, height: 630 }],
   },
 };
 
