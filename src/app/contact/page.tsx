@@ -141,24 +141,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      {/* Map */}
-      <section className={styles.mapSection}>
-        <div className="container">
-          <AnimatedSection>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.789!2d71.4718!3d30.1984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b3169eaf060d5%3A0x8c9b5c6b5e8d1b2a!2sJilani%20Rd%2C%20Multan%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2spk!4v1690000000000!5m2!1sen!2spk"
-              width="100%"
-              height="380"
-              style={{ border: 0, borderRadius: 'var(--radius-xl)' }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Shahid Enterprises Location - Jilani Road, Multan"
-            />
-          </AnimatedSection>
-        </div>
-      </section>
     </>
   );
 }
