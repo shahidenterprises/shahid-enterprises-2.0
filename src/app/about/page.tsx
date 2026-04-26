@@ -255,7 +255,7 @@ export default function AboutPage() {
             />
           </AnimatedSection>
           <div className={styles.galleryGrid}>
-            <AnimatedSection key={1} delay={100}>
+            <AnimatedSection delay={100}>
               <div className={styles.galleryItem}>
                 <Image 
                   src="/images/factory_interior_1.webp" 
@@ -266,7 +266,7 @@ export default function AboutPage() {
                 />
               </div>
             </AnimatedSection>
-            <AnimatedSection key={2} delay={200}>
+            <AnimatedSection delay={200}>
               <div className={styles.galleryItem}>
                 <Image 
                   src="/images/factory_interior_2.webp" 
@@ -277,7 +277,7 @@ export default function AboutPage() {
                 />
               </div>
             </AnimatedSection>
-            <AnimatedSection key={3} delay={300}>
+            <AnimatedSection delay={300}>
               <div className={styles.galleryItem}>
                 <Image 
                   src="/images/factory_interior_3.webp" 
@@ -288,7 +288,7 @@ export default function AboutPage() {
                 />
               </div>
             </AnimatedSection>
-            <AnimatedSection key={4} delay={400}>
+            <AnimatedSection delay={400}>
               <div className={styles.galleryItem}>
                 <Image 
                   src="/images/factory_interior_4.webp" 

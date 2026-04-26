@@ -31,7 +31,10 @@ export default function StatCounter({ end, suffix = '', prefix = '', label, dura
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
             
-            setCount(Math.floor(progress * end));
+            // Easing function: outQuad
+            const easedProgress = progress * (2 - progress);
+            
+            setCount(Math.floor(easedProgress * end));
 
             if (progress < 1) {
               animationFrameId = requestAnimationFrame(animate);
@@ -39,11 +42,12 @@ export default function StatCounter({ end, suffix = '', prefix = '', label, dura
           };
 
           animationFrameId = requestAnimationFrame(animate);
+          observer.unobserve(el);
         }
       },
       { 
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px' 
+        rootMargin: '0px 0px -50px 0px' // Start slightly before it's fully in view
       }
     );
 

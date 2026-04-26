@@ -9,15 +9,11 @@ import AnimatedSection from '@/components/AnimatedSection';
 export const metadata: Metadata = {
   title: 'Global Export Markets | Supplying Europe & the Gulf — Shahid Enterprises',
   description: 'Shahid Enterprises exports premium natural casings to countries across Europe and the Gulf region. Discover our international supply capabilities.',
-  keywords: ['natural casing export Europe', 'sheep casings supplier Gulf', 'global casing logistics', 'B2B food export services'],
-  alternates: {
-    canonical: 'https://www.shahid-enterprises.com/export-markets',
-  },
   openGraph: {
-    title: 'Global Reach & Export Markets | Shahid Enterprises',
-    description: 'Supplying top-grade natural casings to meat processors in over 20 countries.',
+    title: 'Global Export Markets | Supplying Europe & the Gulf — Shahid Enterprises',
+    description: 'Shahid Enterprises exports premium natural casings to countries across Europe and the Gulf region. Discover our international supply capabilities.',
     url: 'https://www.shahid-enterprises.com/export-markets',
-    images: [{ url: '/images/logistics_global.webp' }],
+    images: [{ url: 'https://www.shahid-enterprises.com/images/logistics_global.webp', width: 1200, height: 630 }],
   },
 };
 

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: "Buy premium natural sheep casings and goat casings in bulk. All calibers available. EU approved, Halal certified. Request a quote today.",
     url: "https://www.shahid-enterprises.com/products",
     images: [{ url: "https://www.shahid-enterprises.com/images/afghani_casings.webp", width: 1200, height: 630 }],
-  },
+  }
 };
 
 const products = [
