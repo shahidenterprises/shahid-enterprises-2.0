@@ -69,7 +69,7 @@ export default function ContactPage() {
                     </div>
                     <p>
                       <strong>Email</strong>
-                      contact@shahidenterprises.com
+                      contact@shahid-enterprises.com
                     </p>
                   </div>
                   <div className={styles.infoItem}>

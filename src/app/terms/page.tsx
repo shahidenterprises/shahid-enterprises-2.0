@@ -56,7 +56,7 @@ export default function TermsPage() {
             <p>These terms and any export agreements are governed by the laws of the Islamic Republic of Pakistan.</p>
 
             <h2>7. Contact Information</h2>
-            <p>For any questions regarding our terms, please contact our export team at <strong>contact@shahidenterprises.com</strong>.</p>
+            <p>For any questions regarding our terms, please contact our export team at <strong>contact@shahid-enterprises.com</strong>.</p>
           </div>
         </div>
       </section>

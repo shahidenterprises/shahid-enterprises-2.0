@@ -56,14 +56,14 @@ export default function PrivacyPolicyPage() {
             <p>Shahid Enterprises does not sell, trade, or share your personal information with third parties for marketing purposes. Your data is only shared with essential logistics partners (shipping lines, freight forwarders) and regulatory authorities when necessary to complete your export order.</p>
 
             <h2>4. Data Deletion</h2>
-            <p>You have the right to request the deletion of your personal data at any time. If you would like us to remove your information from our records, please email us at <strong>contact@shahidenterprises.com</strong>.</p>
+            <p>You have the right to request the deletion of your personal data at any time. If you would like us to remove your information from our records, please email us at <strong>contact@shahid-enterprises.com</strong>.</p>
 
             <h2>5. Cookies</h2>
             <p>Our website uses functional cookies to ensure the contact form and basic site features work correctly. We do not use advertising or tracking cookies from third-party networks.</p>
 
             <h2>6. Contact Us</h2>
             <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-            <p>Email: <strong>contact@shahidenterprises.com</strong></p>
+            <p>Email: <strong>contact@shahid-enterprises.com</strong></p>
           </div>
         </div>
       </section>

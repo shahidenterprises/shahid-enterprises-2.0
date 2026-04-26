@@ -78,7 +78,7 @@ export default function Footer() {
               Behind Dream Land Cinema, Jilani Road, Multan, Pakistan
             </p>
           </a>
-          <a href="mailto:contact@shahidenterprises.com" id="footer-contact-email" className={styles.contactItem}>
+          <a href="mailto:contact@shahid-enterprises.com" id="footer-contact-email" className={styles.contactItem}>
             <div className={styles.contactIcon}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect width="20" height="16" x="2" y="4" rx="2" />
@@ -87,7 +87,7 @@ export default function Footer() {
             </div>
             <p>
               <strong>Email</strong>
-              contact@shahidenterprises.com
+              contact@shahid-enterprises.com
             </p>
           </a>
           <a href="tel:+923059312383" id="footer-contact-phone" className={styles.contactItem}>
