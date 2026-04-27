@@ -111,9 +111,9 @@ export default function RootLayout({
       "contactType": "sales",
       "availableLanguage": ["English", "Urdu"]
     },
-    "sameAs": [
-      "https://www.linkedin.com/in/shahid-enterprises-multan/",
-      "https://wa.me/923059312383"
+    \"sameAs\": [
+      \"https://www.linkedin.com/company/shahidenterprises-official/\",
+      \"https://wa.me/923059312383\"
     ]
   };
 
