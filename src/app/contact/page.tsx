@@ -13,7 +13,10 @@ export const metadata: Metadata = {
     description: "Contact our export team for pricing, samples, and bulk orders. We respond within 24 hours via email, WhatsApp, or contact form.",
     url: "https://www.shahid-enterprises.com/contact",
     images: [{ url: "https://www.shahid-enterprises.com/images/hero_home_8k.webp", width: 1200, height: 630 }],
-  }
+  },
+  alternates: {
+    canonical: 'https://www.shahid-enterprises.com/contact',
+  },
 };
 
 export default function ContactPage() {

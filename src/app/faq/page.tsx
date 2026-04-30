@@ -13,7 +13,10 @@ export const metadata: Metadata = {
     description: "Answers to common questions about MCQ, payment terms, lead times, shipping, samples, and certifications for natural casings export.",
     url: "https://www.shahid-enterprises.com/faq",
     images: [{ url: "https://www.shahid-enterprises.com/images/hero_home_8k.webp", width: 1200, height: 630 }],
-  }
+  },
+  alternates: {
+    canonical: 'https://www.shahid-enterprises.com/faq',
+  },
 };
 
 const faqSections = [

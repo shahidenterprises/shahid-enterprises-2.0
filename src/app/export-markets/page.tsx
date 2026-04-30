@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     url: 'https://www.shahid-enterprises.com/export-markets',
     images: [{ url: 'https://www.shahid-enterprises.com/images/logistics_global.webp', width: 1200, height: 630 }],
   },
+  alternates: {
+    canonical: 'https://www.shahid-enterprises.com/export-markets',
+  },
 };
 
 const regions = [

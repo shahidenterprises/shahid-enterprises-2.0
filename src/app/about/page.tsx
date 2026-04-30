@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     description: "Learn about Shahid Enterprises — a family-owned natural casing manufacturer from Multan, Pakistan with 50+ years of heritage and international certifications.",
     url: "https://www.shahid-enterprises.com/about",
     images: [{ url: "https://www.shahid-enterprises.com/images/factory.webp", width: 1200, height: 630 }],
-  }
+  },
+  alternates: {
+    canonical: 'https://www.shahid-enterprises.com/about',
+  },
 };
 
 export default function AboutPage() {

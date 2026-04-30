@@ -15,7 +15,10 @@ export const metadata: Metadata = {
     description: "Shahid Enterprises holds EU Export License, HACCP certification, Halal compliance, and FBR approval.",
     url: "https://www.shahid-enterprises.com/certifications",
     images: [{ url: "https://www.shahid-enterprises.com/images/cert_eu_8k.webp", width: 1200, height: 630 }],
-  }
+  },
+  alternates: {
+    canonical: 'https://www.shahid-enterprises.com/certifications',
+  },
 };
 
 export default function CertificationsPage() {
