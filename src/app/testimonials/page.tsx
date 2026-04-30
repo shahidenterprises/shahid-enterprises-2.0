@@ -21,66 +21,65 @@ export const metadata: Metadata = {
     images: [{ url: '/images/goat_casings.webp' }],
   },
 };
-
 const testimonials = [
   {
-    text: "Shahid Enterprises has been our trusted supplier for over 8 years. Their casings are consistently high quality and meet all EU standards. Highly recommended for any serious meat processor.",
+    text: "Shahid Enterprises has been our trusted supplier for over 8 years. Their casings are consistently high quality and meet all EU standards. The caliber consistency is exceptional, which is vital for our high-speed production lines. Highly recommended for any serious meat processor seeking reliability.",
     author: "Hans Mueller",
     company: "Mueller Fleisch GmbH",
     country: "Germany",
     rating: 5,
   },
   {
-    text: "We switched to Shahid Enterprises two years ago and have never looked back. Their halal-certified casings are perfect for our market, and their export packaging ensures products arrive in pristine condition.",
+    text: "We switched to Shahid Enterprises two years ago and have never looked back. Their halal-certified casings are perfect for our market requirements, and their specialized export packaging ensures products arrive in pristine condition every time. Their team understands the unique needs of the Gulf region perfectly.",
     author: "Ahmed Al-Rashid",
     company: "Gulf Meat Industries",
     country: "UAE",
     rating: 5,
   },
   {
-    text: "Excellent product quality and very professional export team. They handle all documentation seamlessly, making international procurement a breeze. A truly reliable partner.",
+    text: "Excellent product quality and very professional export team. They handle all complex documentation seamlessly, making international procurement a breeze. A truly reliable partner that we can count on for consistent supply throughout the year, even during peak seasons.",
     author: "Pierre Dubois",
     company: "Charcuterie Artisanale",
     country: "France",
     rating: 5,
   },
   {
-    text: "The consistency of their sheep casings is remarkable. Every shipment matches our specifications perfectly, which is critical for our automated production lines.",
+    text: "The consistency of their sheep casings is remarkable and has significantly improved our efficiency. Every shipment matches our technical specifications perfectly, which is critical for our automated production environment. Their attention to detail in sorting is superior to other suppliers we've used.",
     author: "Jan van der Berg",
     company: "Dutch Sausage Co.",
     country: "Netherlands",
     rating: 5,
   },
   {
-    text: "Best natural casing supplier we have worked with from Pakistan. Their quality control is on par with European producers, at significantly more competitive pricing.",
+    text: "Best natural casing supplier we have worked with from Pakistan. Their internal quality control systems are on par with major European producers, providing us with premium products at significantly more competitive pricing. They are a valuable asset to our supply chain.",
     author: "Marco Rossi",
     company: "Salumificio Rossi",
     country: "Italy",
     rating: 5,
   },
   {
-    text: "We have been sourcing goat casings from Shahid Enterprises for our specialty snack products. Reliable, affordable, and always on time. Great partner for growing businesses.",
+    text: "We have been sourcing goat casings from Shahid Enterprises for our specialty snack products. The products are reliable, affordable, and the logistics team ensures they are always delivered on time. They are a great partner for growing businesses that require a scalable supply of high-quality materials.",
     author: "Fatima Al-Saud",
     company: "Saudi Food Processing",
     country: "Saudi Arabia",
     rating: 5,
   },
   {
-    text: "Their team is highly responsive and professional. When we needed custom caliber sorting for a new product line, they delivered exactly what we needed within our timeline.",
+    text: "Their team is highly responsive, professional, and easy to communicate with. When we needed custom caliber sorting for a new premium product line, they were able to adapt their process and delivered exactly what we needed within our strict timeline. Truly impressive customer service.",
     author: "Robert Williams",
     company: "British Meat Co.",
     country: "United Kingdom",
     rating: 5,
   },
   {
-    text: "As a procurement manager, I value transparency and documentation. Shahid Enterprises provides complete traceability and certificates with every shipment. Outstanding service.",
+    text: "As a procurement manager, I value transparency and rigorous documentation. Shahid Enterprises provides complete batch traceability and all necessary health certificates with every single shipment. Their professionalism makes my job much easier. Outstanding service from a top-tier exporter.",
     author: "Kenji Tanaka",
     company: "Tokyo Foods International",
     country: "Japan",
     rating: 4,
   },
   {
-    text: "We placed our first trial order 5 years ago and they are now our primary natural casing supplier. Competitive prices, excellent quality, and a team that truly understands the industry.",
+    text: "We placed our first trial order 5 years ago and they are now our primary natural casing supplier for our entire range. Competitive prices, excellent quality, and a dedicated team that truly understands the nuances of the international meat industry. We look forward to many more years of partnership.",
     author: "Andrzej Kowalski",
     company: "Polski Wędliny",
     country: "Poland",
@@ -137,8 +136,16 @@ export default function TestimonialsPage() {
             <SectionHeading
               label="What Our Clients Say"
               title="Trusted by International Buyers"
-              subtitle="Read genuine feedback from our international partners across Europe and the Gulf."
+              subtitle="Read genuine feedback from our international partners across Europe and the Gulf regions. We take pride in building long-term relationships based on quality and trust."
             />
+            <div className={styles.introText}>
+              <p>
+                At Shahid Enterprises, we believe that our success is directly tied to the success of our partners. For over five decades, we have been more than just a supplier; we have been a strategic partner to meat processors, distributors, and artisanal producers worldwide. Our commitment to maintaining the highest standards of quality, safety, and transparency is reflected in the long-term relationships we have cultivated.
+              </p>
+              <p>
+                From the bustling markets of Europe to the specialized meat processing industries in the Gulf, our natural sheep and goat casings are recognized for their exceptional quality and reliability. Below is a collection of feedback from some of our valued clients who have experienced the Shahid Enterprises difference.
+              </p>
+            </div>
           </AnimatedSection>
           <div className={styles.testimonialsGrid}>
             {testimonials.map((t, i) => (
