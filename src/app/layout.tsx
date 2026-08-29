@@ -121,7 +121,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         {/* Google Search Console Verification */}
-        <meta name="google-site-verification" content="QCUSA14Kebt7Xq4tGVM5TCPO9FLJL__7AOKPKLXPW7E" />
+        <meta name="google-site-verification" content="APOSXTNHoD-4Kl13hgjjDZjgTwxNQDDNBhoE8zZXnMw" />
 
         {/* Google Analytics GA4 — loaded in <head> */}
         {gaId && (
